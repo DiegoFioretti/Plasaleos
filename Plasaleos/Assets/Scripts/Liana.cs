@@ -65,6 +65,8 @@ public class Liana : MonoBehaviour {
 					m_sprite.flipY = false;
 					m_sprite.size = new Vector2(m_width, m_sprite.size.y);
 					transform.eulerAngles = Vector3.zero;
+				} else {
+					enabled = false;
 				}
 				m_sprite.color = Color.white;
 				m_adjusting = false;
