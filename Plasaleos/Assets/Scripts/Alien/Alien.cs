@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 
 public class Alien : MonoBehaviour {
-    State m_currState;
+    IState m_currState;
 
     private void Awake() {
         m_currState = GetComponent<Movement>();

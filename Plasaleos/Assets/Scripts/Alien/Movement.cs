@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class Movement : State {
+public class Movement : MonoBehaviour, IState {
     [SerializeField] LayerMask m_ground;
     [SerializeField] float m_speed;
     Rigidbody2D m_rb;
@@ -11,7 +11,7 @@ public class Movement : State {
         m_footOffset = GetComponent<SpriteRenderer>().size.y / 2f;
     }
 
-    public override State StateUpdate() {
+    public IState StateUpdate() {
         Walk();
         return this;
     }
@@ -25,6 +25,6 @@ public class Movement : State {
     bool IsGrounded() {
         Vector2 footPosition = transform.position;
         footPosition.y -= m_footOffset;
-        return (Physics2D.Raycast(footPosition, (-transform.up), 0.01f, m_ground));
+        return (Physics2D.Raycast(footPosition, (-transform.up), 0.05f, m_ground));
     }
 }
