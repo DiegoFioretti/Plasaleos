@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class LevelManager : MonoBehaviour {
 
@@ -35,4 +36,11 @@ public class LevelManager : MonoBehaviour {
             Destroy(this);
         }
 	}
+
+    private void Update() {
+        if(rescuedAliens >= maxAliens)
+        {
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        }
+    }
 }
