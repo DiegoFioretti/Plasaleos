@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Alien
   - Pelota
+  - LevelManager
   layers:
   - Default
   - TransparentFX

@@ -4,8 +4,19 @@ using UnityEngine;
 
 public class DeathTrigger : MonoBehaviour {
 
+    LevelManager manager;
+
+    private void Start()
+    {
+        manager = GameObject.FindGameObjectWithTag("LevelManager").GetComponent<LevelManager>();
+    }
+
     private void OnTriggerEnter2D(Collider2D other)
     {
-        other.gameObject.SetActive(false);
+        if(other.tag == "Alien"){
+            other.gameObject.SetActive(false);
+            manager.AliveAliens--;
+        }
+        
     }
 }
