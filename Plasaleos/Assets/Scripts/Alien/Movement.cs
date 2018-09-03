@@ -24,7 +24,7 @@ public class Movement : MonoBehaviour, IState {
             transform.eulerAngles = new Vector3(
                 0f, 0f, angle
             );
-            transformRight = new Vector2(m_groundNormal.y, m_groundNormal.x) * (m_facingRight? 1f: -1f);
+            transformRight = new Vector2(m_groundNormal.y, -m_groundNormal.x) * (m_facingRight? 1f: -1f);
         } else {
             transform.eulerAngles = new Vector3(
                 0f, 0f, -Vector2.SignedAngle(Physics2D.gravity, -Vector2.up)
