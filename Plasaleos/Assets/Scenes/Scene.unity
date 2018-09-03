@@ -207,7 +207,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!58 &274832983
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -14356,7 +14356,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!58 &658321288
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -14515,7 +14515,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!58 &1273566713
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -14666,6 +14666,14 @@ Prefab:
     - target: {fileID: 114552153219652784, guid: cf3ef744478b04a4ebab2c05b50e20a9,
         type: 2}
       propertyPath: m_facingRight
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4672918095967910, guid: cf3ef744478b04a4ebab2c05b50e20a9, type: 2}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4672918095967910, guid: cf3ef744478b04a4ebab2c05b50e20a9, type: 2}
+      propertyPath: m_LocalEulerAnglesHint.y
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -14717,7 +14725,7 @@ Prefab:
     - target: {fileID: 114552153219652784, guid: cf3ef744478b04a4ebab2c05b50e20a9,
         type: 2}
       propertyPath: m_facingRight
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cf3ef744478b04a4ebab2c05b50e20a9, type: 2}
@@ -19817,7 +19825,7 @@ Prefab:
     - target: {fileID: 114552153219652784, guid: cf3ef744478b04a4ebab2c05b50e20a9,
         type: 2}
       propertyPath: m_facingRight
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cf3ef744478b04a4ebab2c05b50e20a9, type: 2}
@@ -19865,6 +19873,11 @@ Prefab:
       propertyPath: m_Name
       value: Alien (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 114552153219652784, guid: cf3ef744478b04a4ebab2c05b50e20a9,
+        type: 2}
+      propertyPath: m_facingRight
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cf3ef744478b04a4ebab2c05b50e20a9, type: 2}
   m_IsPrefabAsset: 0
@@ -19890,7 +19903,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!58 &2073209931
 CircleCollider2D:
   m_ObjectHideFlags: 0

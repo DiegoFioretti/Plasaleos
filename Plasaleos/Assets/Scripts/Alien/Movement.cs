@@ -20,26 +20,20 @@ public class Movement : MonoBehaviour, IState {
     public IState StateUpdate() {
         m_grounded = IsGrounded();
         if (m_grounded) {
-            float angle = Vector2.SignedAngle(m_groundNormal, Vector2.up);
-            if (angle < 0f) {
-                angle += 180f;
-            }
+            float angle = -Vector2.SignedAngle(m_groundNormal, Vector2.up);
             transform.eulerAngles = new Vector3(
                 0f, 0f, angle
             );
+            transformRight = new Vector2(m_groundNormal.y, m_groundNormal.x) * (m_facingRight? 1f: -1f);
         } else {
             transform.eulerAngles = new Vector3(
                 0f, 0f, -Vector2.SignedAngle(Physics2D.gravity, -Vector2.up)
             );
+            transformRight = new Vector2(transform.right.x, transform.right.y) * (m_facingRight? 1f: -1f);
         }
-        if (m_grounded) {
-            transformRight = new Vector2(m_groundNormal.y, m_groundNormal.x);
-        } else {
-            transformRight = new Vector2(transform.right.x, transform.right.y);
-        }
-        Debug.DrawRay(transform.position, transform.right, Color.blue, 1f);
+        Debug.DrawRay(transform.position, transformRight, Color.blue, 0.75f);
         if (m_rb.velocity == Vector2.zero) {
-            if (Physics2D.Raycast(transform.position, transform.right * (m_facingRight? 1f:-1f), 1f, m_groundLayer)) {
+            if (Physics2D.Raycast(transform.position, transformRight, 0.75f, m_groundLayer)) {
                 Flip();
             }
         }
@@ -49,8 +43,7 @@ public class Movement : MonoBehaviour, IState {
 
     public void StateFixedUpdate() {
         if (m_grounded) {
-            m_rb.AddForce(transformRight * m_speed * 1.5f
-                * (m_facingRight? 1f:-1f));
+            m_rb.AddForce(transformRight * m_speed * 1.5f);
         }
     }
 
