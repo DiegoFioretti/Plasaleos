@@ -13,16 +13,23 @@ public class Movement : MonoBehaviour, IState {
 
     private void Awake() {
         m_rb = GetComponent<Rigidbody2D>();
-        m_footOffset = GetComponent<SpriteRenderer>().size.y / 2f;
+        m_footOffset = GetComponent<SpriteRenderer>().size.y * 0.5f;
         m_wasGrounded = false;
     }
 
     public IState StateUpdate() {
         m_grounded = IsGrounded();
         if (m_grounded) {
-            float angle = -Vector2.SignedAngle(m_groundNormal, Vector2.up);
+            if (Vector2.Angle(-transform.up, Physics2D.gravity) > 30f) {
+                m_grounded = false;
+            }
+        }
+
+        Walk();
+
+        if (m_grounded) {
             transform.eulerAngles = new Vector3(
-                0f, 0f, angle
+                0f, 0f, -Vector2.SignedAngle(m_groundNormal, Vector2.up)
             );
             transformRight = new Vector2(m_groundNormal.y, -m_groundNormal.x) * (m_facingRight? 1f: -1f);
         } else {
@@ -31,30 +38,35 @@ public class Movement : MonoBehaviour, IState {
             );
             transformRight = new Vector2(transform.right.x, transform.right.y) * (m_facingRight? 1f: -1f);
         }
+
         Debug.DrawRay(transform.position, transformRight, Color.blue, 0.75f);
         if (m_rb.velocity == Vector2.zero) {
             if (Physics2D.Raycast(transform.position, transformRight, 0.75f, m_groundLayer)) {
                 Flip();
             }
         }
-        Walk();
+
+        if (m_rb.velocity.magnitude > m_speed) {
+            m_rb.velocity = Vector3.Normalize(m_rb.velocity) * m_speed * 0.707f;
+            //multiply by sqr(2) so that velocity.magnitude ~= m_speed
+        }
         return this;
     }
 
     public void StateFixedUpdate() {
         if (m_grounded) {
-            m_rb.AddForce(transformRight * m_speed * 1.5f);
+            m_rb.AddForce(transformRight * m_speed);
         }
     }
 
     void Walk() {
         if (m_grounded && !m_wasGrounded) {
             if (m_rb.velocity.magnitude < m_speed) {
-                m_rb.velocity += transformRight * m_speed;
+                m_rb.velocity += transformRight * m_speed * 0.5f;
             }
         } else if (!m_grounded && m_wasGrounded) {
             if (m_rb.velocity.magnitude > m_speed) {
-                m_rb.velocity -= transformRight * m_speed;
+                m_rb.velocity -= transformRight * m_speed * 0.5f;
             }
         }
         m_wasGrounded = m_grounded;
@@ -62,9 +74,9 @@ public class Movement : MonoBehaviour, IState {
 
     bool IsGrounded() {
         RaycastHit2D hit;
-        Debug.DrawRay(transform.position, (-transform.up), Color.red, m_footOffset + 0.25f);
+        Debug.DrawRay(transform.position, (-transform.up), Color.red, m_footOffset + 0.2f);
         hit = Physics2D.Raycast(transform.position, (-transform.up),
-            m_footOffset + 0.1f, m_groundLayer);
+            m_footOffset + 0.2f, m_groundLayer);
         m_groundNormal = hit.normal;
         return (hit);
     }
