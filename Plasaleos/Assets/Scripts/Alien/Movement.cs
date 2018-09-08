@@ -18,7 +18,7 @@ public class Movement : MonoBehaviour, IState {
         m_wasGrounded = false;
     }
 
-    public IState StateUpdate() {
+    public void StateUpdate(ref IState nextState) {
         m_grounded = IsGrounded();
         if (m_grounded) {
             if (Vector2.Angle(-transform.up, Physics2D.gravity) > m_detachAngle) {
@@ -51,7 +51,7 @@ public class Movement : MonoBehaviour, IState {
             m_rb.velocity = Vector3.Normalize(m_rb.velocity) * m_speed * 0.707f;
             //multiply by sqr(2) so that velocity.magnitude ~= m_speed
         }
-        return this;
+        nextState = this;
     }
 
     public void StateFixedUpdate() {

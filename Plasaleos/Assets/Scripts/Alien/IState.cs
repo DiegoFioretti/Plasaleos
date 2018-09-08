@@ -1,4 +1,4 @@
 public interface IState {
-    IState StateUpdate();
+    void StateUpdate(ref IState currState);
     void StateFixedUpdate();
 }
