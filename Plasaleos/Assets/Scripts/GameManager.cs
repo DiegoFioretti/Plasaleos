@@ -55,7 +55,7 @@ public class GameManager : MonoBehaviour {
         a += b;
         if(aliensSaved[a] < value)
         {
-            alienCount = value - aliensSaved[a];
+            alienCount += value - aliensSaved[a];
             aliensSaved[a] = value;
         }
     }
