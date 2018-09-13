@@ -53,8 +53,8 @@ public class LevelManager : MonoBehaviour {
     private void Update() {
         if(rescuedAliens >= aliveAliens)
         {
-            GameManager.instance.AlienCount += rescuedAliens;
-            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+            GameManager.instance.SetAlienCount(rescuedAliens, SceneManager.GetActiveScene().name);
+            SceneManager.LoadScene("MainMenu");
         }
     }
 }
