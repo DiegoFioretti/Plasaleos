@@ -9,6 +9,8 @@ public class LevelManager : MonoBehaviour {
 
     private int maxAliens = -1;
 
+    private int aliveAliens = -1;
+
     private int rescuedAliens = 0;
 
     public int RescuedAliens
@@ -24,12 +26,23 @@ public class LevelManager : MonoBehaviour {
         }
     }
 
+    public int AliveAliens
+    {
+        get{
+            return aliveAliens;
+        }
+        set{
+            aliveAliens = value;
+        }
+    }
+
     // Use this for initialization
     void Start () {
         if (!instance)
         {
             instance = this;
             maxAliens = GameObject.FindGameObjectsWithTag("Alien").Length;
+            aliveAliens = GameObject.FindGameObjectsWithTag("Alien").Length;
         }
         else
         {
@@ -38,9 +51,10 @@ public class LevelManager : MonoBehaviour {
 	}
 
     private void Update() {
-        if(rescuedAliens >= maxAliens)
+        if(rescuedAliens >= aliveAliens)
         {
-            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+            GameManager.instance.SetAlienCount(rescuedAliens, SceneManager.GetActiveScene().name);
+            SceneManager.LoadScene("MainMenu");
         }
     }
 }

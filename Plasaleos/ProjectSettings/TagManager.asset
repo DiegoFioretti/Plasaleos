@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Alien
   - Pelota
+  - LevelManager
   layers:
   - Default
   - TransparentFX
@@ -19,7 +20,7 @@ TagManager:
   - Sky
   - Terrain
   - Alien
-  - 
+  - DeathTrigger
   - 
   - 
   - 
