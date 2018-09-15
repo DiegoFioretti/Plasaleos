@@ -24,6 +24,9 @@ GameObject:
   - component: {fileID: 70911864447214014}
   - component: {fileID: 114032964673685668}
   - component: {fileID: 114552153219652784}
+  - component: {fileID: 114309125043880844}
+  - component: {fileID: 114133663572744894}
+  - component: {fileID: 114278303731729332}
   m_Layer: 11
   m_Name: Alien
   m_TagString: Alien
@@ -90,6 +93,47 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6a279fc2fd4f18d4191c8ec0f3c0e223, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_facingRight: 1
+  m_groundLayer:
+    serializedVersion: 2
+    m_Bits: 1024
+  m_rb: {fileID: 0}
+--- !u!114 &114133663572744894
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1256088697549998}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 39a9afa0aca0ac3409d0fa2c8650fac5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &114278303731729332
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1256088697549998}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b7ac6272a8d2b9f4cbbbef955fb34178, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_duration: 3
+--- !u!114 &114309125043880844
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1256088697549998}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e58b49fd73bd0954a89ee5156abe73dc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_duration: 2
+  m_speed: 10
 --- !u!114 &114552153219652784
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -101,12 +145,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5df70b99a363225458f81152d9fae031, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_groundLayer:
-    serializedVersion: 2
-    m_Bits: 1024
   m_speed: 8
   m_detachAngle: 45
-  m_facingRight: 1
 --- !u!212 &212592919974544110
 SpriteRenderer:
   m_ObjectHideFlags: 1
