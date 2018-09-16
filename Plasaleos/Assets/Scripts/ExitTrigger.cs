@@ -9,6 +9,7 @@ public class ExitTrigger : MonoBehaviour {
         if(collision.tag == "Alien")
         {
             LevelManager.instance.RescuedAliens++;
+            AkSoundEngine.PostEvent("Alien_Rescued", gameObject);
             Destroy(collision.gameObject);
         }
     }

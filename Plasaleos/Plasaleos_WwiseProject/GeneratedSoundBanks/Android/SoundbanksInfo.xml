@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<SoundBanksInfo Platform="Android" BasePlatform="Android" SchemaVersion="11" SoundbankVersion="132">
+	<RootPaths>
+		<ProjectRoot>D:\Documents\Project-Plasaleos\Plasaleos\Plasaleos_WwiseProject\</ProjectRoot>
+		<SourceFilesRoot>D:\Documents\Project-Plasaleos\Plasaleos\Plasaleos_WwiseProject\.cache\Android\</SourceFilesRoot>
+		<SoundBanksRoot>D:\Documents\Project-Plasaleos\Plasaleos\Plasaleos_WwiseProject\GeneratedSoundBanks\Android\</SoundBanksRoot>
+		<ExternalSourcesInputFile></ExternalSourcesInputFile>
+		<ExternalSourcesOutputRoot>D:\Documents\Project-Plasaleos\Plasaleos\Plasaleos_WwiseProject\GeneratedSoundBanks\Android</ExternalSourcesOutputRoot>
+	</RootPaths>
+	<DialogueEvents/>
+	<StreamedFiles/>
+	<MediaFilesNotInAnyBank/>
+	<SoundBanks>
+		<SoundBank Id="1355168291" Language="SFX">
+			<ObjectPath>Init</ObjectPath>
+			<ShortName>Init</ShortName>
+			<Path>Init.bnk</Path>
+		</SoundBank>
+		<SoundBank Id="3161908922" Language="SFX">
+			<ObjectPath>\SoundBanks\Default Work Unit\Main</ObjectPath>
+			<ShortName>Main</ShortName>
+			<Path>Main.bnk</Path>
+			<IncludedEvents>
+				<Event Id="1625617807" Name="Alien_Dead" ObjectPath="\Events\Default Work Unit\Alien_Dead"/>
+				<Event Id="523915378" Name="Alien_Rescued" ObjectPath="\Events\Default Work Unit\Alien_Rescued"/>
+				<Event Id="1249666675" Name="Alien_Step" ObjectPath="\Events\Default Work Unit\Alien_Step"/>
+				<Event Id="1529951376" Name="Hazard_BrokenIce" ObjectPath="\Events\Default Work Unit\Hazard_BrokenIce"/>
+				<Event Id="3998872777" Name="Music_Background" ObjectPath="\Events\Default Work Unit\Music_Background"/>
+			</IncludedEvents>
+			<IncludedMemoryFiles>
+				<File Id="561358359" Language="SFX">
+					<ShortName>Dead.wav</ShortName>
+					<Path>SFX\Dead_56D34C19.wem</Path>
+				</File>
+				<File Id="794205814" Language="SFX">
+					<ShortName>Step.wav</ShortName>
+					<Path>SFX\Step_56D34C19.wem</Path>
+				</File>
+				<File Id="801562404" Language="SFX">
+					<ShortName>Ice.wav</ShortName>
+					<Path>SFX\Ice_22627D18.wem</Path>
+				</File>
+				<File Id="966999040" Language="SFX">
+					<ShortName>PlasaleosMusicProto.wav</ShortName>
+					<Path>SFX\PlasaleosMusicProto_8956FC97.wem</Path>
+				</File>
+				<File Id="1002178581" Language="SFX">
+					<ShortName>Rescued.wav</ShortName>
+					<Path>SFX\Rescued_56D34C19.wem</Path>
+				</File>
+			</IncludedMemoryFiles>
+		</SoundBank>
+	</SoundBanks>
+</SoundBanksInfo>
