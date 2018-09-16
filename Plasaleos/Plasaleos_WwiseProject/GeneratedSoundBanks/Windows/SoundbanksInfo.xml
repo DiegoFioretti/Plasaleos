@@ -26,11 +26,16 @@
 				<Event Id="1249666675" Name="Alien_Step" ObjectPath="\Events\Default Work Unit\Alien_Step"/>
 				<Event Id="1529951376" Name="Hazard_BrokenIce" ObjectPath="\Events\Default Work Unit\Hazard_BrokenIce"/>
 				<Event Id="3998872777" Name="Music_Background" ObjectPath="\Events\Default Work Unit\Music_Background"/>
+				<Event Id="2814314654" Name="Trap_Hit" ObjectPath="\Events\Default Work Unit\Trap_Hit"/>
 			</IncludedEvents>
 			<IncludedMemoryFiles>
 				<File Id="561358359" Language="SFX">
 					<ShortName>Dead.wav</ShortName>
 					<Path>SFX\Dead_56D34C19.wem</Path>
+				</File>
+				<File Id="599664353" Language="SFX">
+					<ShortName>Spike.wav</ShortName>
+					<Path>SFX\Spike_56D34C19.wem</Path>
 				</File>
 				<File Id="794205814" Language="SFX">
 					<ShortName>Step.wav</ShortName>
