@@ -17,6 +17,10 @@ public class DeathTrigger : MonoBehaviour
         {
             other.gameObject.SetActive(false);
             AkSoundEngine.PostEvent("Alien_Dead", gameObject);
+            if(tag == "Trap")
+            {
+                AkSoundEngine.PostEvent("Trap_Hit", gameObject);
+            }
             manager.AliveAliens--;
         }
 
