@@ -73,6 +73,20 @@
 						</Action>
 					</ChildrenList>
 				</Event>
+				<Event Name="Trap_Hit" ID="{603FBC00-5053-4320-AB45-7BB17981DB5C}">
+					<ChildrenList>
+						<Action Name="" ID="{A11C01BC-0250-4953-A1FD-0740DAA38EC2}" ShortID="886036122">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Spike" ID="{E046EB98-9462-449A-A4FF-FB59010FB333}" WorkUnitID="{A55CF131-BE7B-46A7-AA13-13FE3AA2C8EB}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
 			</ChildrenList>
 		</WorkUnit>
 	</Events>

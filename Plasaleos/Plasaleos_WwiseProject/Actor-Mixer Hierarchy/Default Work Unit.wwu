@@ -186,6 +186,40 @@
 						<ActiveSource Name="PlasaleosMusicProto" ID="{59DDCD2C-5168-48CF-91CD-C2BD37426DA4}" Platform="Linked"/>
 					</ActiveSourceList>
 				</Sound>
+				<Sound Name="Spike" ID="{E046EB98-9462-449A-A4FF-FB59010FB333}" ShortID="333071089">
+					<PropertyList>
+						<Property Name="Pitch" Type="int32">
+							<ModifierList>
+								<ModifierInfo>
+									<Modifier Name="" ID="{FEE8BE2A-4F66-4476-9506-4CA7487E7556}">
+										<PropertyList>
+											<Property Name="Enabled" Type="bool" Value="True"/>
+											<Property Name="Max" Type="Real64" Value="303"/>
+											<Property Name="Min" Type="Real64" Value="-303"/>
+										</PropertyList>
+									</Modifier>
+								</ModifierInfo>
+							</ModifierList>
+						</Property>
+					</PropertyList>
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{785F7985-AC0B-4CD2-82F0-0043AF7F1FC7}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{7F63C48F-B99F-442A-AE38-9D097CD4650E}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<AudioFileSource Name="Spike" ID="{5B4A7270-C1C2-4C0F-A0BF-FF1019BA3395}" ShortID="599664353">
+							<Language>SFX</Language>
+							<AudioFile>Spike.wav</AudioFile>
+						</AudioFileSource>
+					</ChildrenList>
+					<ActiveSourceList>
+						<ActiveSource Name="Spike" ID="{5B4A7270-C1C2-4C0F-A0BF-FF1019BA3395}" Platform="Linked"/>
+					</ActiveSourceList>
+				</Sound>
 			</ChildrenList>
 		</WorkUnit>
 	</AudioObjects>

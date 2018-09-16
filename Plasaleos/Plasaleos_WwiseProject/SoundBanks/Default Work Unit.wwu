@@ -7,6 +7,7 @@
 					<ObjectInclusionList>
 						<ObjectRef Name="Alien_Rescued" ID="{64E4E525-07E3-4063-A2C9-04468A96A04C}" WorkUnitID="{4A38E2ED-B942-4D81-920F-2F7810173794}" Filter="7" Origin="Manual"/>
 						<ObjectRef Name="Music_Background" ID="{620FC1D5-D532-42D5-A8F7-66EC3581CAC9}" WorkUnitID="{4A38E2ED-B942-4D81-920F-2F7810173794}" Filter="7" Origin="Manual"/>
+						<ObjectRef Name="Trap_Hit" ID="{603FBC00-5053-4320-AB45-7BB17981DB5C}" WorkUnitID="{4A38E2ED-B942-4D81-920F-2F7810173794}" Filter="7" Origin="Manual"/>
 						<ObjectRef Name="Alien_Dead" ID="{36C6BD32-D375-470A-BAFE-F604780783BD}" WorkUnitID="{4A38E2ED-B942-4D81-920F-2F7810173794}" Filter="7" Origin="Manual"/>
 						<ObjectRef Name="Hazard_BrokenIce" ID="{28012C5D-20AD-49C4-95AC-004C51463F82}" WorkUnitID="{4A38E2ED-B942-4D81-920F-2F7810173794}" Filter="7" Origin="Manual"/>
 						<ObjectRef Name="Alien_Step" ID="{C7DCDA4D-2900-4A5D-82EC-7258283A74A8}" WorkUnitID="{4A38E2ED-B942-4D81-920F-2F7810173794}" Filter="7" Origin="Manual"/>

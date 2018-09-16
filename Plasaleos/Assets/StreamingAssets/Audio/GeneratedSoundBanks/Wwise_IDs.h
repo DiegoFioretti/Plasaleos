@@ -18,6 +18,7 @@ namespace AK
         static const AkUniqueID ALIEN_STEP = 1249666675U;
         static const AkUniqueID HAZARD_BROKENICE = 1529951376U;
         static const AkUniqueID MUSIC_BACKGROUND = 3998872777U;
+        static const AkUniqueID TRAP_HIT = 2814314654U;
     } // namespace EVENTS
 
     namespace BANKS
