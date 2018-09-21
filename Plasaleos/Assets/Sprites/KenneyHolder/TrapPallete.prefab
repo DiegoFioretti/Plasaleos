@@ -38,7 +38,7 @@ GameObject:
   - component: {fileID: 4461680304488206}
   - component: {fileID: 2569400267573017002}
   m_Layer: 31
-  m_Name: KenneyPallete
+  m_Name: TrapPallete
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1361,7 +1361,7 @@ Tilemap:
   - m_RefCount: 0
     m_Data: {r: 1.7e-44, g: 1.7e-44, b: 1.7e-44, a: 1.7e-44}
   - m_RefCount: 1
-    m_Data: {r: 0.70279515, g: 0.3134918, b: 0.3592432, a: 1}
+    m_Data: {r: 0.7794413, g: 0.33760706, b: 0.37658972, a: 1}
   m_AnimationFrameRate: 1
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_Origin: {x: -113, y: -13, z: 0}

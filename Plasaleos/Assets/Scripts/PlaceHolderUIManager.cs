@@ -15,4 +15,14 @@ public class PlaceHolderUIManager : MonoBehaviour {
         SceneManager.LoadScene("testLevel_02");
     }
 
+    public void LoadLevel4()
+    {
+        SceneManager.LoadScene("testLevel_03");
+    }
+
+    public void LoadLevel5()
+    {
+        SceneManager.LoadScene("testLevel_04");
+    }
+
 }
