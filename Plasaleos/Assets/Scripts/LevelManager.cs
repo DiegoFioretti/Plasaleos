@@ -40,6 +40,7 @@ public class LevelManager : MonoBehaviour {
     void Start () {
         if (!instance)
         {
+            AkSoundEngine.PostEvent("StopAll", gameObject);
             instance = this;
             maxAliens = GameObject.FindGameObjectsWithTag("Alien").Length;
             aliveAliens = GameObject.FindGameObjectsWithTag("Alien").Length;

@@ -4,6 +4,7 @@ Event	ID	Name			Wwise Object Path	Notes
 	1529951376	Hazard_BrokenIce			\Default Work Unit\Hazard_BrokenIce	
 	1625617807	Alien_Dead			\Default Work Unit\Alien_Dead	
 	2814314654	Trap_Hit			\Default Work Unit\Trap_Hit	
+	3086540886	StopAll			\Default Work Unit\StopAll	
 	3998872777	Music_Background			\Default Work Unit\Music_Background	
 
 In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size

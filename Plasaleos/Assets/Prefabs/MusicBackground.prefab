@@ -20,7 +20,8 @@ GameObject:
   m_Component:
   - component: {fileID: 4448588368760502}
   - component: {fileID: 114023454859716008}
-  - component: {fileID: 114500797843892788}
+  - component: {fileID: 114200867369737450}
+  - component: {fileID: 114199641825392180}
   m_Layer: 0
   m_Name: MusicBackground
   m_TagString: Untagged
@@ -62,7 +63,29 @@ MonoBehaviour:
     positionOffset: {x: 0, y: 0, z: 0}
   m_posOffsetData: {fileID: 0}
   listenerMask: 1
---- !u!114 &114500797843892788
+--- !u!114 &114199641825392180
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1731650586169528}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f9b21e11879ccf74f97b397f201916a3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  triggerList: 958ca0ea
+  useOtherObject: 0
+  actionOnEventType: 0
+  curveInterpolation: 4
+  enableActionOnEvent: 0
+  eventID: -1208426410
+  m_callbackData: {fileID: 0}
+  playingId: 0
+  soundEmitterObject: {fileID: 0}
+  transitionDuration: 0
+  valueGuid: 464799cd1b8c37419beb0b4b42009d30
+--- !u!114 &114200867369737450
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
