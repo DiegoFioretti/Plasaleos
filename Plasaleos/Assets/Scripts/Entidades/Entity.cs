@@ -4,6 +4,7 @@
 public class Entity : MonoBehaviour {
     [SerializeField] bool m_facingRight = true;
     [SerializeField] LayerMask m_groundLayer;
+    [HideInInspector]
     public Rigidbody2D m_rb;
     float m_footOffset;
     public LayerMask GroundLayer { get { return m_groundLayer; } }
@@ -16,6 +17,16 @@ public class Entity : MonoBehaviour {
 
     protected void SetStateActive(IState state, bool active) {
         (state as MonoBehaviour).enabled = active;
+    }
+
+    private void OnValidate() {
+        Vector3 scale = transform.localScale;
+        if (!m_facingRight) {
+            scale.x = -1;
+        } else {
+            scale.x = 1;
+        }
+        transform.localScale = scale;
     }
 
     public void Flip() {

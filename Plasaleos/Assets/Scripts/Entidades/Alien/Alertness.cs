@@ -1,6 +1,5 @@
 ﻿using UnityEngine;
 
-[RequireComponent(typeof(Entity))]
 public class Alertness : MonoBehaviour, IState {
     [SerializeField] float m_duration;
     Entity m_entity;
