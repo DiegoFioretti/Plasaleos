@@ -1,6 +1,5 @@
 using UnityEngine;
 
-[RequireComponent(typeof(Entity))]
 public class Movement : MonoBehaviour, IState {
     [SerializeField] float m_speed;
     [SerializeField] float m_detachAngle;
@@ -75,4 +74,7 @@ public class Movement : MonoBehaviour, IState {
         m_wasGrounded = m_grounded;
     }
 
+    public Vector2 GetTransformRight() {
+        return m_transformRight;
+    }
 }

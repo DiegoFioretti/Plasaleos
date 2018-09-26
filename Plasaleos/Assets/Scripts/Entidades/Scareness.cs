@@ -1,6 +1,5 @@
 ﻿using UnityEngine;
 
-[RequireComponent(typeof(Entity))]
 public class Scareness : MonoBehaviour, IState {
     [SerializeField] float m_duration;
     [SerializeField] float m_speed;
