@@ -27,6 +27,7 @@ GameObject:
   - component: {fileID: 114309125043880844}
   - component: {fileID: 114133663572744894}
   - component: {fileID: 114278303731729332}
+  - component: {fileID: 114679019257667768}
   m_Layer: 11
   m_Name: Alien
   m_TagString: Alien
@@ -147,6 +148,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_speed: 8
   m_detachAngle: 45
+--- !u!114 &114679019257667768
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1256088697549998}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5439db5161fbb8e4caa2c7ea41c891ee, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  timePerSteps: 0.5
+  defaultSound: Alien_Step
 --- !u!212 &212592919974544110
 SpriteRenderer:
   m_ObjectHideFlags: 1

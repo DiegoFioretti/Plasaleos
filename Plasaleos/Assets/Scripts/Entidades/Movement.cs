@@ -77,4 +77,9 @@ public class Movement : MonoBehaviour, IState {
     public Vector2 GetTransformRight() {
         return m_transformRight;
     }
+
+    public bool IsGrounded()
+    {
+        return m_grounded;
+    }
 }
