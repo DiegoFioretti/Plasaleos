@@ -29,7 +29,7 @@ GameObject:
   - component: {fileID: 114924100776560206}
   - component: {fileID: 114145121882758582}
   - component: {fileID: 114230149307523228}
-  m_Layer: 11
+  m_Layer: 13
   m_Name: Animal
   m_TagString: Alien
   m_Icon: {fileID: 0}
@@ -43,7 +43,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1636643471779464}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 8.33, y: -4.9, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -90,25 +90,25 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1636643471779464}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 755c14003ee830f4fa924f9792f71d56, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_speedToAwake: 0
+  m_speedToAwake: 5
 --- !u!114 &114230149307523228
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1636643471779464}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e58b49fd73bd0954a89ee5156abe73dc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_duration: 0
-  m_speed: 0
+  m_duration: 3
+  m_speed: 12
 --- !u!114 &114273706184836342
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -123,12 +123,12 @@ MonoBehaviour:
   m_facingRight: 1
   m_groundLayer:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 1024
   m_rb: {fileID: 0}
   m_prayLayer:
     serializedVersion: 2
-    m_Bits: 0
-  m_detectionDistance: 0
+    m_Bits: 2048
+  m_detectionDistance: 8
   m_sleeper: 0
 --- !u!114 &114281856487522724
 MonoBehaviour:
@@ -141,8 +141,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5df70b99a363225458f81152d9fae031, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_speed: 0
-  m_detachAngle: 0
+  m_speed: 7
+  m_detachAngle: 45
 --- !u!114 &114510140488934530
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -154,20 +154,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 788c413ee727d3f47ae36cedeaf1a840, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_chaseSpeed: 0
-  m_reachDistance: 0
+  m_chaseSpeed: 12
+  m_reachDistance: 1
 --- !u!114 &114696706292216560
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1636643471779464}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 3e74d7734f7260e4894476ae6621e55f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_duration: 0
+  m_duration: 3
 --- !u!114 &114924100776560206
 MonoBehaviour:
   m_ObjectHideFlags: 1

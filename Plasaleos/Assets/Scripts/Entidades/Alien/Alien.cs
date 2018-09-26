@@ -50,6 +50,12 @@ sealed class Alien : Entity {
         m_scared = true;
     }
 
+    public void Scare(bool enemyFacingRight) {
+        if (enemyFacingRight != FacingRight) {
+            m_scared = true;
+        }
+    }
+
     [ContextMenu("Alert")]
     public void Alert() {
         if ((m_currState as MonoBehaviour) == GetComponent<Movement>()) {

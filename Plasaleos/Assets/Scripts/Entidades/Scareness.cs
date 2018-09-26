@@ -12,6 +12,7 @@ public class Scareness : MonoBehaviour, IState {
 
     private void OnEnable() {
         m_timeLeft = m_duration;
+        m_entity.m_rb.velocity = Vector2.zero;
         m_entity.Flip();
     }
 
