@@ -3,12 +3,13 @@
 	<UserProjectSettingsInfo>
 		<UserProjectSettings Name="" ID="{45F71BAB-4A7B-45AF-9477-1FFE9F3965AB}">
 			<PropertyList>
-				<Property Name="AudioFilesImporter\Path" Type="string" Value="D:\Documents\Project-Plasaleos\Plasaleos\Plasaleos_WwiseProject\Originals\SFX"/>
+				<Property Name="AudioFilesImporter\Path" Type="string" Value="D:\Documents\Project-Plasaleos\Plasaleos\Plasaleos_WwiseProject\Originals\Music"/>
 				<Property Name="Event Action List\{28012C5D-20AD-49C4-95AC-004C51463F82}\x64_Expand States" Type="string" Value=""/>
 				<Property Name="Event Action List\{36C6BD32-D375-470A-BAFE-F604780783BD}\x64_Expand States" Type="string" Value=""/>
 				<Property Name="Event Action List\{603FBC00-5053-4320-AB45-7BB17981DB5C}\x64_Expand States" Type="string" Value=""/>
 				<Property Name="Event Action List\{620FC1D5-D532-42D5-A8F7-66EC3581CAC9}\x64_Expand States" Type="string" Value=""/>
 				<Property Name="Event Action List\{64E4E525-07E3-4063-A2C9-04468A96A04C}\x64_Expand States" Type="string" Value=""/>
+				<Property Name="Event Action List\{995FBD95-1BA5-4A6E-BEED-CF65E32347E6}\x64_Expand States" Type="string" Value=""/>
 				<Property Name="Event Action List\{C7DCDA4D-2900-4A5D-82EC-7258283A74A8}\x64_Expand States" Type="string" Value=""/>
 				<Property Name="Event Action List\{CD994746-8C1B-4137-9BEB-0B4B42009D30}\x64_Expand States" Type="string" Value=""/>
 				<Property Name="EventView\FilterMode1" Type="int32" Value="2"/>

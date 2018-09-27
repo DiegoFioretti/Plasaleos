@@ -64,10 +64,25 @@
 						<Action Name="" ID="{B0A0951A-8418-4B88-9F47-0CCC6978334D}" ShortID="709128091">
 							<PropertyList>
 								<Property Name="ActionType" Type="int16" Value="1"/>
+								<Property Name="Inclusion" Type="bool">
+									<ValueList>
+										<Value>False</Value>
+									</ValueList>
+								</Property>
 							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Target">
 									<ObjectRef Name="PlasaleosMusicProto" ID="{C9BA98E9-737A-4A88-A321-31D109A9FACA}" WorkUnitID="{A55CF131-BE7B-46A7-AA13-13FE3AA2C8EB}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{0EAB486E-4CEA-4951-9F9A-1805003B7DDC}" ShortID="705580296">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="PlasaleosMusicProto-04" ID="{B2668A1B-6578-4332-B4AC-5689E9700F7E}" WorkUnitID="{A55CF131-BE7B-46A7-AA13-13FE3AA2C8EB}"/>
 								</Reference>
 							</ReferenceList>
 						</Action>
@@ -94,6 +109,31 @@
 								<Property Name="ActionType" Type="int16" Value="3"/>
 							</PropertyList>
 							<ReferenceList/>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Music_Victory" ID="{995FBD95-1BA5-4A6E-BEED-CF65E32347E6}">
+					<ChildrenList>
+						<Action Name="" ID="{7933228E-DB95-438C-AB11-35AE20EBB274}" ShortID="1049595982">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Victory" ID="{6A06E811-D098-4E5D-9925-02314A2A3C5D}" WorkUnitID="{A55CF131-BE7B-46A7-AA13-13FE3AA2C8EB}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{6B575E7D-8AEC-4408-96B3-308AFA18AF46}" ShortID="271025303">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="1"/>
+								<Property Name="Delay" Type="Real64" Value="8.018"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="PlasaleosMusicProto-04" ID="{B2668A1B-6578-4332-B4AC-5689E9700F7E}" WorkUnitID="{A55CF131-BE7B-46A7-AA13-13FE3AA2C8EB}"/>
+								</Reference>
+							</ReferenceList>
 						</Action>
 					</ChildrenList>
 				</Event>

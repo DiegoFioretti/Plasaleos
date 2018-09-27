@@ -12,6 +12,7 @@
 						<ObjectRef Name="Alien_Dead" ID="{36C6BD32-D375-470A-BAFE-F604780783BD}" WorkUnitID="{4A38E2ED-B942-4D81-920F-2F7810173794}" Filter="7" Origin="Manual"/>
 						<ObjectRef Name="Hazard_BrokenIce" ID="{28012C5D-20AD-49C4-95AC-004C51463F82}" WorkUnitID="{4A38E2ED-B942-4D81-920F-2F7810173794}" Filter="7" Origin="Manual"/>
 						<ObjectRef Name="Alien_Step" ID="{C7DCDA4D-2900-4A5D-82EC-7258283A74A8}" WorkUnitID="{4A38E2ED-B942-4D81-920F-2F7810173794}" Filter="7" Origin="Manual"/>
+						<ObjectRef Name="Music_Victory" ID="{995FBD95-1BA5-4A6E-BEED-CF65E32347E6}" WorkUnitID="{4A38E2ED-B942-4D81-920F-2F7810173794}" Filter="7" Origin="Manual"/>
 					</ObjectInclusionList>
 					<ObjectExclusionList/>
 					<GameSyncExclusionList/>
