@@ -4,6 +4,7 @@ public class Death : MonoBehaviour, IState {
 
     public void StateUpdate(out IState nextState) {
         //triggerAnimation
+        GetComponent<Animator>().SetBool("Dead", true);
         Invoke("Die", 1f /*animationDuration*/ );
         nextState = this;
     }
@@ -11,6 +12,10 @@ public class Death : MonoBehaviour, IState {
     public void StateFixedUpdate() { }
 
     void Die() {
-        gameObject.SetActive(false);
+        if (gameObject.activeSelf)
+        {
+            gameObject.SetActive(false);
+            LevelManager.instance.AliveAliens--;
+        }
     }
 }

@@ -52,6 +52,8 @@ public class Movement : MonoBehaviour, IState {
                 m_entity.m_rb.velocity) * m_speed * 0.707f;
             //multiply by sqr(2) so that velocity.magnitude ~= m_speed
         }
+        
+        GetComponent<Animator>().SetFloat("Speed", m_entity.m_rb.velocity.magnitude/m_speed);
         nextState = this;
     }
 

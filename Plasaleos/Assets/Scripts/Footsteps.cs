@@ -4,9 +4,6 @@ using UnityEngine;
 
 public class Footsteps : MonoBehaviour {
 
-    [SerializeField] private float timePerSteps;
-    private float timer = 0;
-
     public string defaultSound;
 
     private Movement mov;
@@ -20,12 +17,16 @@ public class Footsteps : MonoBehaviour {
     void Update () {
         if (mov.IsGrounded())
         {
-            timer += Time.deltaTime;
-            if (timer > timePerSteps)
-            {
-                AkSoundEngine.PostEvent(defaultSound, gameObject);
-                timer = 0;
-            }
+            GetComponent<Animator>().SetBool("Falling", false);
+        }
+        else
+        {
+            GetComponent<Animator>().SetBool("Falling", true);
         }
 	}
+
+    public void Step()
+    {
+        AkSoundEngine.PostEvent(defaultSound, gameObject);
+    }
 }
