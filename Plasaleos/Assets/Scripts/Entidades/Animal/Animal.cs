@@ -44,7 +44,7 @@ public class Animal : Entity {
             m_scared = false;
         } else if (m_currState == (m_movementState as IState)) {
             RaycastHit2D hit;
-            if (hit = Physics2D.Raycast(transform.position, transform.right * transform.localScale.z,
+            if (hit = Physics2D.Raycast(transform.position, transform.right * transform.localScale.x,
                     m_detectionDistance, m_prayLayer)) {
 
                 Hunt hunt = GetComponent<Hunt>();
@@ -60,7 +60,7 @@ public class Animal : Entity {
     }
 
     public bool SearchPrey(out RaycastHit2D hit) {
-        hit = Physics2D.Raycast(transform.position, transform.right * transform.localScale.z,
+        hit = Physics2D.Raycast(transform.position, transform.right * transform.localScale.x,
             m_detectionDistance, m_prayLayer);
         return (hit != false);
     }
