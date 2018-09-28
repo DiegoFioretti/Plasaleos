@@ -13,57 +13,47 @@ public class LevelManager : MonoBehaviour {
 
     private int rescuedAliens = 0;
 
-    public int RescuedAliens
-    {
-        get
-        {
+    public int RescuedAliens {
+        get {
             return rescuedAliens;
         }
 
-        set
-        {
+        set {
             rescuedAliens = value;
         }
     }
 
-    public int AliveAliens
-    {
-        get{
+    public int AliveAliens {
+        get {
             return aliveAliens;
         }
-        set{
+        set {
             aliveAliens = value;
         }
     }
 
     // Use this for initialization
-    void Start () {
-        if (!instance)
-        {
+    void Start() {
+        if (!instance) {
             AkSoundEngine.PostEvent("StopAll", gameObject);
             instance = this;
             maxAliens = GameObject.FindGameObjectsWithTag("Alien").Length;
             aliveAliens = GameObject.FindGameObjectsWithTag("Alien").Length;
-        }
-        else
-        {
+            Screen.sleepTimeout = SleepTimeout.NeverSleep;
+        } else {
             Destroy(this);
         }
-	}
+    }
 
     private void Update() {
-        if(rescuedAliens >= aliveAliens)
-        {
+        if (rescuedAliens >= aliveAliens) {
             GameManager.instance.SetAlienCount(rescuedAliens, SceneManager.GetActiveScene().name);
             //SceneManager.LoadScene("MainMenu");
             //GameObject.FindGameObjectWithTag("EndScreen").SetActive(true);
             var fooGroup = Resources.FindObjectsOfTypeAll<GameObject>();
-            if (fooGroup.Length > 0)
-            {
-                for(int i = 0; i < fooGroup.Length; i++)
-                {
-                    if(fooGroup[i].tag == "EndScreen")
-                    {
+            if (fooGroup.Length > 0) {
+                for (int i = 0; i < fooGroup.Length; i++) {
+                    if (fooGroup[i].tag == "EndScreen") {
                         fooGroup[i].SetActive(true);
                         i = fooGroup.Length;
                     }
