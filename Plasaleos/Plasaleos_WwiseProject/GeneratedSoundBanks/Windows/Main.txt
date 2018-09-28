@@ -10,7 +10,7 @@ Event	ID	Name			Wwise Object Path	Notes
 
 In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	561358359	Dead	D:\Documents\Project-Plasaleos\Plasaleos\Plasaleos_WwiseProject\.cache\Windows\SFX\Dead_56D34C19.wem		\Actor-Mixer Hierarchy\Default Work Unit\Dead		91162
-	570449265	PlasaleosMusicProto-04	D:\Documents\Project-Plasaleos\Plasaleos\Plasaleos_WwiseProject\.cache\Windows\SFX\PlasaleosMusicProto-04_8956FC97.wem		\Actor-Mixer Hierarchy\Default Work Unit\PlasaleosMusicProto-04		28225344
+	570449265	PlasaleosMusicProto-04	D:\Documents\Project-Plasaleos\Plasaleos\Plasaleos_WwiseProject\.cache\Windows\SFX\PlasaleosMusicProto-04_3CBE96A5.wem		\Actor-Mixer Hierarchy\Default Work Unit\PlasaleosMusicProto-04		14112040
 	599664353	Spike	D:\Documents\Project-Plasaleos\Plasaleos\Plasaleos_WwiseProject\.cache\Windows\SFX\Spike_56D34C19.wem		\Actor-Mixer Hierarchy\Default Work Unit\Spike		23826
 	794205814	Step	D:\Documents\Project-Plasaleos\Plasaleos\Plasaleos_WwiseProject\.cache\Windows\SFX\Step_56D34C19.wem		\Actor-Mixer Hierarchy\Default Work Unit\Step		4160
 	801562404	Ice	D:\Documents\Project-Plasaleos\Plasaleos\Plasaleos_WwiseProject\.cache\Windows\SFX\Ice_22627D18.wem		\Actor-Mixer Hierarchy\Default Work Unit\Ice		67996

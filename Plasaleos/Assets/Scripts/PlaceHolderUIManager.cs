@@ -24,5 +24,19 @@ public class PlaceHolderUIManager : MonoBehaviour {
     {
         SceneManager.LoadScene("testLevel_04");
     }
+    
+    public void LoadLevel(string level)
+    {
+        SceneManager.LoadScene(level);
+    }
 
+    public void ResetLevel()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+    }
+
+    public void ExitGame()
+    {
+        Application.Quit();
+    }
 }

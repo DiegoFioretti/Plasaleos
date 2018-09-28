@@ -114,6 +114,13 @@
 				</Event>
 				<Event Name="Music_Victory" ID="{995FBD95-1BA5-4A6E-BEED-CF65E32347E6}">
 					<ChildrenList>
+						<Action Name="" ID="{FD9FCD0B-28F3-4601-83C9-B595D3630D89}" ShortID="1096775">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="3"/>
+								<Property Name="Scope" Type="int16" Value="1"/>
+							</PropertyList>
+							<ReferenceList/>
+						</Action>
 						<Action Name="" ID="{7933228E-DB95-438C-AB11-35AE20EBB274}" ShortID="1049595982">
 							<PropertyList>
 								<Property Name="ActionType" Type="int16" Value="1"/>

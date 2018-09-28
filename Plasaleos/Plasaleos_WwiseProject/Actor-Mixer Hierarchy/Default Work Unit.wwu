@@ -265,6 +265,9 @@
 					</ReferenceList>
 					<ChildrenList>
 						<AudioFileSource Name="PlasaleosMusicProto-04" ID="{C74D31E4-254F-4F94-AA16-B4D428632F8B}" ShortID="570449265">
+							<PropertyList>
+								<Property Name="TrimEnd" Type="Real64" Value="79.9998722510188"/>
+							</PropertyList>
 							<Language>SFX</Language>
 							<AudioFile>PlasaleosMusicProto-04.wav</AudioFile>
 						</AudioFileSource>

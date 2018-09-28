@@ -9,6 +9,7 @@ TagManager:
   - LevelManager
   - Trap
   - Animal
+  - EndScreen
   layers:
   - Default
   - TransparentFX
