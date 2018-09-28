@@ -56,3 +56,6 @@ TagManager:
   - name: Character
     uniqueID: 1015019679
     locked: 0
+  - name: Filter
+    uniqueID: 699154173
+    locked: 0
