@@ -116,10 +116,16 @@
 					<ChildrenList>
 						<Action Name="" ID="{FD9FCD0B-28F3-4601-83C9-B595D3630D89}" ShortID="1096775">
 							<PropertyList>
-								<Property Name="ActionType" Type="int16" Value="3"/>
+								<Property Name="ActionType" Type="int16" Value="12"/>
+								<Property Name="FadeTime" Type="Real64" Value="0.5"/>
 								<Property Name="Scope" Type="int16" Value="1"/>
+								<Property Name="Volume" Type="Real64" Value="-96"/>
 							</PropertyList>
-							<ReferenceList/>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="PlasaleosMusicProto-04" ID="{B2668A1B-6578-4332-B4AC-5689E9700F7E}" WorkUnitID="{A55CF131-BE7B-46A7-AA13-13FE3AA2C8EB}"/>
+								</Reference>
+							</ReferenceList>
 						</Action>
 						<Action Name="" ID="{7933228E-DB95-438C-AB11-35AE20EBB274}" ShortID="1049595982">
 							<PropertyList>
@@ -135,6 +141,25 @@
 							<PropertyList>
 								<Property Name="ActionType" Type="int16" Value="1"/>
 								<Property Name="Delay" Type="Real64" Value="8.018"/>
+								<Property Name="Inclusion" Type="bool">
+									<ValueList>
+										<Value>False</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="PlasaleosMusicProto-04" ID="{B2668A1B-6578-4332-B4AC-5689E9700F7E}" WorkUnitID="{A55CF131-BE7B-46A7-AA13-13FE3AA2C8EB}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{1F58DD79-7896-4E76-B5DB-DEB1B289F394}" ShortID="305436613">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="12"/>
+								<Property Name="Delay" Type="Real64" Value="8.018"/>
+								<Property Name="FadeTime" Type="Real64" Value="1.5"/>
+								<Property Name="Scope" Type="int16" Value="1"/>
+								<Property Name="Volume" Type="Real64" Value="-5"/>
 							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Target">
