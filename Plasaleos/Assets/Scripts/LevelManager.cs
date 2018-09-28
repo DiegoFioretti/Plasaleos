@@ -40,6 +40,7 @@ public class LevelManager : MonoBehaviour {
     void Start () {
         if (!instance)
         {
+            AkSoundEngine.PostEvent("StopAll", gameObject);
             instance = this;
             maxAliens = GameObject.FindGameObjectsWithTag("Alien").Length;
             aliveAliens = GameObject.FindGameObjectsWithTag("Alien").Length;
@@ -54,7 +55,20 @@ public class LevelManager : MonoBehaviour {
         if(rescuedAliens >= aliveAliens)
         {
             GameManager.instance.SetAlienCount(rescuedAliens, SceneManager.GetActiveScene().name);
-            SceneManager.LoadScene("MainMenu");
+            //SceneManager.LoadScene("MainMenu");
+            //GameObject.FindGameObjectWithTag("EndScreen").SetActive(true);
+            var fooGroup = Resources.FindObjectsOfTypeAll<GameObject>();
+            if (fooGroup.Length > 0)
+            {
+                for(int i = 0; i < fooGroup.Length; i++)
+                {
+                    if(fooGroup[i].tag == "EndScreen")
+                    {
+                        fooGroup[i].SetActive(true);
+                        i = fooGroup.Length;
+                    }
+                }
+            }
         }
     }
 }

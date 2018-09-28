@@ -1,0 +1,17 @@
+Event	ID	Name			Wwise Object Path	Notes
+	523915378	Alien_Rescued			\Default Work Unit\Alien_Rescued	
+	1249666675	Alien_Step			\Default Work Unit\Alien_Step	
+	1529951376	Hazard_BrokenIce			\Default Work Unit\Hazard_BrokenIce	
+	1625617807	Alien_Dead			\Default Work Unit\Alien_Dead	
+	2814314654	Trap_Hit			\Default Work Unit\Trap_Hit	
+	3086540886	StopAll			\Default Work Unit\StopAll	
+	3998872777	Music_Background			\Default Work Unit\Music_Background	
+
+In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
+	561358359	Dead	D:\Documents\Project-Plasaleos\Plasaleos\Plasaleos_WwiseProject\.cache\iOS\SFX\Dead_56D34C19.wem		\Actor-Mixer Hierarchy\Default Work Unit\Dead		91162
+	599664353	Spike	D:\Documents\Project-Plasaleos\Plasaleos\Plasaleos_WwiseProject\.cache\iOS\SFX\Spike_56D34C19.wem		\Actor-Mixer Hierarchy\Default Work Unit\Spike		23826
+	794205814	Step	D:\Documents\Project-Plasaleos\Plasaleos\Plasaleos_WwiseProject\.cache\iOS\SFX\Step_56D34C19.wem		\Actor-Mixer Hierarchy\Default Work Unit\Step		4160
+	801562404	Ice	D:\Documents\Project-Plasaleos\Plasaleos\Plasaleos_WwiseProject\.cache\iOS\SFX\Ice_22627D18.wem		\Actor-Mixer Hierarchy\Default Work Unit\Ice		67996
+	966999040	PlasaleosMusicProto	D:\Documents\Project-Plasaleos\Plasaleos\Plasaleos_WwiseProject\.cache\iOS\SFX\PlasaleosMusicProto_8956FC97.wem		\Actor-Mixer Hierarchy\Default Work Unit\PlasaleosMusicProto		5646656
+	1002178581	Rescued	D:\Documents\Project-Plasaleos\Plasaleos\Plasaleos_WwiseProject\.cache\iOS\SFX\Rescued_56D34C19.wem		\Actor-Mixer Hierarchy\Default Work Unit\Rescued		41972
+

@@ -11,6 +11,7 @@ public class GlassTrigger : MonoBehaviour {
         GameObject go = collision.gameObject;
         if (go.GetComponent<Rigidbody2D>().velocity.magnitude > minForce)
         {
+            AkSoundEngine.PostEvent("Hazard_BrokenIce", gameObject);
             Destroy(gameObject);
         }
     }

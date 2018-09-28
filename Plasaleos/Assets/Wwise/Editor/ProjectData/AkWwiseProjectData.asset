@@ -1,0 +1,135 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fb8e527b4909bd4418873a3578f27589, type: 3}
+  m_Name: AkWwiseProjectData
+  m_EditorClassIdentifier: 
+  autoPopulateEnabled: 1
+  CurrentPluginConfig: 
+  m_lastPopulateTimePart2: 0
+  m_lastPopulateTimePsrt1: 0
+  AcousticTextureWwu:
+  - Guid: '{519E923D-51B7-4609-888B-E1A1E08CE2E6}'
+    m_lastTimePart2: -1999234230
+    m_lastTimePsrt1: -1370112644
+    ParentPhysicalPath: 
+    PhysicalPath: Virtual Acoustics\Default Work Unit.wwu
+    List: []
+  AuxBusWwu:
+  - Guid: '{7F63C48F-B99F-442A-AE38-9D097CD4650E}'
+    m_lastTimePart2: -1999234230
+    m_lastTimePsrt1: -1376285931
+    ParentPhysicalPath: 
+    PhysicalPath: Master-Mixer Hierarchy\Default Work Unit.wwu
+    List: []
+  BankWwu:
+  - Guid: '{DA99B120-4987-40C8-A748-4D7A84B51CDE}'
+    m_lastTimePart2: -1999234230
+    m_lastTimePsrt1: -1370162595
+    ParentPhysicalPath: 
+    PhysicalPath: SoundBanks\Default Work Unit.wwu
+    List:
+    - Guid: 1ffba5c0f289204e8078af3fda6b82e5
+      ID: -1133058374
+      Name: Main
+      Path: Default Work Unit\Main
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Main
+        ObjectType: 7
+  EventWwu:
+  - Guid: '{4A38E2ED-B942-4D81-920F-2F7810173794}'
+    m_lastTimePart2: -1999234230
+    m_lastTimePsrt1: -1377974187
+    ParentPhysicalPath: 
+    PhysicalPath: Events\Default Work Unit.wwu
+    List:
+    - Guid: 32bdc63675d30a47bafef604780783bd
+      ID: 1625617807
+      Name: Alien_Dead
+      Path: Default Work Unit\Alien_Dead
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Alien_Dead
+        ObjectType: 3
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - Guid: 25e5e464e3076340a2c904468a96a04c
+      ID: 523915378
+      Name: Alien_Rescued
+      Path: Default Work Unit\Alien_Rescued
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Alien_Rescued
+        ObjectType: 3
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - Guid: 4ddadcc700295d4a82ec7258283a74a8
+      ID: 1249666675
+      Name: Alien_Step
+      Path: Default Work Unit\Alien_Step
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Alien_Step
+        ObjectType: 3
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - Guid: 5d2c0128ad20c44995ac004c51463f82
+      ID: 1529951376
+      Name: Hazard_BrokenIce
+      Path: Default Work Unit\Hazard_BrokenIce
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Hazard_BrokenIce
+        ObjectType: 3
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+  ExpandedItems:
+  - /Plasaleos_WwiseProject
+  - /Plasaleos_WwiseProject/Events
+  - /Plasaleos_WwiseProject/Events/Default Work Unit
+  - /Plasaleos_WwiseProject/SoundBanks
+  RtpcWwu:
+  - Guid: '{1E848DD2-F7C4-4122-BB04-0E0416EE2C3C}'
+    m_lastTimePart2: -1999234230
+    m_lastTimePsrt1: -1378153552
+    ParentPhysicalPath: 
+    PhysicalPath: Game Parameters\Default Work Unit.wwu
+    List: []
+  StateWwu:
+  - Guid: '{F6911393-E6F5-4FF7-B6FB-C56AFA0B180A}'
+    m_lastTimePart2: -1999234230
+    m_lastTimePsrt1: -1370342117
+    ParentPhysicalPath: 
+    PhysicalPath: States\Default Work Unit.wwu
+    List: []
+  SwitchWwu:
+  - Guid: '{1C9D1679-9C9D-45AF-ACBF-6C92C7FA3C30}'
+    m_lastTimePart2: -1999234230
+    m_lastTimePsrt1: -1370332147
+    ParentPhysicalPath: 
+    PhysicalPath: Switches\Default Work Unit.wwu
+    List: []
+  TriggerWwu:
+  - Guid: '{E604AF76-AEF8-461A-8B3D-65F0537814F0}'
+    m_lastTimePart2: -1999234230
+    m_lastTimePsrt1: -1370132675
+    ParentPhysicalPath: 
+    PhysicalPath: Triggers\Default Work Unit.wwu
+    List: []

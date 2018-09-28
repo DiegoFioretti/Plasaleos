@@ -7,6 +7,9 @@ TagManager:
   - Alien
   - Pelota
   - LevelManager
+  - Trap
+  - Animal
+  - EndScreen
   layers:
   - Default
   - TransparentFX
@@ -21,7 +24,7 @@ TagManager:
   - Terrain
   - Alien
   - DeathTrigger
-  - 
+  - Animal
   - 
   - 
   - 
@@ -52,4 +55,7 @@ TagManager:
     locked: 0
   - name: Character
     uniqueID: 1015019679
+    locked: 0
+  - name: Filter
+    uniqueID: 699154173
     locked: 0

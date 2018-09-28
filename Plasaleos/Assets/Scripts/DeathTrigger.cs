@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class DeathTrigger : MonoBehaviour
 {
-
     LevelManager manager;
 
     private void Start()
@@ -17,6 +16,11 @@ public class DeathTrigger : MonoBehaviour
         if (other.tag == "Alien")
         {
             other.gameObject.SetActive(false);
+            AkSoundEngine.PostEvent("Alien_Dead", gameObject);
+            if(tag == "Trap")
+            {
+                AkSoundEngine.PostEvent("Trap_Hit", gameObject);
+            }
             manager.AliveAliens--;
         }
 

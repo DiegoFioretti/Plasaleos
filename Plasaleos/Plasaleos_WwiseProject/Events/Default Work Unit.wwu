@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{4A38E2ED-B942-4D81-920F-2F7810173794}" SchemaVersion="89">
+	<Events>
+		<WorkUnit Name="Default Work Unit" ID="{4A38E2ED-B942-4D81-920F-2F7810173794}" PersistMode="Standalone">
+			<ChildrenList>
+				<Event Name="Alien_Step" ID="{C7DCDA4D-2900-4A5D-82EC-7258283A74A8}">
+					<ChildrenList>
+						<Action Name="" ID="{6FC3C117-2B91-47F8-B475-B69105E531AE}" ShortID="1024649340">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Step" ID="{A2C67378-5A01-4E17-B801-3CE767936AC1}" WorkUnitID="{A55CF131-BE7B-46A7-AA13-13FE3AA2C8EB}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Alien_Rescued" ID="{64E4E525-07E3-4063-A2C9-04468A96A04C}">
+					<ChildrenList>
+						<Action Name="" ID="{5DE09EE8-6A4E-4E41-B099-0578938F65BC}" ShortID="748478697">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Rescued" ID="{51BEDD35-07C1-4EFE-ACB9-D1EF57B33AEC}" WorkUnitID="{A55CF131-BE7B-46A7-AA13-13FE3AA2C8EB}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Alien_Dead" ID="{36C6BD32-D375-470A-BAFE-F604780783BD}">
+					<ChildrenList>
+						<Action Name="" ID="{A84109B6-50E3-4A53-89A3-5EB09BA3BC1D}" ShortID="87625137">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Dead" ID="{A549E808-89F6-482A-93B9-9AD6E9EBD339}" WorkUnitID="{A55CF131-BE7B-46A7-AA13-13FE3AA2C8EB}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Hazard_BrokenIce" ID="{28012C5D-20AD-49C4-95AC-004C51463F82}">
+					<ChildrenList>
+						<Action Name="" ID="{8E290839-91A9-4C30-A9A5-CFB17B702A1B}" ShortID="500335622">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Ice" ID="{C6A9CF61-6AFE-4DC0-A598-FE2B4D4D444D}" WorkUnitID="{A55CF131-BE7B-46A7-AA13-13FE3AA2C8EB}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Music_Background" ID="{620FC1D5-D532-42D5-A8F7-66EC3581CAC9}">
+					<ChildrenList>
+						<Action Name="" ID="{B0A0951A-8418-4B88-9F47-0CCC6978334D}" ShortID="709128091">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="1"/>
+								<Property Name="Inclusion" Type="bool">
+									<ValueList>
+										<Value>False</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="PlasaleosMusicProto" ID="{C9BA98E9-737A-4A88-A321-31D109A9FACA}" WorkUnitID="{A55CF131-BE7B-46A7-AA13-13FE3AA2C8EB}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{0EAB486E-4CEA-4951-9F9A-1805003B7DDC}" ShortID="705580296">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="PlasaleosMusicProto-04" ID="{B2668A1B-6578-4332-B4AC-5689E9700F7E}" WorkUnitID="{A55CF131-BE7B-46A7-AA13-13FE3AA2C8EB}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Trap_Hit" ID="{603FBC00-5053-4320-AB45-7BB17981DB5C}">
+					<ChildrenList>
+						<Action Name="" ID="{A11C01BC-0250-4953-A1FD-0740DAA38EC2}" ShortID="886036122">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Spike" ID="{E046EB98-9462-449A-A4FF-FB59010FB333}" WorkUnitID="{A55CF131-BE7B-46A7-AA13-13FE3AA2C8EB}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="StopAll" ID="{CD994746-8C1B-4137-9BEB-0B4B42009D30}">
+					<ChildrenList>
+						<Action Name="" ID="{D2683DBB-5A4D-4BD1-86FC-A1E876703E6B}" ShortID="465081188">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="3"/>
+							</PropertyList>
+							<ReferenceList/>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Music_Victory" ID="{995FBD95-1BA5-4A6E-BEED-CF65E32347E6}">
+					<ChildrenList>
+						<Action Name="" ID="{FD9FCD0B-28F3-4601-83C9-B595D3630D89}" ShortID="1096775">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="12"/>
+								<Property Name="FadeTime" Type="Real64" Value="0.5"/>
+								<Property Name="Scope" Type="int16" Value="1"/>
+								<Property Name="Volume" Type="Real64" Value="-96"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="PlasaleosMusicProto-04" ID="{B2668A1B-6578-4332-B4AC-5689E9700F7E}" WorkUnitID="{A55CF131-BE7B-46A7-AA13-13FE3AA2C8EB}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{7933228E-DB95-438C-AB11-35AE20EBB274}" ShortID="1049595982">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Victory" ID="{6A06E811-D098-4E5D-9925-02314A2A3C5D}" WorkUnitID="{A55CF131-BE7B-46A7-AA13-13FE3AA2C8EB}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{6B575E7D-8AEC-4408-96B3-308AFA18AF46}" ShortID="271025303">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="1"/>
+								<Property Name="Delay" Type="Real64" Value="8.018"/>
+								<Property Name="Inclusion" Type="bool">
+									<ValueList>
+										<Value>False</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="PlasaleosMusicProto-04" ID="{B2668A1B-6578-4332-B4AC-5689E9700F7E}" WorkUnitID="{A55CF131-BE7B-46A7-AA13-13FE3AA2C8EB}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{1F58DD79-7896-4E76-B5DB-DEB1B289F394}" ShortID="305436613">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="12"/>
+								<Property Name="Delay" Type="Real64" Value="8.018"/>
+								<Property Name="FadeTime" Type="Real64" Value="1.5"/>
+								<Property Name="Scope" Type="int16" Value="1"/>
+								<Property Name="Volume" Type="Real64" Value="-5"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="PlasaleosMusicProto-04" ID="{B2668A1B-6578-4332-B4AC-5689E9700F7E}" WorkUnitID="{A55CF131-BE7B-46A7-AA13-13FE3AA2C8EB}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+			</ChildrenList>
+		</WorkUnit>
+	</Events>
+</WwiseDocument>
