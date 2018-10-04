@@ -63,7 +63,7 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 2
+  m_GravityScale: 3
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
@@ -153,7 +153,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_duration: 2
-  m_speed: 10
+  m_speed: 8
 --- !u!114 &114552153219652784
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -165,7 +165,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5df70b99a363225458f81152d9fae031, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_speed: 8
+  m_speed: 7
   m_detachAngle: 45
 --- !u!114 &114679019257667768
 MonoBehaviour:
@@ -178,7 +178,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5439db5161fbb8e4caa2c7ea41c891ee, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  timePerSteps: 0.5
   defaultSound: Alien_Step
 --- !u!212 &212592919974544110
 SpriteRenderer:

@@ -8,15 +8,14 @@ public class GyroController : MonoBehaviour {
     private bool gyroEnabled;
     private bool accelEnabled;
     private Gyroscope gyro;
+    float angle;
 
     // Use this for initialization
-    void Start ()
-    {
+    void Start() {
 #if INPUT_MOBILE
         gyroEnabled = EnableGyro();
         //gyroEnabled = false;
-        if(!gyroEnabled)
-        {
+        if (!gyroEnabled) {
             //accelEnabled = EnableAccel();
             accelEnabled = true;
         }
@@ -26,10 +25,8 @@ public class GyroController : MonoBehaviour {
 #endif
     }
 
-    private bool EnableGyro()
-    {
-        if (SystemInfo.supportsGyroscope)
-        {
+    private bool EnableGyro() {
+        if (SystemInfo.supportsGyroscope) {
             gyro = Input.gyro;
             gyro.enabled = true;
             return true;
@@ -38,25 +35,22 @@ public class GyroController : MonoBehaviour {
         return false;
     }
 
-    private bool EnableAccel()
-    {
-        if (SystemInfo.supportsAccelerometer)
-        {
+    private bool EnableAccel() {
+        if (SystemInfo.supportsAccelerometer) {
             return true;
         }
         return false;
     }
 
     // Update is called once per frame
-    void FixedUpdate()
-    {
-        if (gyroEnabled)
-        {
-            transform.up = -gyro.gravity;
+    void FixedUpdate() {
+        if (gyroEnabled) {
+            angle = Vector2.SignedAngle(gyro.gravity, -transform.up);
+        } else if (accelEnabled) {
+            angle = Vector2.SignedAngle(Input.acceleration, -transform.up);
         }
-        else if(accelEnabled)
-        {
-            transform.up = -Input.acceleration;
+        if (Mathf.Abs(angle) >= 75f) {
+            transform.up = transform.right * Mathf.Sign(angle);
         }
     }
 }

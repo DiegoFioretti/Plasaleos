@@ -47,19 +47,19 @@ public class Movement : MonoBehaviour, IState {
             }
         }
 
-        if (m_entity.m_rb.velocity.magnitude > m_speed && m_grounded) {
+        if (m_entity.m_rb.velocity.magnitude > m_speed) {
             m_entity.m_rb.velocity = Vector3.Normalize(
-                m_entity.m_rb.velocity) * m_speed * 0.707f;
+                m_entity.m_rb.velocity) * m_speed * 0.707f * (m_grounded? 1f : 2f);
             //multiply by sqr(2) so that velocity.magnitude ~= m_speed
         }
-        
-        GetComponent<Animator>().SetFloat("Speed", m_entity.m_rb.velocity.magnitude/m_speed);
+
+        GetComponent<Animator>().SetFloat("Speed", m_entity.m_rb.velocity.magnitude / m_speed);
         nextState = this;
     }
 
     public void StateFixedUpdate() {
         if (m_grounded) {
-            m_entity.m_rb.AddForce(m_transformRight * m_speed * 1.5f);
+            m_entity.m_rb.AddForce(m_transformRight * m_speed * 3f);
         }
     }
 
@@ -80,8 +80,7 @@ public class Movement : MonoBehaviour, IState {
         return m_transformRight;
     }
 
-    public bool IsGrounded()
-    {
+    public bool IsGrounded() {
         return m_grounded;
     }
 }
