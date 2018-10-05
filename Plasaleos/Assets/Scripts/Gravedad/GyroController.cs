@@ -54,10 +54,5 @@ public class GyroController : MonoBehaviour {
         if (Mathf.Abs(angle) >= 75f) {
             transform.up = transform.right * Mathf.Sign(angle);
         }
-
-#if INPUT_MOBILE
-        if (fixedGravity)
-            transform.rotation = Quaternion.Euler(0, 0, transform.rotation.z);
-#endif
     }
 }
