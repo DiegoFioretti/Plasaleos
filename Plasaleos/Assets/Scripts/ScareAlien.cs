@@ -11,5 +11,11 @@ public class ScareAlien : MonoBehaviour {
         {
             go[i].GetComponent<Alien>().Scare();
         }
+        /*
+        go = GameObject.FindGameObjectsWithTag("Animal");
+        for (int i = 0; i < go.Length; i++)
+        {
+            go[i].GetComponent<Animal>().Scared();
+        }*/
     }
 }
