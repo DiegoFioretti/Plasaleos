@@ -9,6 +9,8 @@ public class GyroController : MonoBehaviour {
     private bool accelEnabled;
     private Gyroscope gyro;
 
+    public bool fixedGravity;
+
     // Use this for initialization
     void Start ()
     {
@@ -52,11 +54,17 @@ public class GyroController : MonoBehaviour {
     {
         if (gyroEnabled)
         {
+            //transform.up = new Vector3(gyro.gravity.x, gyro.gravity.y, 0) * -1;
             transform.up = -gyro.gravity;
         }
         else if(accelEnabled)
         {
             transform.up = -Input.acceleration;
         }
+
+#if INPUT_MOBILE
+        if (fixedGravity)
+            transform.rotation = Quaternion.Euler(0, 0, transform.rotation.z);
+#endif
     }
 }

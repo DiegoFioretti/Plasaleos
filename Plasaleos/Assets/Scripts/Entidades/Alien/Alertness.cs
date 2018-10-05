@@ -13,6 +13,7 @@ public class Alertness : MonoBehaviour, IState {
         m_timeLeft = m_duration;
         if (m_entity.m_rb) {
             m_entity.m_rb.velocity = Vector2.zero;
+            GetComponent<Animator>().SetBool("Moving", false);
         }
     }
 

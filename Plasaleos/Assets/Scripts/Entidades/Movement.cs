@@ -64,6 +64,7 @@ public class Movement : MonoBehaviour, IState {
     }
 
     void Walk() {
+        GetComponent<Animator>().SetBool("Moving", true);
         if (m_grounded && !m_wasGrounded) {
             if (m_entity.m_rb.velocity.magnitude < m_speed) {
                 m_entity.m_rb.velocity += m_transformRight * m_speed * 0.5f;
