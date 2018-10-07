@@ -60,6 +60,8 @@ sealed class Alien : Entity {
     public void Alert() {
         if ((m_currState as MonoBehaviour) == GetComponent<Movement>()) {
             m_alert = true;
+        } else if ((m_currState as MonoBehaviour) == GetComponent<Alertness>()) {
+            GetComponent<Alertness>().ToggleAlert();
         }
     }
 
