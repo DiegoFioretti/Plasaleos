@@ -1,26 +1,28 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class GravityController : MonoBehaviour {
 
     [SerializeField] private float force = 9.8f;
     private Vector2 gravity;
+    float rot45; //==sin(45)==cos(45)
 
-    // Use this for initialization
     void Start() {
+        gravity = -transform.up * force;
+        Physics2D.gravity = gravity;
+        rot45 = Mathf.Sin(45f);
+    }
+
+    void FixedUpdate() {
         ChangeGravity();
     }
 
-    // Update is called once per frame
-    void FixedUpdate() {
-        if (Vector2.Angle(Physics2D.gravity, -transform.up) >= 85f) {
-            ChangeGravity();
-        }
-    }
-
     private void ChangeGravity() {
-        gravity = -transform.up * force;
-        Physics2D.gravity = gravity;
+        float angle = Vector2.SignedAngle(gravity, -transform.up);
+        if (Mathf.Abs(angle) >= 35f) {
+            gravity = new Vector2((gravity.x - gravity.y) * rot45,
+                (gravity.x + gravity.y) * rot45);
+            gravity = gravity.normalized * force;
+            Physics2D.gravity = gravity;
+        }
     }
 }

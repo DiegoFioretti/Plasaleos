@@ -47,12 +47,9 @@ public class GyroController : MonoBehaviour {
     // Update is called once per frame
     void FixedUpdate() {
         if (gyroEnabled) {
-            angle = Vector2.SignedAngle(gyro.gravity, -transform.up);
+            transform.up = -gyro.gravity;
         } else if (accelEnabled) {
-            angle = Vector2.SignedAngle(Input.acceleration, -transform.up);
-        }
-        if (Mathf.Abs(angle) >= 75f) {
-            transform.up = transform.right * Mathf.Sign(angle);
+            transform.up = -Input.acceleration;
         }
     }
 }
