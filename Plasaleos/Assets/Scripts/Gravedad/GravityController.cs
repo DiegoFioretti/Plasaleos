@@ -19,8 +19,9 @@ public class GravityController : MonoBehaviour {
     private void ChangeGravity() {
         float angle = Vector2.SignedAngle(gravity, -transform.up);
         if (Mathf.Abs(angle) >= 35f) {
-            gravity = new Vector2((gravity.x - gravity.y) * rot45,
-                (gravity.x + gravity.y) * rot45);
+            gravity = new Vector2((gravity.x - gravity.y * Mathf.Sign(angle)),
+                (gravity.x * Mathf.Sign(angle) + gravity.y)) * rot45; //Matrix rotation
+            //We multiply by the sign on angle on the sin term because sin(-45) < 0
             gravity = gravity.normalized * force;
             Physics2D.gravity = gravity;
         }

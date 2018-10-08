@@ -40,16 +40,24 @@ public class Movement : MonoBehaviour, IState {
 
         // Debug.DrawRay(transform.position, m_transformRight, Color.blue, 1.5f);
         if (m_entity.m_rb.velocity == Vector2.zero) {
-            if (Physics2D.Raycast(transform.position,
-                    m_transformRight, 1.5f, m_entity.GroundLayer)) {
+            RaycastHit2D hit = Physics2D.Raycast(transform.position,
+                m_transformRight, 1.5f, m_entity.GroundLayer);
+            if (hit) {
 
+                if (Physics2D.Raycast(transform.position, -m_transformRight, //check if it's stuck in a corner
+                        1.5f, m_entity.GroundLayer)) {
+
+                    transform.up = hit.normal;
+                }
                 m_entity.Flip();
+            } else if (m_grounded) {
+                m_entity.m_rb.velocity += m_transformRight * m_speed * 0.5f;
             }
         }
 
         if (m_entity.m_rb.velocity.magnitude > m_speed) {
             m_entity.m_rb.velocity = Vector3.Normalize(
-                m_entity.m_rb.velocity) * m_speed * 0.707f * (m_grounded? 1f : 2f);
+                m_entity.m_rb.velocity) * m_speed * 0.707f * (m_grounded? 1f : 2.5f);
             //multiply by sqr(2) so that velocity.magnitude ~= m_speed
         }
 
