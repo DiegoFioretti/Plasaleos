@@ -67,7 +67,7 @@ public class Movement : MonoBehaviour, IState {
 
     public void StateFixedUpdate() {
         if (m_grounded) {
-            m_entity.m_rb.AddForce(m_transformRight * m_speed * 3f);
+            m_entity.m_rb.AddForce(m_transformRight * m_speed * 2f);
         }
     }
 
