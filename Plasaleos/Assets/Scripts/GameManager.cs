@@ -42,8 +42,6 @@ public class GameManager : MonoBehaviour {
         System.Int32.TryParse(level[level.Length - 1].ToString(), out a);
         int b;
         System.Int32.TryParse(level[level.Length - 2].ToString(), out b);
-        Debug.LogError(a);
-        Debug.LogError(b);
         b *= 10;
         a += b;
         if (aliensSaved[a] < value) {
