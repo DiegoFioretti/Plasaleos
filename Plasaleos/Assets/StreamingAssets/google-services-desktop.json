@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "754460676893",
+    "firebase_url": "https://plasaleos.firebaseio.com",
+    "project_id": "plasaleos",
+    "storage_bucket": "plasaleos.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:754460676893:android:8f4713a9d688f9f0",
+        "android_client_info": {
+          "package_name": "com.MDM.Plasaleos"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "754460676893-17dcvgiku28579uqmrbujai0lp7aajpg.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDLrkUlv4KpW_rVEzHmVigqn9I3MbRrV48"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
