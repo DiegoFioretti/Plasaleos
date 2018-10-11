@@ -56,6 +56,7 @@ GameObject:
   - component: {fileID: 222098522629850604}
   - component: {fileID: 114736807879084540}
   - component: {fileID: 114544814632407740}
+  - component: {fileID: 114329086613081010}
   m_Layer: 5
   m_Name: AlienCounter
   m_TagString: Untagged
@@ -90,6 +91,17 @@ MonoBehaviour:
   m_FillAmount: 1
   m_FillClockwise: 1
   m_FillOrigin: 0
+--- !u!114 &114329086613081010
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1103335056234970}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b7862452f9d0970498371dcc4880829d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &114544814632407740
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -196,10 +208,10 @@ RectTransform:
   m_Father: {fileID: 224768680752179096}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -53.55, y: 1.782}
-  m_SizeDelta: {x: 148.8, y: 85}
+  m_AnchorMin: {x: 0.055000003, y: 0.11000001}
+  m_AnchorMax: {x: 0.54256773, y: 0.85}
+  m_AnchoredPosition: {x: -0.000015258789, y: 0.00050735474}
+  m_SizeDelta: {x: -0, y: 0.0010071}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!224 &224681481055750174
 RectTransform:
@@ -214,10 +226,10 @@ RectTransform:
   m_Father: {fileID: 224768680752179096}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 1, y: 1}
-  m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -62.800003, y: -50.000004}
-  m_SizeDelta: {x: 88.600006, y: 88.563995}
+  m_AnchorMin: {x: 0.57383, y: 0.05}
+  m_AnchorMax: {x: 0.92100006, y: 0.93000007}
+  m_AnchoredPosition: {x: 1.699997, y: 0.9999962}
+  m_SizeDelta: {x: -0.3999939, y: 0.56399536}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!224 &224768680752179096
 RectTransform:
@@ -234,8 +246,8 @@ RectTransform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 1, y: 1}
-  m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -128.4, y: -49.400024}
-  m_SizeDelta: {x: 255.9, y: 100}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -258.7, y: 128}
+  m_SizeDelta: {x: 125.16, y: 48.91}
   m_Pivot: {x: 0.5, y: 0.5}

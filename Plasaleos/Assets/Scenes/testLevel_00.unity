@@ -493,7 +493,7 @@ GameObject:
   - component: {fileID: 291256149}
   m_Layer: 0
   m_Name: GravityController
-  m_TagString: Untagged
+  m_TagString: Gyroscope
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -910,25 +910,6 @@ Prefab:
     - target: {fileID: 4697856686137838, guid: 2f02ce6bbefab57479df225a44440182, type: 2}
       propertyPath: m_RootOrder
       value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 61072840452149440, guid: 2f02ce6bbefab57479df225a44440182,
-        type: 2}
-      propertyPath: m_IsTrigger
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4697856686137838, guid: 2f02ce6bbefab57479df225a44440182, type: 2}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 180.034
-      objectReference: {fileID: 0}
-    - target: {fileID: 212140770339515160, guid: 2f02ce6bbefab57479df225a44440182,
-        type: 2}
-      propertyPath: m_SortingLayerID
-      value: 1173831057
-      objectReference: {fileID: 0}
-    - target: {fileID: 212140770339515160, guid: 2f02ce6bbefab57479df225a44440182,
-        type: 2}
-      propertyPath: m_SortingLayer
-      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2f02ce6bbefab57479df225a44440182, type: 2}
@@ -1462,7 +1443,7 @@ GameObject:
   - component: {fileID: 1606160925}
   m_Layer: 5
   m_Name: Canvas
-  m_TagString: Untagged
+  m_TagString: MainCanvas
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1596,42 +1577,42 @@ Prefab:
     - target: {fileID: 224768680752179096, guid: aad9705312ec5f94d82b3a29b4da21dd,
         type: 2}
       propertyPath: m_AnchoredPosition.x
-      value: -128.4
+      value: -258.7
       objectReference: {fileID: 0}
     - target: {fileID: 224768680752179096, guid: aad9705312ec5f94d82b3a29b4da21dd,
         type: 2}
       propertyPath: m_AnchoredPosition.y
-      value: -49.400024
+      value: 128
       objectReference: {fileID: 0}
     - target: {fileID: 224768680752179096, guid: aad9705312ec5f94d82b3a29b4da21dd,
         type: 2}
       propertyPath: m_SizeDelta.x
-      value: 255.9
+      value: 125.16
       objectReference: {fileID: 0}
     - target: {fileID: 224768680752179096, guid: aad9705312ec5f94d82b3a29b4da21dd,
         type: 2}
       propertyPath: m_SizeDelta.y
-      value: 100
+      value: 48.91
       objectReference: {fileID: 0}
     - target: {fileID: 224768680752179096, guid: aad9705312ec5f94d82b3a29b4da21dd,
         type: 2}
       propertyPath: m_AnchorMin.x
-      value: 1
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 224768680752179096, guid: aad9705312ec5f94d82b3a29b4da21dd,
         type: 2}
       propertyPath: m_AnchorMin.y
-      value: 1
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 224768680752179096, guid: aad9705312ec5f94d82b3a29b4da21dd,
         type: 2}
       propertyPath: m_AnchorMax.x
-      value: 1
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 224768680752179096, guid: aad9705312ec5f94d82b3a29b4da21dd,
         type: 2}
       propertyPath: m_AnchorMax.y
-      value: 1
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 224768680752179096, guid: aad9705312ec5f94d82b3a29b4da21dd,
         type: 2}

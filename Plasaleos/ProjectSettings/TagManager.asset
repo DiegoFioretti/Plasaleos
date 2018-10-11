@@ -10,6 +10,9 @@ TagManager:
   - Trap
   - Animal
   - EndScreen
+  - Gyroscope
+  - MainCanvas
+  - AlienCounterPoint
   layers:
   - Default
   - TransparentFX

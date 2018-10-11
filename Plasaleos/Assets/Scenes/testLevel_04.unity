@@ -126,7 +126,7 @@ GameObject:
   - component: {fileID: 76681952}
   m_Layer: 5
   m_Name: Canvas
-  m_TagString: Untagged
+  m_TagString: MainCanvas
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -327,7 +327,7 @@ GameObject:
   - component: {fileID: 291256149}
   m_Layer: 0
   m_Name: GravityController
-  m_TagString: Untagged
+  m_TagString: Gyroscope
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -376,95 +376,15 @@ Prefab:
   m_Modification:
     m_TransformParent: {fileID: 76681955}
     m_Modifications:
-    - target: {fileID: 224768680752179096, guid: aad9705312ec5f94d82b3a29b4da21dd,
-        type: 2}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 224768680752179096, guid: aad9705312ec5f94d82b3a29b4da21dd,
-        type: 2}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 224768680752179096, guid: aad9705312ec5f94d82b3a29b4da21dd,
-        type: 2}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 224768680752179096, guid: aad9705312ec5f94d82b3a29b4da21dd,
-        type: 2}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 224768680752179096, guid: aad9705312ec5f94d82b3a29b4da21dd,
-        type: 2}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 224768680752179096, guid: aad9705312ec5f94d82b3a29b4da21dd,
-        type: 2}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 224768680752179096, guid: aad9705312ec5f94d82b3a29b4da21dd,
-        type: 2}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 224768680752179096, guid: aad9705312ec5f94d82b3a29b4da21dd,
-        type: 2}
-      propertyPath: m_RootOrder
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 224768680752179096, guid: aad9705312ec5f94d82b3a29b4da21dd,
-        type: 2}
-      propertyPath: m_AnchoredPosition.x
-      value: -128.4
-      objectReference: {fileID: 0}
-    - target: {fileID: 224768680752179096, guid: aad9705312ec5f94d82b3a29b4da21dd,
+    - target: {fileID: 224536933559821806, guid: aad9705312ec5f94d82b3a29b4da21dd,
         type: 2}
       propertyPath: m_AnchoredPosition.y
-      value: -49.400024
+      value: 0.00050354004
       objectReference: {fileID: 0}
-    - target: {fileID: 224768680752179096, guid: aad9705312ec5f94d82b3a29b4da21dd,
+    - target: {fileID: 224681481055750174, guid: aad9705312ec5f94d82b3a29b4da21dd,
         type: 2}
-      propertyPath: m_SizeDelta.x
-      value: 255.9
-      objectReference: {fileID: 0}
-    - target: {fileID: 224768680752179096, guid: aad9705312ec5f94d82b3a29b4da21dd,
-        type: 2}
-      propertyPath: m_SizeDelta.y
-      value: 100
-      objectReference: {fileID: 0}
-    - target: {fileID: 224768680752179096, guid: aad9705312ec5f94d82b3a29b4da21dd,
-        type: 2}
-      propertyPath: m_AnchorMin.x
+      propertyPath: m_AnchoredPosition.y
       value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 224768680752179096, guid: aad9705312ec5f94d82b3a29b4da21dd,
-        type: 2}
-      propertyPath: m_AnchorMin.y
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 224768680752179096, guid: aad9705312ec5f94d82b3a29b4da21dd,
-        type: 2}
-      propertyPath: m_AnchorMax.x
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 224768680752179096, guid: aad9705312ec5f94d82b3a29b4da21dd,
-        type: 2}
-      propertyPath: m_AnchorMax.y
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 224768680752179096, guid: aad9705312ec5f94d82b3a29b4da21dd,
-        type: 2}
-      propertyPath: m_Pivot.x
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 224768680752179096, guid: aad9705312ec5f94d82b3a29b4da21dd,
-        type: 2}
-      propertyPath: m_Pivot.y
-      value: 0.5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: aad9705312ec5f94d82b3a29b4da21dd, type: 2}
