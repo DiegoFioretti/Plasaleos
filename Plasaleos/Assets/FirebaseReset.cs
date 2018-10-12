@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class FirebaseReset : MonoBehaviour {
 
-	public void NewUser()
+    public void NewUser()
     {
         string email = UserManagerFB.instance.GetValue() + "@abc.com";
         Firebase.Auth.FirebaseAuth auth = Firebase.Auth.FirebaseAuth.DefaultInstance;
@@ -25,5 +25,7 @@ public class FirebaseReset : MonoBehaviour {
             Debug.LogFormat("Firebase user created successfully: {0} ({1})",
                 newUser.DisplayName, newUser.UserId);
         });
+
+        Firebase.Analytics.FirebaseAnalytics.LogEvent("NewUser", "string", email);
     }
 }
