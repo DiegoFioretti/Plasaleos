@@ -34,6 +34,9 @@ public class Entity : MonoBehaviour {
 
     protected virtual void Update() {
         m_grounded = IsGrounded(out m_groundNormal);
+    }
+
+    protected virtual void LateUpdate() {
         m_prevGravity = Physics2D.gravity;
     }
 

@@ -144,7 +144,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 1024
   m_facingRight: 1
-  m_speed: 8
+  m_speed: 7
   m_detachAngle: 85
   m_rb: {fileID: 0}
   m_prayLayer:

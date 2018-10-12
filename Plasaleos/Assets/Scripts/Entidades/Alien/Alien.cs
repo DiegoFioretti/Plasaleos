@@ -42,6 +42,10 @@ sealed class Alien : Entity {
         }
     }
 
+    protected override void LateUpdate() {
+        base.LateUpdate();
+    }
+
     private void FixedUpdate() {
         m_currState.StateFixedUpdate();
     }

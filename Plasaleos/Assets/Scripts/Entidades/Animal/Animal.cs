@@ -60,6 +60,10 @@ public class Animal : Entity {
         }
     }
 
+    protected override void LateUpdate() {
+        base.LateUpdate();
+    }
+
     public bool SearchPrey(out RaycastHit2D hit) {
         hit = Physics2D.Raycast(transform.position, transform.right * transform.localScale.x,
             m_detectionDistance, m_prayLayer);
