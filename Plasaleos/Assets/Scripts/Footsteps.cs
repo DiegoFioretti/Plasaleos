@@ -6,27 +6,22 @@ public class Footsteps : MonoBehaviour {
 
     public string defaultSound;
 
-    private Movement mov;
+    private Entity entity;
 
-    private void Start()
-    {
-        mov = GetComponent<Movement>();
+    private void Start() {
+        entity = GetComponent<Entity>();
     }
 
     // Update is called once per frame
-    void Update () {
-        if (mov.IsGrounded())
-        {
+    void Update() {
+        if (entity.Grounded) {
             GetComponent<Animator>().SetBool("Falling", false);
-        }
-        else
-        {
+        } else {
             GetComponent<Animator>().SetBool("Falling", true);
         }
-	}
+    }
 
-    public void Step()
-    {
+    public void Step() {
         AkSoundEngine.PostEvent(defaultSound, gameObject);
     }
 }

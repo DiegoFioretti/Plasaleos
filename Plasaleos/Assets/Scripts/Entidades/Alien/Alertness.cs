@@ -17,6 +17,8 @@ public class Alertness : MonoBehaviour, IState {
     }
 
     public void StateUpdate(out IState nextState) {
+        m_entity.CheckForLanding();
+        m_entity.TakeGravityEffect();
         if (m_alerted) {
             nextState = this;
         } else {

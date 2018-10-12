@@ -35,7 +35,8 @@ public class Animal : Entity {
         SetStateActive(m_currState, true);
     }
 
-    private void Update() {
+    protected override void Update() {
+        base.Update();
         m_currState.StateUpdate(out m_nextState);
         if (m_death) {
             m_nextState = GetComponent<Death>();
@@ -57,6 +58,10 @@ public class Animal : Entity {
             SetStateActive(m_nextState, true);
             m_currState = m_nextState;
         }
+    }
+
+    protected override void LateUpdate() {
+        base.LateUpdate();
     }
 
     public bool SearchPrey(out RaycastHit2D hit) {
