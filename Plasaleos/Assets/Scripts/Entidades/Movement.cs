@@ -26,9 +26,22 @@ public class Movement : MonoBehaviour, IState {
             }
         }
 
-        if (!m_grounded && (m_prevGravity != Physics2D.gravity)) {
-            float currSpeed = m_entity.m_rb.velocity.magnitude;
-            m_entity.m_rb.velocity = Physics2D.gravity * currSpeed;
+        float angle = Vector2.Angle(m_transformRight, Physics2D.gravity);
+        if (!m_grounded) {
+            m_speedMultiplier = 2.5f;
+        } else if (m_grounded && angle < 90f) {
+            m_speedMultiplier = 1.5f;
+        } else if (m_grounded && angle > 90) {
+            m_speedMultiplier = 0.5f;
+        } else {
+            m_speedMultiplier = 1f;
+        }
+
+        if ((!m_grounded || (m_grounded && angle == 90f)) &&
+            (m_prevGravity != Physics2D.gravity)) {
+
+            float newSpeed = m_entity.m_rb.velocity.magnitude * 0.7f;
+            m_entity.m_rb.velocity = Physics2D.gravity.normalized * newSpeed;
         }
 
         Walk();
@@ -58,17 +71,6 @@ public class Movement : MonoBehaviour, IState {
                 transform.up = hit.normal;
             }
             m_entity.Flip();
-        }
-
-        float angle = Vector2.Angle(m_transformRight, Physics2D.gravity);
-        if (!m_grounded) {
-            m_speedMultiplier = 3f;
-        } else if (m_grounded && angle < 90f) {
-            m_speedMultiplier = 1.5f;
-        } else if (m_grounded && angle > 90) {
-            m_speedMultiplier = 0.5f;
-        } else {
-            m_speedMultiplier = 1f;
         }
 
         if (m_entity.m_rb.velocity.magnitude > m_speed * m_speedMultiplier) {
