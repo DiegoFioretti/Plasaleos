@@ -20,10 +20,6 @@ public class GameManager : MonoBehaviour {
             for (int i = 0; i < levelAmount; i++) {
                 aliensSaved[i] = 0;
             }
-            Screen.autorotateToLandscapeLeft = true;
-            Screen.autorotateToLandscapeRight = false;
-            Screen.autorotateToPortrait = false;
-            Screen.autorotateToPortraitUpsideDown = false;
             DontDestroyOnLoad(gameObject);
         } else {
             Destroy(gameObject);
