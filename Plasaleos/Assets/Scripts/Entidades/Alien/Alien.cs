@@ -23,7 +23,8 @@ sealed class Alien : Entity {
         m_currState = GetComponent<Movement>();
     }
 
-    private void Update() {
+    protected override void Update() {
+        base.Update();
         m_currState.StateUpdate(out m_nextState);
         if (m_death) {
             m_nextState = GetComponent<Death>();

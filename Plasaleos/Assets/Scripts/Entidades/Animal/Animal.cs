@@ -35,7 +35,8 @@ public class Animal : Entity {
         SetStateActive(m_currState, true);
     }
 
-    private void Update() {
+    protected override void Update() {
+        base.Update();
         m_currState.StateUpdate(out m_nextState);
         if (m_death) {
             m_nextState = GetComponent<Death>();

@@ -6,7 +6,6 @@ public class Hunt : MonoBehaviour, IState {
     [SerializeField] float m_reachDistance;
     [SerializeField] float m_looseDistance;
     Animal m_animal;
-    Movement m_movement;
     Alien m_alienPrey;
     Vector2 m_transformRight;
     Vector2 m_groundNormal;
@@ -14,11 +13,12 @@ public class Hunt : MonoBehaviour, IState {
 
     private void Awake() {
         m_animal = GetComponent<Animal>();
-        m_movement = GetComponent<Movement>();
     }
 
     public void StateUpdate(out IState nextState) {
-        m_movement.StateUpdate(out nextState);
+        m_animal.CheckForFlip();
+        m_animal.CheckForLanding();
+        m_animal.TakeGravityEffect();
         if (transform.localScale.z != m_alienPrey.transform.localScale.z) {
             m_animal.Flip();
         }
@@ -44,8 +44,8 @@ public class Hunt : MonoBehaviour, IState {
     }
 
     public void StateFixedUpdate() {
-        if (m_animal.IsGrounded()) {
-            m_animal.m_rb.AddForce(m_movement.GetTransformRight() * m_chaseSpeed * 1.5f);
+        if (m_animal.Grounded) {
+            m_animal.m_rb.AddForce(m_animal.EntityRight * m_chaseSpeed * 1.5f);
         }
     }
 
