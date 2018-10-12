@@ -6,12 +6,14 @@ public class Movement : MonoBehaviour, IState {
     Entity m_entity;
     Vector2 m_transformRight;
     Vector2 m_groundNormal;
+    Vector2 m_prevGravity;
     bool m_grounded;
     bool m_wasGrounded;
 
     private void Awake() {
         m_entity = GetComponent<Entity>();
         m_wasGrounded = false;
+        m_prevGravity = Physics.gravity;
     }
 
     public void StateUpdate(out IState nextState) {
@@ -20,6 +22,11 @@ public class Movement : MonoBehaviour, IState {
             if (Vector2.Angle(-transform.up, Physics2D.gravity) > m_detachAngle) {
                 m_grounded = false;
             }
+        }
+
+        if (m_prevGravity != Physics2D.gravity) {
+            float currSpeed = m_entity.m_rb.velocity.magnitude;
+            m_entity.m_rb.velocity = Physics2D.gravity * currSpeed;
         }
 
         Walk();
@@ -62,6 +69,7 @@ public class Movement : MonoBehaviour, IState {
         }
 
         GetComponent<Animator>().SetFloat("Speed", m_entity.m_rb.velocity.magnitude / m_speed);
+        m_prevGravity = Physics2D.gravity;
         nextState = this;
     }
 
