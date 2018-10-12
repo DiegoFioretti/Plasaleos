@@ -1,0 +1,11 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources tools:keep="@string/firebase_database_url,@string/gcm_defaultSenderId,@string/google_storage_bucket,@string/project_id,@string/google_api_key,@string/google_crash_reporting_api_key,@string/google_app_id,@string/default_web_client_id" xmlns:tools="http://schemas.android.com/tools">
+  <string name="firebase_database_url" translatable="false">https://plasaleos.firebaseio.com</string>
+  <string name="gcm_defaultSenderId" translatable="false">754460676893</string>
+  <string name="google_storage_bucket" translatable="false">plasaleos.appspot.com</string>
+  <string name="project_id" translatable="false">plasaleos</string>
+  <string name="google_api_key" translatable="false">AIzaSyDLrkUlv4KpW_rVEzHmVigqn9I3MbRrV48</string>
+  <string name="google_crash_reporting_api_key" translatable="false">AIzaSyDLrkUlv4KpW_rVEzHmVigqn9I3MbRrV48</string>
+  <string name="google_app_id" translatable="false">1:754460676893:android:8f4713a9d688f9f0</string>
+  <string name="default_web_client_id" translatable="false">754460676893-17dcvgiku28579uqmrbujai0lp7aajpg.apps.googleusercontent.com</string>
+</resources>
