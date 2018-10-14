@@ -4,7 +4,7 @@
 [RequireComponent(typeof(Scareness))]
 [RequireComponent(typeof(Alertness))]
 [RequireComponent(typeof(Death))]
-sealed class Alien : Entity {
+public sealed class Alien : Entity {
     IState m_currState;
     IState m_nextState;
     bool m_scared;
