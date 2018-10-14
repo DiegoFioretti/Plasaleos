@@ -42,6 +42,7 @@ public class Liana : MonoBehaviour {
 		Vector3 startPos = m_screenCamera.ScreenToWorldPoint(touch.position);
 		if (!Physics2D.Raycast(startPos, Vector3.forward, 1000f, m_terrain)) {
 			Cancel();
+			Time.timeScale = 1f;
 		} else {
 			startPos.z = 0;
 			transform.position = startPos;

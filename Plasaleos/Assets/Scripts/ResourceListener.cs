@@ -24,15 +24,19 @@ public class ResourceListener : MonoBehaviour {
         }
     }
 
+    private void Start() {
+        UpdateText();
+    }
+
     void UpdateText() {
         if (m_resource == Resource.LIANA) {
             m_text.text = m_resourceManager.GetLianaAmount().ToString();
         } else if (m_resource == Resource.MUSHROOM) {
-            // m_text.text = m_resourceManager.GetLianaAmount().ToString();
+            m_text.text = m_resourceManager.GetMushroomAmount().ToString();
         } else if (m_resource == Resource.ALERT) {
-            // m_text.text = m_resourceManager.GetLianaAmount().ToString();
+            m_text.text = m_resourceManager.GetAlertAmount().ToString();
         } else if (m_resource == Resource.SCARE) {
-            // m_text.text = m_resourceManager.GetLianaAmount().ToString();
+            m_text.text = m_resourceManager.GetScareAmount().ToString();
         }
         if (m_text.text == "0") {
             m_button.interactable = false;
