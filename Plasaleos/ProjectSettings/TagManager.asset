@@ -28,7 +28,7 @@ TagManager:
   - Alien
   - DeathTrigger
   - Animal
-  - 
+  - Ambient
   - 
   - 
   - 
@@ -49,6 +49,9 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: Background
+    uniqueID: 624102243
     locked: 0
   - name: Front
     uniqueID: 1002083217

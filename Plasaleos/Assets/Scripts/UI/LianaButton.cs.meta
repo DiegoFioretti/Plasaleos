@@ -1,0 +1,12 @@
+fileFormatVersion: 2
+guid: b1a8a78431dc2e34381c865c12a58b6e
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - m_liana: {fileID: 1628053091522102, guid: 56866354ad3b6ad4db13407969b0febe, type: 2}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
