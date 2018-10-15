@@ -3,14 +3,12 @@ using UnityEngine.UI;
 
 public class ResourceListener : MonoBehaviour {
     [SerializeField] Resource m_resource;
-    ResourceManager m_resourceManager;
     Text m_text;
     Button m_button;
 
     private void Awake() {
         m_text = GetComponentInChildren<Text>();
         m_button = GetComponentInParent<Button>();
-        m_resourceManager = FindObjectOfType<ResourceManager>();
     }
 
     private void Start() {
