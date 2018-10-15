@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 
 public class Alertness : MonoBehaviour, IState {
+    [SerializeField] float m_duration;
     Entity m_entity;
     bool m_alerted = false;
 
@@ -14,6 +15,7 @@ public class Alertness : MonoBehaviour, IState {
             m_entity.m_rb.velocity = Vector2.zero;
             GetComponent<Animator>().SetBool("Moving", false);
         }
+        Invoke("ToggleAlert", m_duration);
     }
 
     public void StateUpdate(out IState nextState) {
@@ -22,6 +24,7 @@ public class Alertness : MonoBehaviour, IState {
         if (m_alerted) {
             nextState = this;
         } else {
+            CancelInvoke();
             nextState = GetComponent<Movement>();
         }
     }
