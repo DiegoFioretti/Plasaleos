@@ -9,7 +9,7 @@ public class LianaButton : MonoBehaviour {
     }
 
     public void InstanceLiana() {
-        if (m_resourceManager.RequestLiana()) {
+        if (m_resourceManager.Lianas.Request()) {
             GameObject go = Instantiate(m_liana);
             go.SetActive(true);
             Time.timeScale = 0f;

@@ -1,8 +1,6 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
 
-enum Resource { LIANA, MUSHROOM, ALERT, SCARE }
-
 public class ResourceListener : MonoBehaviour {
     [SerializeField] Resource m_resource;
     ResourceManager m_resourceManager;
@@ -13,31 +11,15 @@ public class ResourceListener : MonoBehaviour {
         m_text = GetComponentInChildren<Text>();
         m_button = GetComponentInParent<Button>();
         m_resourceManager = FindObjectOfType<ResourceManager>();
-        if (m_resource == Resource.LIANA) {
-            m_resourceManager.LianaChange.AddListener(UpdateText);
-        } else if (m_resource == Resource.MUSHROOM) {
-            m_resourceManager.MushroomChange.AddListener(UpdateText);
-        } else if (m_resource == Resource.ALERT) {
-            m_resourceManager.AlertChange.AddListener(UpdateText);
-        } else if (m_resource == Resource.SCARE) {
-            m_resourceManager.ScareChange.AddListener(UpdateText);
-        }
     }
 
     private void Start() {
+        m_resource.Change.AddListener(UpdateText);
         UpdateText();
     }
 
     void UpdateText() {
-        if (m_resource == Resource.LIANA) {
-            m_text.text = m_resourceManager.GetLianaAmount().ToString();
-        } else if (m_resource == Resource.MUSHROOM) {
-            m_text.text = m_resourceManager.GetMushroomAmount().ToString();
-        } else if (m_resource == Resource.ALERT) {
-            m_text.text = m_resourceManager.GetAlertAmount().ToString();
-        } else if (m_resource == Resource.SCARE) {
-            m_text.text = m_resourceManager.GetScareAmount().ToString();
-        }
+        m_text.text = m_resource.GetCount().ToString();
         if (m_text.text == "0") {
             m_button.interactable = false;
         }

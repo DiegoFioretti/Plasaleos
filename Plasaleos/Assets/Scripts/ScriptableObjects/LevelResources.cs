@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-[CreateAssetMenu(fileName = "Level Resource")]
+[CreateAssetMenu(menuName = "Resources/Level Resource")]
 public class LevelResources : ScriptableObject {
     [Header("Ambient")]
     public int lianas;
