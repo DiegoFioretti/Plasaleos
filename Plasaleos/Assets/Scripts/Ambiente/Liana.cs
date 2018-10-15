@@ -23,7 +23,6 @@ public class Liana : MonoBehaviour {
 	private void OnEnable() {
 		m_collider.enabled = false;
 		m_sprite.enabled = false;
-		print(Input.touchCount);
 	}
 
 	private void Update() {
@@ -75,12 +74,12 @@ public class Liana : MonoBehaviour {
 			} else {
 				m_sprite.flipY = false;
 			}
+			m_newSize = m_sprite.size;
+			m_newSize.x = Vector2.Distance(transform.position, m_newPos);
 			Vector3 orientation = transform.eulerAngles;
 			orientation.z = Vector2.SignedAngle(
 				Vector3.right, m_newPos - transform.position);
 			transform.eulerAngles = orientation;
-			m_newSize = m_sprite.size;
-			m_newSize.x = Vector2.Distance(transform.position, m_newPos);
 			if (m_newSize.x > m_width / 2) {
 				m_sprite.size = m_newSize;
 			}

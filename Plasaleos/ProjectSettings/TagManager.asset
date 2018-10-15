@@ -53,6 +53,9 @@ TagManager:
   - name: Background
     uniqueID: 624102243
     locked: 0
+  - name: Ambient
+    uniqueID: 2744653627
+    locked: 0
   - name: Front
     uniqueID: 1002083217
     locked: 0
