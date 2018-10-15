@@ -73,4 +73,8 @@ public sealed class Alien : Entity {
     public void Damage() {
         m_death = true;
     }
+
+    public float GetAlertDuration() {
+        return GetComponent<Alertness>().GetDuration();
+    }
 }

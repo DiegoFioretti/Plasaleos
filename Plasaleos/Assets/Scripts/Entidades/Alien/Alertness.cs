@@ -35,4 +35,8 @@ public class Alertness : MonoBehaviour, IState {
         m_alerted = !m_alerted;
         return m_alerted;
     }
+
+    public float GetDuration() {
+        return m_duration;
+    }
 }

@@ -13,5 +13,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   lianas: 3
   mushrooms: 2
-  alerts: 1
+  alerts: 2
   scares: 8

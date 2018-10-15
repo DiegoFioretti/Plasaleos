@@ -10,9 +10,9 @@ public class ResourceManager : MonoBehaviour {
     [SerializeField] Resource m_alerts;
     [SerializeField] Resource m_scares;
     public Resource Lianas { get { return m_lianas; } }
-    public Resource Mushroom { get { return m_mushrooms; } }
-    public Resource Alert { get { return m_alerts; } }
-    public Resource Scare { get { return m_scares; } }
+    public Resource Mushrooms { get { return m_mushrooms; } }
+    public Resource Alerts { get { return m_alerts; } }
+    public Resource Scares { get { return m_scares; } }
 
     private void Awake() {
         m_lianas.Init(m_levelResources.lianas);
