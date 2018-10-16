@@ -24,7 +24,9 @@ public class Movement : MonoBehaviour, IState {
     public void StateFixedUpdate() {
         float angle = Vector2.Angle(m_entity.EntityRight, -Physics2D.gravity);
         if (m_entity.Grounded && angle <= 90f) {
-            m_entity.m_rb.AddForce(m_entity.EntityRight * m_entity.Speed * 2f);
+            Vector2 newSpeed = m_entity.m_rb.velocity;
+            newSpeed.x = m_entity.Speed * (m_entity.FacingRight? 1f: -1f);
+            m_entity.m_rb.velocity = newSpeed;
         }
     }
 

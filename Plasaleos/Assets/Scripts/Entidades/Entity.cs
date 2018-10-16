@@ -14,12 +14,14 @@ public class Entity : MonoBehaviour {
     float m_footOffset;
     float m_speedMultiplier;
     bool m_grounded;
+    bool m_jumping;
 
     public LayerMask GroundLayer { get { return m_groundLayer; } }
     public Vector2 EntityRight { get { return m_entityRight; } }
     public float Speed { get { return m_speed; } }
     public bool FacingRight { get { return m_facingRight; } }
     public bool Grounded { get { return m_grounded; } }
+    public bool Jumping { get { return m_jumping; } }
 
     protected virtual void Awake() {
         m_footOffset = GetComponent<SpriteRenderer>().size.y * 0.5f;
@@ -132,5 +134,14 @@ public class Entity : MonoBehaviour {
             m_footOffset + 0.2f, m_groundLayer);
         normal = hit.normal;
         return (hit);
+    }
+
+    public void Jump() {
+        Invoke("EndJump", 0.5f);
+        m_jumping = true;
+    }
+
+    void EndJump() {
+        m_jumping = false;
     }
 }

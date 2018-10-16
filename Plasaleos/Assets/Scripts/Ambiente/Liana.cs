@@ -8,9 +8,9 @@ public class Liana : MonoBehaviour {
 	SpriteRenderer m_sprite;
 	BoxCollider2D m_collider;
 	Vector2 m_newSize;
-	bool m_adjusting = false;
+	bool m_adjusting;
 	float m_width;
-	Touch touch;
+	Touch m_touch;
 
 	private void Awake() {
 		m_screenCamera = Camera.main;
@@ -21,24 +21,25 @@ public class Liana : MonoBehaviour {
 	}
 
 	private void OnEnable() {
+		m_adjusting = false;
 		m_collider.enabled = false;
 		m_sprite.enabled = false;
 	}
 
 	private void Update() {
 		if (Input.touchCount > 0) {
-			touch = Input.GetTouch(Input.touchCount - 1);
+			m_touch = Input.GetTouch(Input.touchCount - 1);
 
-			if (touch.phase == TouchPhase.Began) {
+			if (m_touch.phase == TouchPhase.Began) {
 				OnTouchDown();
-			} else if (touch.phase == TouchPhase.Ended) {
+			} else if (m_touch.phase == TouchPhase.Ended) {
 				OnTouchUp();
 			}
 		}
 	}
 
 	void OnTouchDown() {
-		Vector3 startPos = m_screenCamera.ScreenToWorldPoint(touch.position);
+		Vector3 startPos = m_screenCamera.ScreenToWorldPoint(m_touch.position);
 		if (!Physics2D.Raycast(startPos, Vector3.forward, 1000f, m_terrain)) {
 			Cancel();
 			Time.timeScale = 1f;
@@ -67,7 +68,7 @@ public class Liana : MonoBehaviour {
 
 	private void LateUpdate() {
 		if (m_adjusting) {
-			m_newPos = m_screenCamera.ScreenToWorldPoint(touch.position);
+			m_newPos = m_screenCamera.ScreenToWorldPoint(m_touch.position);
 			m_newPos.z = 0f;
 			if (m_newPos.x - transform.position.x < 0f) {
 				m_sprite.flipY = true;
