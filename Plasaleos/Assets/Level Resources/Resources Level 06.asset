@@ -9,9 +9,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 78ab87f3f241ef549886df5f8db62197, type: 3}
-  m_Name: Resources Level 0
+  m_Name: Resources Level 06
   m_EditorClassIdentifier: 
-  lianas: 0
+  lianas: 4
   mushrooms: 0
   alerts: 3
   scares: 3
