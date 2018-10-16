@@ -2610,7 +2610,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   text: {fileID: 1067335290}
-  unlock: 0
+  unlock: 20
 --- !u!114 &2139576404
 MonoBehaviour:
   m_ObjectHideFlags: 0
