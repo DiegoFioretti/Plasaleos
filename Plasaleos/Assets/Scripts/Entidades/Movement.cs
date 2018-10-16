@@ -12,10 +12,10 @@ public class Movement : MonoBehaviour, IState {
     }
 
     public void StateUpdate(out IState nextState) {
-        m_entity.TakeGravityEffect();
         m_entity.CheckForLanding();
-
         m_entity.CheckForFlip();
+        m_entity.TakeGravityEffect();
+
 
         GetComponent<Animator>().SetFloat("Speed", m_entity.m_rb.velocity.magnitude / m_entity.Speed);
         nextState = this;
@@ -24,9 +24,7 @@ public class Movement : MonoBehaviour, IState {
     public void StateFixedUpdate() {
         float angle = Vector2.Angle(m_entity.EntityRight, -Physics2D.gravity);
         if (m_entity.Grounded && angle <= 90f) {
-            Vector2 newSpeed = m_entity.m_rb.velocity;
-            newSpeed.x = m_entity.Speed * (m_entity.FacingRight? 1f: -1f);
-            m_entity.m_rb.velocity = newSpeed;
+            m_entity.m_rb.velocity = m_entity.EntityRight *  m_entity.Speed;
         }
     }
 
