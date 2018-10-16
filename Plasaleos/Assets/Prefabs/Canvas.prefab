@@ -374,6 +374,7 @@ GameObject:
   - component: {fileID: 222428398471163954}
   - component: {fileID: 114337241440787958}
   - component: {fileID: 114040764784017222}
+  - component: {fileID: 114311242327284328}
   m_Layer: 5
   m_Name: ButtonMushroom
   m_TagString: Untagged
@@ -549,7 +550,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 114337241440787958}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 114311242327284328}
+        m_MethodName: Instance
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &114085676092509742
@@ -927,6 +939,18 @@ MonoBehaviour:
   m_FillAmount: 1
   m_FillClockwise: 1
   m_FillOrigin: 0
+--- !u!114 &114311242327284328
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1836026734387088}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 68424c40bd8b90e4c86bd9eed1430fc9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_mushroom: {fileID: 1919942724678370, guid: e74c5ddadd7b68e40818718482376f6f, type: 2}
 --- !u!114 &114313419781172406
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1250,7 +1274,7 @@ MonoBehaviour:
       m_PersistentCalls:
         m_Calls:
         - m_Target: {fileID: 114085676092509742}
-          m_MethodName: InstanceLiana
+          m_MethodName: Instance
           m_Mode: 1
           m_Arguments:
             m_ObjectArgument: {fileID: 0}

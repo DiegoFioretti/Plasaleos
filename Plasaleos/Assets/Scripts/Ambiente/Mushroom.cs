@@ -10,6 +10,7 @@ public class Mushroom : MonoBehaviour {
     SpriteRenderer m_sprite;
     Touch m_touch;
     float m_newY;
+    float m_distToFeet;
     bool m_adjusting;
 
     private void Awake() {
@@ -17,6 +18,7 @@ public class Mushroom : MonoBehaviour {
         m_animator = GetComponentInChildren<Animator>();
         m_sprite = GetComponentInChildren<SpriteRenderer>();
         m_screenCamera = Camera.main;
+        m_distToFeet = m_sprite.size.y * 0.5f;
     }
 
     private void OnEnable() {
@@ -42,25 +44,35 @@ public class Mushroom : MonoBehaviour {
 
     void OnTouchDown() {
         m_sprite.enabled = true;
+        Vector3 newPos = m_screenCamera.ScreenToWorldPoint(m_touch.position);
+        newPos.y += m_distToFeet;
+        newPos.z = 0f;
+        transform.position = newPos;
     }
 
     void WhileOnTouch() {
         Vector3 newPos = m_screenCamera.ScreenToWorldPoint(m_touch.position);
+        newPos += transform.up * m_distToFeet;
         newPos.z = 0f;
         transform.position = newPos;
-        if (Physics2D.Raycast(transform.position, -transform.up,
-                m_sprite.size.y * 0.5f, m_groundLayer)) {
-
+        RaycastHit2D hit = Physics2D.Raycast(transform.position + transform.up * m_distToFeet,
+            -transform.up, m_distToFeet * 4f, m_groundLayer);
+        RaycastHit2D hitUp = Physics2D.Raycast(transform.position + transform.up * m_distToFeet,
+            transform.up, m_distToFeet * 2f, m_groundLayer); //to avoid putting them under de ground
+        if (hit.collider!= null && hitUp.collider == null) {
             m_sprite.color = Color.white;
-            // m_newY =
+            m_newY = hit.point.y + m_distToFeet + 0.1f;
         } else {
             m_sprite.color = Color.red;
-            // m_newY = transform.position.y;
+            m_newY = transform.position.y;
         }
     }
 
     void OnTouchUp() {
         if (m_adjusting) {
+            Vector3 pos = transform.position;
+            pos.y = m_newY;
+            transform.position = pos;
             m_adjusting = false;
             Time.timeScale = 1f;
             if (m_sprite.color == Color.red) {
@@ -77,7 +89,7 @@ public class Mushroom : MonoBehaviour {
 
     private void OnTriggerEnter2D(Collider2D other) {
         Rigidbody2D rb = other.GetComponent<Rigidbody2D>();
-        if (rb.velocity.y < 0f) {
+        if (rb.velocity.y < -1f) {
             Entity m_entity = other.GetComponent<Entity>();
             float direction = 1f;
             if (m_entity) {
