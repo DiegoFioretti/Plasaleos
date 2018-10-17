@@ -9,6 +9,7 @@ public class ResourceManager : MonoBehaviour {
     [Header("Sounds")]
     [SerializeField] Resource m_alerts;
     [SerializeField] Resource m_scares;
+    Resource m_lastResourceAffected;
     public Resource Lianas { get { return m_lianas; } }
     public Resource Mushrooms { get { return m_mushrooms; } }
     public Resource Alerts { get { return m_alerts; } }
@@ -23,5 +24,13 @@ public class ResourceManager : MonoBehaviour {
         m_mushrooms.Change.Invoke();
         m_alerts.Change.Invoke();
         m_scares.Change.Invoke();
+    }
+
+    public void UpdateLastResourceAffected(Resource lastUsed) {
+        m_lastResourceAffected = lastUsed;
+    }
+
+    public void RecoverLastResource() {
+        m_lastResourceAffected.Add();
     }
 }

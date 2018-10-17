@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using UnityEngine.EventSystems;
 
 public class Liana : MonoBehaviour {
 	[SerializeField] LayerMask m_terrain;
@@ -31,7 +32,12 @@ public class Liana : MonoBehaviour {
 			m_touch = Input.GetTouch(Input.touchCount - 1);
 
 			if (m_touch.phase == TouchPhase.Began) {
-				OnTouchDown();
+				if (!EventSystem.current.IsPointerOverGameObject(m_touch.fingerId)) {
+					OnTouchDown();
+				} else {
+					Time.timeScale = 1f;
+					Destroy(gameObject);
+				}
 			} else if (m_touch.phase == TouchPhase.Ended) {
 				OnTouchUp();
 			}
@@ -41,8 +47,10 @@ public class Liana : MonoBehaviour {
 	void OnTouchDown() {
 		Vector3 startPos = m_screenCamera.ScreenToWorldPoint(m_touch.position);
 		if (!Physics2D.Raycast(startPos, Vector3.forward, 1000f, m_terrain)) {
-			Cancel();
 			Time.timeScale = 1f;
+			FindObjectOfType<FinishEdit>().Finish();
+			m_resourceManager.Lianas.Add();
+			Destroy(gameObject);
 		} else {
 			startPos.z = 0;
 			transform.position = startPos;
@@ -54,15 +62,17 @@ public class Liana : MonoBehaviour {
 	void OnTouchUp() {
 		if (m_adjusting) {
 			m_adjusting = false;
+			FindObjectOfType<FinishEdit>().Finish();
+			Time.timeScale = 1f;
 			if (m_sprite.color == Color.white) {
 				m_collider.size = m_newSize;
 				m_collider.offset = new Vector2(m_newSize.x * 0.5f, 0f);
 				m_collider.enabled = true;
 				enabled = false;
 			} else {
-				Cancel();
+				m_resourceManager.Lianas.Add();
+				Destroy(gameObject);
 			}
-			Time.timeScale = 1f;
 		}
 	}
 
@@ -105,11 +115,7 @@ public class Liana : MonoBehaviour {
 	}
 
 	void Cancel() {
-		m_sprite.flipY = false;
-		m_sprite.size = new Vector2(m_width, m_sprite.size.y);
-		transform.eulerAngles = Vector3.zero;
 		m_resourceManager.Lianas.Add();
-
 		Destroy(gameObject);
 	}
 

@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using UnityEngine.EventSystems;
 
 public class Mushroom : MonoBehaviour {
     [SerializeField] LayerMask m_groundLayer;
@@ -32,7 +33,12 @@ public class Mushroom : MonoBehaviour {
                 m_touch = Input.GetTouch(Input.touchCount - 1);
 
                 if (m_touch.phase == TouchPhase.Began) {
-                    OnTouchDown();
+                    if (!EventSystem.current.IsPointerOverGameObject(m_touch.fingerId)) {
+                        OnTouchDown();
+                    } else {
+                        Time.timeScale = 1f;
+                        Destroy(gameObject);
+                    }
                 } else if (m_touch.phase == TouchPhase.Moved) {
                     WhileOnTouch();
                 } else if (m_touch.phase == TouchPhase.Ended) {
@@ -48,6 +54,7 @@ public class Mushroom : MonoBehaviour {
         newPos.y += m_distToFeet;
         newPos.z = 0f;
         transform.position = newPos;
+        WhileOnTouch();
     }
 
     void WhileOnTouch() {
@@ -55,11 +62,10 @@ public class Mushroom : MonoBehaviour {
         newPos += transform.up * m_distToFeet;
         newPos.z = 0f;
         transform.position = newPos;
-        RaycastHit2D hit = Physics2D.Raycast(transform.position + transform.up * m_distToFeet,
-            -transform.up, m_distToFeet * 4f, m_groundLayer);
+        RaycastHit2D hit = Physics2D.Raycast(transform.position + transform.up * m_distToFeet, -transform.up, m_distToFeet * 4f, m_groundLayer);
         RaycastHit2D hitUp = Physics2D.Raycast(transform.position + transform.up * m_distToFeet,
             transform.up, m_distToFeet * 2f, m_groundLayer); //to avoid putting them under de ground
-        if (hit.collider!= null && hitUp.collider == null) {
+        if (hit.collider != null && hitUp.collider == null) {
             m_sprite.color = Color.white;
             m_newY = hit.point.y + m_distToFeet + 0.1f;
         } else {
@@ -75,16 +81,12 @@ public class Mushroom : MonoBehaviour {
             transform.position = pos;
             m_adjusting = false;
             Time.timeScale = 1f;
+            FindObjectOfType<FinishEdit>().Finish();
             if (m_sprite.color == Color.red) {
-                Cancel();
+                m_resourceManager.Mushrooms.Add();
+                Destroy(gameObject);
             }
         }
-    }
-
-    void Cancel() {
-        m_resourceManager.Mushrooms.Add();
-
-        Destroy(gameObject);
     }
 
     private void OnTriggerEnter2D(Collider2D other) {

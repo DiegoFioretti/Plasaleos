@@ -20,6 +20,8 @@ public class ResourceListener : MonoBehaviour {
         m_text.text = m_resource.GetCount().ToString();
         if (m_text.text == "0") {
             m_button.interactable = false;
+        } else {
+            m_button.interactable = true;
         }
     }
 }
