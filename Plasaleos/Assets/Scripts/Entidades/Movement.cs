@@ -16,7 +16,6 @@ public class Movement : MonoBehaviour, IState {
         m_entity.CheckForFlip();
         m_entity.TakeGravityEffect();
 
-
         GetComponent<Animator>().SetFloat("Speed", m_entity.m_rb.velocity.magnitude / m_entity.Speed);
         nextState = this;
     }
@@ -24,7 +23,7 @@ public class Movement : MonoBehaviour, IState {
     public void StateFixedUpdate() {
         float angle = Vector2.Angle(m_entity.EntityRight, -Physics2D.gravity);
         if (m_entity.Grounded && angle <= 90f) {
-            m_entity.m_rb.velocity = m_entity.EntityRight *  m_entity.Speed;
+            m_entity.m_rb.AddForce(m_entity.EntityRight * m_entity.Speed * 2f);
         }
     }
 

@@ -46,7 +46,7 @@ public class Hunt : MonoBehaviour, IState {
     public void StateFixedUpdate() {
         float angle = Vector2.Angle(m_animal.EntityRight, -Physics2D.gravity);
         if (m_animal.Grounded && angle <= 90f) {
-            m_animal.m_rb.velocity = m_animal.EntityRight * m_chaseSpeed;
+            m_animal.m_rb.AddForce(m_animal.EntityRight * m_chaseSpeed * 1.5f);
         }
     }
 

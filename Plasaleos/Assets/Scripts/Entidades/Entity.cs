@@ -58,7 +58,7 @@ public class Entity : MonoBehaviour {
             m_speedMultiplier = 2.5f;
         } else if (m_grounded && angle < 90f) {
             m_speedMultiplier = 1.5f;
-        } else if (m_grounded && angle > 90) {
+        } else if (m_grounded && angle > 90f) {
             m_speedMultiplier = 0.5f;
         } else {
             m_speedMultiplier = 1f;
