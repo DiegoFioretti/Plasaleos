@@ -11,6 +11,7 @@ public sealed class Alien : Entity {
     bool m_scared;
     bool m_alerted;
     bool m_dead;
+    public bool IsDead { get { return m_dead; } }
 
     protected override void Awake() {
         base.Awake();
@@ -82,5 +83,4 @@ public sealed class Alien : Entity {
     public float GetAlertDuration() {
         return GetComponent<Alertness>().GetDuration();
     }
-
 }

@@ -19,15 +19,15 @@ public class Hunt : MonoBehaviour, IState {
         m_animal.CheckForFlip();
         m_animal.CheckForLanding();
         m_animal.TakeGravityEffect();
-        if (transform.localScale.z != m_alienPrey.transform.localScale.z) {
-            m_animal.Flip();
-        }
         RaycastHit2D hit;
         if (!m_alienPrey.isActiveAndEnabled || (Vector3.Distance(
                 transform.position, m_alienPrey.transform.position) > m_looseDistance)) {
 
             nextState = GetComponent<Movement>();
         } else {
+            if (transform.localScale.z != m_alienPrey.transform.localScale.z) {
+                m_animal.Flip();
+            }
             if (m_animal.SearchPrey(out hit)) {
                 if (hit.distance < m_reachDistance) {
                     m_alienPrey.Damage();
@@ -44,8 +44,9 @@ public class Hunt : MonoBehaviour, IState {
     }
 
     public void StateFixedUpdate() {
-        if (m_animal.Grounded) {
-            m_animal.m_rb.AddForce(m_animal.EntityRight * m_chaseSpeed * 1.5f);
+        float angle = Vector2.Angle(m_animal.EntityRight, -Physics2D.gravity);
+        if (m_animal.Grounded && angle <= 90f) {
+            m_animal.m_rb.velocity = m_animal.EntityRight * m_chaseSpeed;
         }
     }
 
