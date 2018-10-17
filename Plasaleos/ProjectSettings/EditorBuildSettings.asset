@@ -30,6 +30,15 @@ EditorBuildSettings:
     path: Assets/Scenes/testLevel_04.unity
     guid: 406eabd159df2804a8ebc361e3adcf79
   - enabled: 1
+    path: Assets/Scenes/testLevel_05.unity
+    guid: 03c3cc81f15766c459c31386461d39c8
+  - enabled: 1
+    path: Assets/Scenes/testLevel_06.unity
+    guid: 732965046b5cb424fa7302442f1ba880
+  - enabled: 1
+    path: Assets/Scenes/testLevel_07.unity
+    guid: a7c69458942e41541831339e18859897
+  - enabled: 1
     path: Assets/Scenes/TestAnimal.unity
     guid: 01c0e61f1cbc4ca479ae25ab1e80e777
   m_configObjects: {}

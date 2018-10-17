@@ -6,7 +6,7 @@ public class FinishEdit : MonoBehaviour {
 
     public void Finish() {
         m_elementsButtons.enabled = false;
-        gameObject.SetActive(false);
+        transform.parent.gameObject.SetActive(false);
     }
 
 }
