@@ -184,7 +184,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_groundLayer:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 1024
   m_jumpForce: 10
   m_horizontalSpeed: 6
 --- !u!114 &114606100541141600
