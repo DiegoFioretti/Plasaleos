@@ -10,7 +10,12 @@ public class GyroController : MonoBehaviour {
     private Gyroscope gyro;
     float angle;
 
-    public bool fixedGravity;
+    public bool dragGravity = false;
+    [SerializeField] private float dragMagnitude = 3;
+
+    private Vector2 startPos;
+    private Vector2 endPos;
+    private bool directionChosen;
 
     // Use this for initialization
     void Start() {
@@ -25,6 +30,8 @@ public class GyroController : MonoBehaviour {
         gyroEnabled = false;
         accelEnabled = false;
 #endif
+
+        dragGravity = true;
     }
 
     private bool EnableGyro() {
@@ -46,10 +53,46 @@ public class GyroController : MonoBehaviour {
 
     // Update is called once per frame
     void FixedUpdate() {
-        if (gyroEnabled) {
-            transform.up = -gyro.gravity;
-        } else if (accelEnabled) {
-            transform.up = -Input.acceleration;
+        if (dragGravity)
+        {
+            if (Input.touchCount > 0)
+            {
+                Touch touch = Input.GetTouch(0);
+
+                // Handle finger movements based on touch phase.
+                switch (touch.phase)
+                {
+                    // Record initial touch position.
+                    case TouchPhase.Began:
+                        startPos = touch.position;
+                        directionChosen = false;
+                        break;
+
+                    // Report that a direction has been chosen when the finger is lifted.
+                    case TouchPhase.Ended:
+                        endPos = touch.position;
+                        directionChosen = true;
+                        break;
+                }
+            }
+            if (directionChosen)
+            {
+                directionChosen = false;
+                Vector2 gravityDir = (endPos - startPos);
+                if(gravityDir.magnitude > dragMagnitude)
+                    transform.up = -gravityDir;
+            }
+        }
+        else
+        {
+            if (gyroEnabled)
+            {
+                transform.up = -gyro.gravity;
+            }
+            else if (accelEnabled)
+            {
+                transform.up = -Input.acceleration;
+            }
         }
     }
 }

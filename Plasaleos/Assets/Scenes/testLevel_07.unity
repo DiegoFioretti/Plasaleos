@@ -246,7 +246,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d6e2764ffe590c42972b9a97c730d3e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fixedGravity: 1
+  dragGravity: 0
+  dragMagnitude: 3
 --- !u!114 &291256150
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -847,6 +848,11 @@ Prefab:
       propertyPath: m_Pivot.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 114972924517747112, guid: da0ad584e5ccf7047b322f33002a43de,
+        type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1207469058}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: da0ad584e5ccf7047b322f33002a43de, type: 2}
   m_IsPrefabAsset: 0

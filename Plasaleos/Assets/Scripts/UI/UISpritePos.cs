@@ -22,8 +22,10 @@ public class UISpritePos : MonoBehaviour {
     {
         Vector2 screenPoint = RectTransformUtility.WorldToScreenPoint(Camera.main, objectToFollow.position);
         healthBar.anchoredPosition = screenPoint - canvasRectT.sizeDelta / 2f;
-
-        GetComponent<RectTransform>().up = gyro.transform.up;
-        GetComponent<RectTransform>().rotation = Quaternion.Euler(0, 0, GetComponent<RectTransform>().rotation.eulerAngles.z);
+        if(!gyro.GetComponent<GyroController>().dragGravity)
+        {
+            GetComponent<RectTransform>().up = gyro.transform.up;
+            GetComponent<RectTransform>().rotation = Quaternion.Euler(0, 0, GetComponent<RectTransform>().rotation.eulerAngles.z);
+        }
     }
 }
