@@ -11,7 +11,7 @@ public class GyroController : MonoBehaviour {
     float angle;
 
     public bool dragGravity = false;
-    public float dragMagnitude = 3;
+    [SerializeField] private float dragMagnitude = 3;
 
     private Vector2 startPos;
     private Vector2 endPos;
@@ -30,6 +30,8 @@ public class GyroController : MonoBehaviour {
         gyroEnabled = false;
         accelEnabled = false;
 #endif
+
+        dragGravity = true;
     }
 
     private bool EnableGyro() {
@@ -78,7 +80,7 @@ public class GyroController : MonoBehaviour {
                 directionChosen = false;
                 Vector2 gravityDir = (endPos - startPos);
                 if(gravityDir.magnitude > dragMagnitude)
-                    transform.up = gravityDir;
+                    transform.up = -gravityDir;
             }
         }
         else
