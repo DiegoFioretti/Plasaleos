@@ -1288,7 +1288,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5d5e4c9387b27804aba408d0ed1fe03a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  startingValue: 1000
+  startingValue: 3000
 --- !u!4 &2027680853
 Transform:
   m_ObjectHideFlags: 0
