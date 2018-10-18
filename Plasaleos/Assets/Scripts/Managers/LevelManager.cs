@@ -7,8 +7,6 @@ public class LevelManager : MonoBehaviour {
 
     static public LevelManager instance;
 
-    private int maxAliens = -1;
-
     private int aliveAliens = -1;
 
     private int rescuedAliens = 0;
@@ -37,7 +35,6 @@ public class LevelManager : MonoBehaviour {
         if (!instance) {
             AkSoundEngine.PostEvent("StopAll", gameObject);
             instance = this;
-            maxAliens = GameObject.FindGameObjectsWithTag("Alien").Length;
             aliveAliens = GameObject.FindGameObjectsWithTag("Alien").Length;
             Screen.sleepTimeout = SleepTimeout.NeverSleep;
         } else {
