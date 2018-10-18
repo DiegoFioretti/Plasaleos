@@ -13,6 +13,7 @@ TagManager:
   - Gyroscope
   - MainCanvas
   - AlienCounterPoint
+  - Rock
   layers:
   - Default
   - TransparentFX

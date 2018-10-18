@@ -24,8 +24,8 @@ GameObject:
   - component: {fileID: 58026786034861210}
   - component: {fileID: 114855986630231830}
   m_Layer: 0
-  m_Name: Roca
-  m_TagString: Pelota
+  m_Name: Rock
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -92,7 +92,7 @@ MonoBehaviour:
   lm:
     serializedVersion: 2
     m_Bits: 43008
-  minSpeed: 1
+  minSpeed: 5
 --- !u!212 &212646097467802812
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -128,8 +128,8 @@ SpriteRenderer:
   m_SortingLayerID: 1173831057
   m_SortingLayer: 4
   m_SortingOrder: 0
-  m_Sprite: {fileID: 10913, guid: 0000000000000000f000000000000000, type: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Sprite: {fileID: 21300000, guid: df4aec9d04bc31a41a4b964e2021b63f, type: 3}
+  m_Color: {r: 0.81394625, g: 0.8477078, b: 0.8584906, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
