@@ -83,14 +83,19 @@ public class Entity : MonoBehaviour {
     }
 
     public void CheckForFlip() {
-        RaycastHit2D frontHit = Physics2D.Raycast(transform.position,
+        RaycastHit2D frontHit = Physics2D.Raycast(transform.position - 0.5f * transform.up,
             m_entityRight, 1.3f, m_groundLayer);
         Vector2 pos = transform.position;
-        RaycastHit2D frontDownHit = Physics2D.Raycast(pos + m_entityRight * 1f, -transform.up,
-            m_footOffset + 0.2f, m_groundLayer); //for flipping in corners
-        Debug.DrawRay(pos + m_entityRight * 1f, -transform.up, Color.magenta);
+        //for flipping in corners
+        RaycastHit2D frontDownHit = Physics2D.Raycast(pos + m_entityRight * 0.82f, -transform.up,
+            m_footOffset + 0.3f, m_groundLayer);
+        RaycastHit2D backDownHit = Physics2D.Raycast(pos - m_entityRight * 0.8f, -transform.up,
+            m_footOffset + 0.6f, m_groundLayer);
+        Debug.DrawRay(pos + m_entityRight * 0.82f, -transform.up, Color.magenta);
+        Debug.DrawRay(pos, m_entityRight, Color.cyan);
+        Debug.DrawRay(pos, Physics2D.gravity, Color.cyan);
         if (frontHit && m_grounded && !((Vector3.Angle(frontHit.normal, Vector3.down) != 90f) &&
-                (frontDownHit.normal != m_groundNormal))) {
+                (Vector3.Angle(Physics2D.gravity, m_entityRight) < 90f))) {
 
             if (Physics2D.Raycast(transform.position, -m_entityRight, //check if it's stuck in a corner
                     1.5f, m_groundLayer)) {
