@@ -9,10 +9,8 @@ public class Jumping : MonoBehaviour, IState {
 
     public void StateUpdate(out IState nextState) {
         if (m_entity.Jumping || !m_entity.Grounded) {
-            print("yesh");
             nextState = this;
         } else {
-            print("nop");
             nextState = GetComponent<Movement>();
         }
     }
