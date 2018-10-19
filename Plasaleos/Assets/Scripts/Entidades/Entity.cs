@@ -38,7 +38,7 @@ public class Entity : MonoBehaviour {
 
     protected virtual void Update() {
         m_grounded = IsGrounded(out m_groundNormal);
-        if (m_rb.velocity.magnitude == 0f) {
+        if (m_rb.velocity.magnitude <= 0.05f) {
             m_stuckCounter += Time.deltaTime;
             if (m_stuckCounter >= 0.15f) {
                 Flip();
