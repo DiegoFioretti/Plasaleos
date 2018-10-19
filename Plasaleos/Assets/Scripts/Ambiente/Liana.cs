@@ -3,6 +3,7 @@ using UnityEngine.EventSystems;
 
 public class Liana : MonoBehaviour {
 	[SerializeField] LayerMask m_terrain;
+	[SerializeField] Color m_invalidColor;
 	ResourceManager m_resourceManager;
 	Camera m_screenCamera;
 	Vector3 m_newPos;
@@ -56,10 +57,12 @@ public class Liana : MonoBehaviour {
 			transform.position = startPos;
 			m_sprite.enabled = true;
 			m_adjusting = true;
+			ColorPermitted();
 		}
 	}
 
 	void OnTouchUp() {
+		CancelInvoke();
 		if (m_adjusting) {
 			m_adjusting = false;
 			FindObjectOfType<FinishEdit>().Finish();
@@ -99,19 +102,35 @@ public class Liana : MonoBehaviour {
 	}
 
 	void ColorPermitted() {
-		m_sprite.color = Color.red;
+		m_sprite.color = m_invalidColor;
+		bool once = false;
+		bool twice = false;
 		if (Physics2D.Raycast(m_newPos, Vector3.forward, 1000f, m_terrain)) {
-			float rate = m_newSize.x * 0.1f;
 			Vector3 start = transform.position;
-			for (int i = 0; i < 10; i++) {
+			int i;
+			int count = 50;
+			float rate = m_newSize.x / count;
+			for (i = 0; i < count; i++) {
 				Vector3 diff = m_newPos - start;
 				if (!Physics2D.Raycast(start, diff, rate, m_terrain)) {
-					m_sprite.color = Color.white;
-					break;
+					if (!once) {
+						once = true;
+					} else if (twice) {
+						m_sprite.color = m_invalidColor;
+						break;
+					}
+				} else {
+					if (once) {
+						twice = true;
+					}
 				}
 				start += diff * 0.1f;
 			}
+			if (i == count && once) {
+				m_sprite.color = Color.white;
+			}
 		}
+		Invoke("ColorPermitted", 0.33f);
 	}
 
 	void Cancel() {

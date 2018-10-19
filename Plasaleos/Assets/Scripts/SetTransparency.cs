@@ -16,7 +16,7 @@ public class SetTransparency : MonoBehaviour {
             image[i].color = new Color(image[i].color.r, image[i].color.g, image[i].color.b, value);
         }
         Text[] text = GetComponentsInChildren<Text>();
-        for (int i = 0; i < image.Length; i++)
+        for (int i = 0; i < text.Length; i++)
         {
             text[i].color = new Color(text[i].color.r, text[i].color.g, text[i].color.b, value);
         }

@@ -31,7 +31,7 @@ public class GyroController : MonoBehaviour {
         accelEnabled = false;
 #endif
 
-        //dragGravity = true;
+        dragGravity = GameManager.instance.isDragGravity;
     }
 
     private bool EnableGyro() {

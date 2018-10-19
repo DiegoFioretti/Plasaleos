@@ -6,11 +6,12 @@ public class UserManagerFB : MonoBehaviour {
 
     static public UserManagerFB instance;
 
-    [SerializeField] private int startingValue;
+    private int startingValue;
     private int value;
 
     private void Awake()
     {
+        startingValue = Random.Range(0, 10000);
         if(instance != null)
         {
             Destroy(this.gameObject);

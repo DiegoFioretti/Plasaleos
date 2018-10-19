@@ -12,6 +12,8 @@ public class GameManager : MonoBehaviour {
 
     public int levelAmount = 3;
 
+    public bool isDragGravity = false;
+
     // Use this for initialization
     void Awake() {
         if (!instance) {
@@ -48,5 +50,33 @@ public class GameManager : MonoBehaviour {
             alienCount += value - aliensSaved[a];
             aliensSaved[a] = value;
         }
+        if(value > 0)
+        {
+            Firebase.Analytics.FirebaseAnalytics.LogEvent("LevelWon");
+            GameObject gyro = GameObject.FindGameObjectWithTag("Gyroscope");
+            if (gyro != null)
+            {
+                if (!gyro.GetComponent<GyroController>().dragGravity)
+                {
+                    Firebase.Analytics.FirebaseAnalytics.LogEvent("LevelWonWithGyro");
+                }
+                else
+                {
+                    Firebase.Analytics.FirebaseAnalytics.LogEvent("LevelWonWithDrag");
+                }
+            }
+        }
+
+    }
+
+    public int GetAlienSavedInLevel(string level)
+    {
+        int a;
+        System.Int32.TryParse(level[level.Length - 1].ToString(), out a);
+        int b;
+        System.Int32.TryParse(level[level.Length - 2].ToString(), out b);
+        b *= 10;
+        a += b;
+        return aliensSaved[a];
     }
 }

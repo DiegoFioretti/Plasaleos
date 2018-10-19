@@ -40,6 +40,19 @@ public class LevelManager : MonoBehaviour {
             maxAliens = GameObject.FindGameObjectsWithTag("Alien").Length;
             aliveAliens = GameObject.FindGameObjectsWithTag("Alien").Length;
             Screen.sleepTimeout = SleepTimeout.NeverSleep;
+            Firebase.Analytics.FirebaseAnalytics.LogEvent("LevelPlayed");
+            GameObject gyro = GameObject.FindGameObjectWithTag("Gyroscope");
+            if (gyro != null)
+            {
+                if (!gyro.GetComponent<GyroController>().dragGravity)
+                {
+                    Firebase.Analytics.FirebaseAnalytics.LogEvent("LevelPlayedWithGyro");
+                }
+                else
+                {
+                    Firebase.Analytics.FirebaseAnalytics.LogEvent("LevelPlayedWithDrag");
+                }
+            }
         } else {
             Destroy(this);
         }

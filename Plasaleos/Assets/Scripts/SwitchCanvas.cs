@@ -10,16 +10,26 @@ public class SwitchCanvas : MonoBehaviour {
     // Update is called once per frame
     void Update()
     {
-        Debug.LogError(Physics.gravity.y);
-        if (Physics2D.gravity.y < 0 || GameObject.FindGameObjectWithTag("Gyroscope").GetComponent<GyroController>().dragGravity)
+        if (!(canvasUp == null || canvasDown == null))
         {
-            canvasUp.SetActive(true);
-            canvasDown.SetActive(false);
-        }
-        else
-        {
-            canvasUp.SetActive(false);
-            canvasDown.SetActive(true);
+            if (GameObject.FindGameObjectWithTag("Gyroscope") != null)
+            {
+                if (Physics2D.gravity.y < 0 || GameObject.FindGameObjectWithTag("Gyroscope").GetComponent<GyroController>().dragGravity)
+                {
+                    canvasUp.SetActive(true);
+                    canvasDown.SetActive(false);
+                }
+                else
+                {
+                    canvasUp.SetActive(false);
+                    canvasDown.SetActive(true);
+                }
+            }
+            else
+            {
+                canvasUp.SetActive(true);
+                canvasDown.SetActive(false);
+            }
         }
     }
 }

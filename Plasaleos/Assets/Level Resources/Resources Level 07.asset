@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Name: Resources Level 07
   m_EditorClassIdentifier: 
   lianas: 3
-  mushrooms: 2
+  mushrooms: 0
   alerts: 3
-  scares: 3
+  scares: 0

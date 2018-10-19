@@ -7,6 +7,8 @@ public class SetEvent : MonoBehaviour {
 
     private int alien = 0;
 
+    private List<GameObject> aliensCollided;
+
     public UnityEvent ev;
 
     string parameter;
@@ -17,6 +19,7 @@ public class SetEvent : MonoBehaviour {
     private void Start()
     {
         time = Time.time;
+        aliensCollided = new List<GameObject>();
     }
 
     public void SetParameter(string _parameter)
@@ -58,7 +61,20 @@ public class SetEvent : MonoBehaviour {
     {
         if(collision.tag == "Alien")
         {
-            ev.Invoke();
+            bool found = false;
+            for (int i = 0; i < aliensCollided.Count; i++)
+            {
+                if(aliensCollided[i].gameObject == collision.gameObject)
+                {
+                    found = true;
+                    i = aliensCollided.Count;
+                }
+            }
+            if (!found)
+            {
+                aliensCollided.Add(collision.gameObject);
+                ev.Invoke();
+            }
         }
     }
 }
