@@ -131,7 +131,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &60528305
 RectTransform:
   m_ObjectHideFlags: 0
@@ -254,14 +254,13 @@ GameObject:
   - component: {fileID: 152603400}
   - component: {fileID: 152603399}
   - component: {fileID: 152603398}
-  - component: {fileID: 152603397}
   m_Layer: 5
   m_Name: B_Level1 (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &152603396
 RectTransform:
   m_ObjectHideFlags: 0
@@ -282,17 +281,6 @@ RectTransform:
   m_AnchoredPosition: {x: -106, y: -43.099976}
   m_SizeDelta: {x: 137.8, y: 66.3}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &152603397
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 152603395}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4b63ed356ef9d624a853475e2843c216, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &152603398
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -334,7 +322,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 152603397}
+      - m_Target: {fileID: 0}
         m_MethodName: NewUser
         m_Mode: 1
         m_Arguments:
