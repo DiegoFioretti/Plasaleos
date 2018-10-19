@@ -1391,8 +1391,8 @@ MonoBehaviour:
     m_VerticalOverflow: 0
     m_LineSpacing: 1
   m_Text: "Eres un planeta y tienes que rescatar a los aliens que se extraviaron.
-    \nUsa tu fuerza de gravedad para influir en su movimiento as\xED como en los objetos
-    del ambiente."
+    \nUsa tu fuerza de gravedad, girando el tel\xE9fono, para influir en su movimiento
+    as\xED como en los objetos del ambiente."
 --- !u!222 &1495997742
 CanvasRenderer:
   m_ObjectHideFlags: 0
