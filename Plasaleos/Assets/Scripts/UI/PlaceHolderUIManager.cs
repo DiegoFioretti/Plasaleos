@@ -43,7 +43,7 @@ public class PlaceHolderUIManager : MonoBehaviour {
     }
 
     public void NextLevel() {
-        if (SceneManager.GetActiveScene().buildIndex < SceneManager.sceneCountInBuildSettings) {
+        if (SceneManager.GetActiveScene().buildIndex < SceneManager.sceneCountInBuildSettings - 1) {
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
         } else {
             SceneManager.LoadScene("MainMenu");
