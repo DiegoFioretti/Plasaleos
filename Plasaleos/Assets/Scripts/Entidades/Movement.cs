@@ -14,7 +14,7 @@ public class Movement : MonoBehaviour, IState {
     }
 
     public void StateUpdate(out IState nextState) {
-        if (m_entity.m_rb.velocity.magnitude <= 0.22f) {
+        if (m_entity.m_rb.velocity.magnitude <= 0.2f) {
             m_stuckCounter += Time.deltaTime;
             if (m_stuckCounter >= 0.15f) {
                 m_entity.Flip();

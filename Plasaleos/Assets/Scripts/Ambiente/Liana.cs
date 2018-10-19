@@ -106,10 +106,11 @@ public class Liana : MonoBehaviour {
 		bool once = false;
 		bool twice = false;
 		if (Physics2D.Raycast(m_newPos, Vector3.forward, 1000f, m_terrain)) {
-			float rate = m_newSize.x * 0.1f;
 			Vector3 start = transform.position;
 			int i;
-			for (i = 0; i < 10; i++) {
+			int count = 50;
+			float rate = m_newSize.x / count;
+			for (i = 0; i < count; i++) {
 				Vector3 diff = m_newPos - start;
 				if (!Physics2D.Raycast(start, diff, rate, m_terrain)) {
 					if (!once) {
@@ -125,7 +126,7 @@ public class Liana : MonoBehaviour {
 				}
 				start += diff * 0.1f;
 			}
-			if (i == 10 && once) {
+			if (i == count && once) {
 				m_sprite.color = Color.white;
 			}
 		}
