@@ -2,6 +2,7 @@ using UnityEngine;
 
 public class Movement : MonoBehaviour, IState {
     Entity m_entity;
+    float m_stuckCounter;
 
     private void Awake() {
         m_entity = GetComponent<Entity>();
@@ -9,9 +10,20 @@ public class Movement : MonoBehaviour, IState {
 
     private void OnEnable() {
         GetComponent<Animator>().SetBool("Moving", true);
+        m_stuckCounter = 0f;
     }
 
     public void StateUpdate(out IState nextState) {
+        if (m_entity.m_rb.velocity.magnitude <= 0.22f) {
+            m_stuckCounter += Time.deltaTime;
+            if (m_stuckCounter >= 0.15f) {
+                m_entity.Flip();
+                m_stuckCounter = 0f;
+            }
+        } else {
+            m_stuckCounter = 0f;
+        }
+
         m_entity.CheckForLanding();
         m_entity.TakeGravityEffect();
         m_entity.CheckForFlip();

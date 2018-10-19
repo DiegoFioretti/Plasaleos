@@ -12,7 +12,6 @@ public class Entity : MonoBehaviour {
     Vector2 m_groundNormal;
     float m_footOffset;
     float m_speedMultiplier;
-    float m_stuckCounter;
     bool m_grounded;
     bool m_jumping;
     bool m_death;
@@ -29,7 +28,6 @@ public class Entity : MonoBehaviour {
         m_footOffset = GetComponent<SpriteRenderer>().size.y * 0.5f;
         m_rb = GetComponent<Rigidbody2D>();
         m_speedMultiplier = 1f;
-        m_stuckCounter = 0f;
     }
 
     protected void SetStateActive(IState state, bool active) {
@@ -38,15 +36,6 @@ public class Entity : MonoBehaviour {
 
     protected virtual void Update() {
         m_grounded = IsGrounded(out m_groundNormal);
-        if (m_rb.velocity.magnitude <= 0.05f) {
-            m_stuckCounter += Time.deltaTime;
-            if (m_stuckCounter >= 0.15f) {
-                Flip();
-                m_stuckCounter = 0f;
-            }
-        } else {
-            m_stuckCounter = 0f;
-        }
     }
 
     protected virtual void LateUpdate() { }
