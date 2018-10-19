@@ -42,6 +42,14 @@ public class PlaceHolderUIManager : MonoBehaviour {
         SceneManager.LoadScene(level);
     }
 
+    public void NextLevel() {
+        if (SceneManager.GetActiveScene().buildIndex < SceneManager.sceneCountInBuildSettings) {
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        } else {
+            SceneManager.LoadScene("MainMenu");
+        }
+    }
+
     public void ResetLevel() {
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }

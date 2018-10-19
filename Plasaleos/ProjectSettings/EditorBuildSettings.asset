@@ -8,10 +8,10 @@ EditorBuildSettings:
   - enabled: 0
     path: 
     guid: 00000000000000000000000000000000
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/StartMenu.unity
     guid: 100be987e63662a4bbda604b6e2cbdb1
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/MainMenu.unity
     guid: da3f9a225e03f2c44bbc02a6bc627533
   - enabled: 0
@@ -42,6 +42,15 @@ EditorBuildSettings:
     path: Assets/Scenes/TestAnimal.unity
     guid: 01c0e61f1cbc4ca479ae25ab1e80e777
   - enabled: 1
-    path: Assets/Scenes/Level01b.unity
+    path: Assets/Scenes/Levelb01.unity
     guid: 35f3be70d79cc404eaaae3c265279450
+  - enabled: 1
+    path: Assets/Scenes/Levelb02.unity
+    guid: 5fa701650882c1448b7fa5cae06c63f7
+  - enabled: 1
+    path: Assets/Scenes/Levelb03.unity
+    guid: 4418c00ad34756c409de60843777a9a6
+  - enabled: 1
+    path: Assets/Scenes/Levelb04.unity
+    guid: e5cc1083277cec24b8c37d71e2171f27
   m_configObjects: {}

@@ -81,11 +81,6 @@ public class Entity : MonoBehaviour {
     }
 
     public void CheckForLanding() {
-        // if (m_grounded) {
-        //     if (Vector2.Angle(-transform.up, Physics2D.gravity) > m_detachAngle) {
-        //         m_grounded = false;
-        //     }
-        // }
         if (m_grounded) {
             transform.eulerAngles = new Vector3(
                 0f, 0f, -Vector2.SignedAngle(m_groundNormal, Vector2.up)
@@ -93,13 +88,8 @@ public class Entity : MonoBehaviour {
             m_entityRight = new Vector2(
                 m_groundNormal.y, -m_groundNormal.x) * (m_facingRight? 1f: -1f);
         } else {
-            float angle = -Vector2.SignedAngle(Physics2D.gravity, -Vector2.up);
-            angle = Mathf.Clamp(angle, -30f, 30f);
-            transform.eulerAngles = new Vector3(
-                0f, 0f, angle
-            );
-            m_entityRight = new Vector2(
-                transform.right.x, transform.right.y) * (m_facingRight? 1f: -1f);
+            transform.up = Vector3.up;
+            m_entityRight = transform.right * (m_facingRight? 1f: -1f);
         }
     }
 
@@ -107,9 +97,9 @@ public class Entity : MonoBehaviour {
         RaycastHit2D frontHit = Physics2D.Raycast(transform.position,
             m_entityRight, 1.3f, m_groundLayer);
         Vector2 pos = transform.position;
-        RaycastHit2D frontDownHit = Physics2D.Raycast(pos + m_entityRight * 0.7f, -transform.up,
+        RaycastHit2D frontDownHit = Physics2D.Raycast(pos + m_entityRight * 1f, -transform.up,
             m_footOffset + 0.2f, m_groundLayer); //for flipping in corners
-        Debug.DrawRay(pos + m_entityRight * 0.8f, -transform.up, Color.magenta);
+        Debug.DrawRay(pos + m_entityRight * 1f, -transform.up, Color.magenta);
         if (frontHit && m_grounded && !((Vector3.Angle(frontHit.normal, Vector3.down) != 90f) &&
                 (frontDownHit.normal != m_groundNormal))) {
 
@@ -132,7 +122,6 @@ public class Entity : MonoBehaviour {
     bool IsGrounded() {
         RaycastHit2D hit;
         hit = Physics2D.Raycast(transform.position, (-transform.up),
-            // hit = Physics2D.Raycast(transform.position, Vector3.down,
             m_footOffset + 0.2f, m_groundLayer);
         return (hit);
     }
@@ -140,7 +129,6 @@ public class Entity : MonoBehaviour {
     bool IsGrounded(out Vector2 normal) {
         RaycastHit2D hit;
         hit = Physics2D.Raycast(transform.position, (-transform.up),
-            // hit = Physics2D.Raycast(transform.position, Vector3.down,
             m_footOffset + 0.2f, m_groundLayer);
         normal = hit.normal;
         return (hit);

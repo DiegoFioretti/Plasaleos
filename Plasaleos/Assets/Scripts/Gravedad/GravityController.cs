@@ -21,7 +21,7 @@ public class GravityController : MonoBehaviour {
     private void ChangeGravity() {
         float angle = Vector2.SignedAngle(gravity, -transform.up);
         float maxAngle = Vector2.SignedAngle(gravity, Vector3.down);
-        if (Mathf.Abs(angle) >= 20f && (maxAngle == 0f || //Check for angle not going over 35
+        if (Mathf.Abs(angle) >= 25f && (maxAngle == 0f || //Check for angle not going over 35
                 ((Mathf.Sign(angle) == Mathf.Sign(maxAngle) && Mathf.Abs(maxAngle) == 35f)))) {
 
             gravity = new Vector2(((gravity.x * cos35) - (gravity.y * sin35 * Mathf.Sign(angle))),
