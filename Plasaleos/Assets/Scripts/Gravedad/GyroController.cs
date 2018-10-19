@@ -31,7 +31,7 @@ public class GyroController : MonoBehaviour {
         accelEnabled = false;
 #endif
 
-        dragGravity = true;
+        //dragGravity = true;
     }
 
     private bool EnableGyro() {

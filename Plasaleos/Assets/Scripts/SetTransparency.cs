@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class SetTransparency : MonoBehaviour {
 
-    [SerializeField] private float value = 0.5f;
+    [SerializeField] private float value = 1f;
 
     // Use this for initialization
     void Start()
@@ -18,7 +18,7 @@ public class SetTransparency : MonoBehaviour {
         Text[] text = GetComponentsInChildren<Text>();
         for (int i = 0; i < image.Length; i++)
         {
-            text[i].color = new Color(image[i].color.r, image[i].color.g, image[i].color.b, value);
+            text[i].color = new Color(text[i].color.r, text[i].color.g, text[i].color.b, value);
         }
     }
 }

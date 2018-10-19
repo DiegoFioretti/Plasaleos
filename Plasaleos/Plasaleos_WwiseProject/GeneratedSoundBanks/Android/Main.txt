@@ -9,11 +9,11 @@ Event	ID	Name			Wwise Object Path	Notes
 	3998872777	Music_Background			\Default Work Unit\Music_Background	
 
 In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
+	303669959	Victory_2	D:\Documents\Project-Plasaleos\Plasaleos\Plasaleos_WwiseProject\.cache\Android\SFX\Victory_2_56D34C19.wem		\Actor-Mixer Hierarchy\Default Work Unit\Victory_2		291296
 	561358359	Dead	D:\Documents\Project-Plasaleos\Plasaleos\Plasaleos_WwiseProject\.cache\Android\SFX\Dead_56D34C19.wem		\Actor-Mixer Hierarchy\Default Work Unit\Dead		91162
 	570449265	PlasaleosMusicProto-04	D:\Documents\Project-Plasaleos\Plasaleos\Plasaleos_WwiseProject\.cache\Android\SFX\PlasaleosMusicProto-04_3CBE96A5.wem		\Actor-Mixer Hierarchy\Default Work Unit\PlasaleosMusicProto-04		14112040
 	599664353	Spike	D:\Documents\Project-Plasaleos\Plasaleos\Plasaleos_WwiseProject\.cache\Android\SFX\Spike_56D34C19.wem		\Actor-Mixer Hierarchy\Default Work Unit\Spike		23826
 	794205814	Step	D:\Documents\Project-Plasaleos\Plasaleos\Plasaleos_WwiseProject\.cache\Android\SFX\Step_56D34C19.wem		\Actor-Mixer Hierarchy\Default Work Unit\Step		4160
 	801562404	Ice	D:\Documents\Project-Plasaleos\Plasaleos\Plasaleos_WwiseProject\.cache\Android\SFX\Ice_22627D18.wem		\Actor-Mixer Hierarchy\Default Work Unit\Ice		67996
-	910560587	Victory	D:\Documents\Project-Plasaleos\Plasaleos\Plasaleos_WwiseProject\.cache\Android\SFX\Victory_56D34C19.wem		\Actor-Mixer Hierarchy\Default Work Unit\Victory		1414464
 	1002178581	Rescued	D:\Documents\Project-Plasaleos\Plasaleos\Plasaleos_WwiseProject\.cache\Android\SFX\Rescued_56D34C19.wem		\Actor-Mixer Hierarchy\Default Work Unit\Rescued		41972
 

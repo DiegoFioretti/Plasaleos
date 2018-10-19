@@ -51,7 +51,7 @@ public class Mushroom : MonoBehaviour {
     void OnTouchDown() {
         m_sprite.enabled = true;
         Vector3 newPos = m_screenCamera.ScreenToWorldPoint(m_touch.position);
-        newPos.y += m_distToFeet;
+        newPos.y += m_distToFeet * 3f;
         newPos.z = 0f;
         transform.position = newPos;
         WhileOnTouch();
@@ -59,7 +59,7 @@ public class Mushroom : MonoBehaviour {
 
     void WhileOnTouch() {
         Vector3 newPos = m_screenCamera.ScreenToWorldPoint(m_touch.position);
-        newPos += transform.up * m_distToFeet;
+        newPos += transform.up * m_distToFeet * 3f;
         newPos.z = 0f;
         transform.position = newPos;
         RaycastHit2D hit = Physics2D.Raycast(transform.position + transform.up * m_distToFeet, -transform.up, m_distToFeet * 4f, m_groundLayer);

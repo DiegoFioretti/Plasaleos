@@ -11,6 +11,12 @@ public class Rest : MonoBehaviour, IState {
 
     private void OnEnable() {
         m_awaken = false;
+        GetComponent<Animator>().SetBool("Sleep", true);
+    }
+
+    private void OnDisable()
+    {
+        GetComponent<Animator>().SetBool("Sleep", false);
     }
 
     public void StateUpdate(out IState nextState) {

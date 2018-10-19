@@ -11,6 +11,11 @@ public class Movement : MonoBehaviour, IState {
         GetComponent<Animator>().SetBool("Moving", true);
     }
 
+    private void OnDisable()
+    {
+        GetComponent<Animator>().SetBool("Moving", false);
+    }
+
     public void StateUpdate(out IState nextState) {
         m_entity.CheckForLanding();
         m_entity.CheckForFlip();

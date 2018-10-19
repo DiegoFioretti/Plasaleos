@@ -15,6 +15,16 @@ public class Hunt : MonoBehaviour, IState {
         m_animal = GetComponent<Animal>();
     }
 
+    private void OnEnable()
+    {
+        GetComponent<Animator>().SetBool("Chasing", true);
+    }
+
+    private void OnDisable()
+    {
+        GetComponent<Animator>().SetBool("Chasing", false);
+    }
+
     public void StateUpdate(out IState nextState) {
         m_animal.CheckForFlip();
         m_animal.CheckForLanding();

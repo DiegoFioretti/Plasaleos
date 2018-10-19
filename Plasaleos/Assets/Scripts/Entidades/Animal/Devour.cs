@@ -12,6 +12,12 @@ public class Devour : MonoBehaviour, IState {
 
     private void OnEnable() {
         m_timer = m_duration;
+        GetComponent<Animator>().SetBool("Eat", true);
+    }
+
+    private void OnDisable()
+    {
+        GetComponent<Animator>().SetBool("Eat", false);
     }
 
     public void StateUpdate(out IState nextState) {
