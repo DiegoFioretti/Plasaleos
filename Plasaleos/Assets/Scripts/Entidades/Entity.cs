@@ -12,7 +12,6 @@ public class Entity : MonoBehaviour {
     Vector2 m_prevGravity;
     Vector2 m_groundNormal;
     float m_footOffset;
-    float m_headOffset;
     float m_speedMultiplier;
     bool m_grounded;
     bool m_jumping;
@@ -28,7 +27,6 @@ public class Entity : MonoBehaviour {
     protected virtual void Awake() {
         m_death = false;
         m_footOffset = GetComponent<SpriteRenderer>().size.y * 0.5f;
-        m_headOffset = GetComponent<SpriteRenderer>().size.y * 0.25f;
         m_rb = GetComponent<Rigidbody2D>();
         m_speedMultiplier = 1f;
         m_prevGravity = Physics.gravity;
@@ -108,11 +106,13 @@ public class Entity : MonoBehaviour {
     public void CheckForFlip() {
         // Debug.DrawRay(transform.position, m_transformRight, Color.blue, 1.5f);
         RaycastHit2D frontHit = Physics2D.Raycast(transform.position,
-            m_entityRight, 1.25f, m_groundLayer);
-        RaycastHit2D footHit = Physics2D.Raycast(transform.position, -transform.up, m_footOffset + 0.2f, m_groundLayer);
-        if (frontHit && footHit) {
-            if (Physics2D.Raycast(transform.position + transform.up * m_headOffset, -m_entityRight, //check if it's stuck in a corner
-                    0.3f, m_groundLayer)) {
+            m_entityRight, 1.5f, m_groundLayer);
+        Vector2 up = new Vector2(transform.up.x, transform.up.y);
+        Vector2 entityRightDown = m_entityRight - up; //When it hits a slope with gravity in favor
+        Debug.DrawRay(transform.position, entityRightDown, Color.magenta);
+        if (frontHit && m_grounded && !((Vector3.Angle(frontHit.normal, Vector3.down) != 90f) && (Vector2.Angle(entityRightDown, Physics2D.gravity) < 15f))) {
+            if (Physics2D.Raycast(transform.position, -m_entityRight, //check if it's stuck in a corner
+                    1.5f, m_groundLayer)) {
 
                 transform.up = frontHit.normal;
             }
