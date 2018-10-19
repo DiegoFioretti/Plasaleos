@@ -133,14 +133,14 @@
 							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Target">
-									<ObjectRef Name="Victory" ID="{6A06E811-D098-4E5D-9925-02314A2A3C5D}" WorkUnitID="{A55CF131-BE7B-46A7-AA13-13FE3AA2C8EB}"/>
+									<ObjectRef Name="Victory 2" ID="{DD624208-1E18-4932-8B6E-B0B878C150F9}" WorkUnitID="{A55CF131-BE7B-46A7-AA13-13FE3AA2C8EB}"/>
 								</Reference>
 							</ReferenceList>
 						</Action>
 						<Action Name="" ID="{6B575E7D-8AEC-4408-96B3-308AFA18AF46}" ShortID="271025303">
 							<PropertyList>
 								<Property Name="ActionType" Type="int16" Value="1"/>
-								<Property Name="Delay" Type="Real64" Value="8.018"/>
+								<Property Name="Delay" Type="Real64" Value="2"/>
 								<Property Name="Inclusion" Type="bool">
 									<ValueList>
 										<Value>False</Value>

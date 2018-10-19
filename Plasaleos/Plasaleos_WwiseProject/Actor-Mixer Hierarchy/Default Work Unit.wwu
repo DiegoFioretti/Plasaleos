@@ -298,6 +298,25 @@
 						<ActiveSource Name="PlasaleosMusicProto-04" ID="{C74D31E4-254F-4F94-AA16-B4D428632F8B}" Platform="Linked"/>
 					</ActiveSourceList>
 				</Sound>
+				<Sound Name="Victory 2" ID="{DD624208-1E18-4932-8B6E-B0B878C150F9}" ShortID="559479012">
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{785F7985-AC0B-4CD2-82F0-0043AF7F1FC7}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{7F63C48F-B99F-442A-AE38-9D097CD4650E}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<AudioFileSource Name="Victory 2" ID="{B7466745-CD05-46AA-9A65-8A54F91F8DD7}" ShortID="168837722">
+							<Language>SFX</Language>
+							<AudioFile>Victory 2.wav</AudioFile>
+						</AudioFileSource>
+					</ChildrenList>
+					<ActiveSourceList>
+						<ActiveSource Name="Victory 2" ID="{B7466745-CD05-46AA-9A65-8A54F91F8DD7}" Platform="Linked"/>
+					</ActiveSourceList>
+				</Sound>
 			</ChildrenList>
 		</WorkUnit>
 	</AudioObjects>

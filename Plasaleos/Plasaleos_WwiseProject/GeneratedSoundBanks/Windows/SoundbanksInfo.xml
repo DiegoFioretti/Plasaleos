@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <SoundBanksInfo Platform="Windows" BasePlatform="Windows" SchemaVersion="11" SoundbankVersion="132">
 	<RootPaths>
-		<ProjectRoot>D:\Documents\Project-Plasaleos\Plasaleos\Plasaleos_WwiseProject\</ProjectRoot>
-		<SourceFilesRoot>D:\Documents\Project-Plasaleos\Plasaleos\Plasaleos_WwiseProject\.cache\Windows\</SourceFilesRoot>
-		<SoundBanksRoot>D:\Documents\Project-Plasaleos\Plasaleos\Plasaleos_WwiseProject\GeneratedSoundBanks\Windows\</SoundBanksRoot>
+		<ProjectRoot>D:\Unity\Project-Plasaleos\Plasaleos\Plasaleos_WwiseProject\</ProjectRoot>
+		<SourceFilesRoot>D:\Unity\Project-Plasaleos\Plasaleos\Plasaleos_WwiseProject\.cache\Windows\</SourceFilesRoot>
+		<SoundBanksRoot>D:\Unity\Project-Plasaleos\Plasaleos\Plasaleos_WwiseProject\GeneratedSoundBanks\Windows\</SoundBanksRoot>
 		<ExternalSourcesInputFile></ExternalSourcesInputFile>
-		<ExternalSourcesOutputRoot>D:\Documents\Project-Plasaleos\Plasaleos\Plasaleos_WwiseProject\GeneratedSoundBanks\Windows</ExternalSourcesOutputRoot>
+		<ExternalSourcesOutputRoot>D:\Unity\Project-Plasaleos\Plasaleos\Plasaleos_WwiseProject\GeneratedSoundBanks\Windows</ExternalSourcesOutputRoot>
 	</RootPaths>
 	<DialogueEvents/>
 	<StreamedFiles/>
@@ -31,6 +31,10 @@
 				<Event Id="2814314654" Name="Trap_Hit" ObjectPath="\Events\Default Work Unit\Trap_Hit"/>
 			</IncludedEvents>
 			<IncludedMemoryFiles>
+				<File Id="168837722" Language="SFX">
+					<ShortName>Victory 2.wav</ShortName>
+					<Path>SFX\Victory 2_56D34C19.wem</Path>
+				</File>
 				<File Id="561358359" Language="SFX">
 					<ShortName>Dead.wav</ShortName>
 					<Path>SFX\Dead_56D34C19.wem</Path>
@@ -50,10 +54,6 @@
 				<File Id="801562404" Language="SFX">
 					<ShortName>Ice.wav</ShortName>
 					<Path>SFX\Ice_22627D18.wem</Path>
-				</File>
-				<File Id="910560587" Language="SFX">
-					<ShortName>Victory.wav</ShortName>
-					<Path>SFX\Victory_56D34C19.wem</Path>
 				</File>
 				<File Id="1002178581" Language="SFX">
 					<ShortName>Rescued.wav</ShortName>
