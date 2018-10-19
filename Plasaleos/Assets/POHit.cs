@@ -14,9 +14,11 @@ public class POHit : MonoBehaviour {
 
     private void OnCollisionEnter2D(Collision2D collision) {
         if (rb.velocity.magnitude > minSpeed) {
-            Entity entity;
-            if (entity = collision.gameObject.GetComponent<Entity>()) {
-                entity.Damage();
+            if (Vector2.Angle(rb.velocity, -collision.contacts[0].normal) < 90f) {
+                Entity entity;
+                if (entity = collision.gameObject.GetComponent<Entity>()) {
+                    entity.Damage();
+                }
             }
         }
     }
