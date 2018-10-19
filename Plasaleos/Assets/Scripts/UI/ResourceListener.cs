@@ -28,6 +28,9 @@ public class ResourceListener : MonoBehaviour {
             }
         } else {
             m_button.interactable = true;
+            if (m_eventTrigger) {
+                m_eventTrigger.enabled = true;
+            }
         }
     }
 }

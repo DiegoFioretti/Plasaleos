@@ -299,6 +299,13 @@
 					</ActiveSourceList>
 				</Sound>
 				<Sound Name="Victory 2" ID="{DD624208-1E18-4932-8B6E-B0B878C150F9}" ShortID="559479012">
+					<PropertyList>
+						<Property Name="Volume" Type="Real64">
+							<ValueList>
+								<Value>-10</Value>
+							</ValueList>
+						</Property>
+					</PropertyList>
 					<ReferenceList>
 						<Reference Name="Conversion">
 							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{785F7985-AC0B-4CD2-82F0-0043AF7F1FC7}"/>

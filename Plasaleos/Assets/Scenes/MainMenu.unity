@@ -788,7 +788,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   text: {fileID: 1024511280}
-  unlock: 12
+  unlock: 9
 --- !u!114 &677322470
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1280,7 +1280,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   text: {fileID: 207152310}
-  unlock: 4
+  unlock: 2
 --- !u!1 &1219185738
 GameObject:
   m_ObjectHideFlags: 0
@@ -1455,7 +1455,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   text: {fileID: 1937120125}
-  unlock: 18
+  unlock: 14
 --- !u!114 &1351375904
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1723,7 +1723,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   text: {fileID: 514839948}
-  unlock: 14
+  unlock: 12
 --- !u!114 &1529828321
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2184,7 +2184,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   text: {fileID: 2048096455}
-  unlock: 10
+  unlock: 6
 --- !u!114 &1947488844
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2409,7 +2409,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   text: {fileID: 574879732}
-  unlock: 6
+  unlock: 4
 --- !u!1 &2048096453
 GameObject:
   m_ObjectHideFlags: 0
@@ -2610,7 +2610,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   text: {fileID: 1067335290}
-  unlock: 20
+  unlock: 15
 --- !u!114 &2139576404
 MonoBehaviour:
   m_ObjectHideFlags: 0

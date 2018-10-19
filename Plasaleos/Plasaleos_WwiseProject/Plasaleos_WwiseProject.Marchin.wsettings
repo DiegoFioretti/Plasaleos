@@ -4,6 +4,7 @@
 		<UserProjectSettings Name="" ID="{E0656BC6-5C68-430D-B282-E50897941B0A}">
 			<PropertyList>
 				<Property Name="AudioFilesImporter\Path" Type="string" Value="D:\Unity\Project-Plasaleos\Plasaleos\Plasaleos_WwiseProject\Originals\Music"/>
+				<Property Name="Event Action List\{620FC1D5-D532-42D5-A8F7-66EC3581CAC9}\x64_Expand States" Type="string" Value=""/>
 				<Property Name="Event Action List\{995FBD95-1BA5-4A6E-BEED-CF65E32347E6}\x64_Expand States" Type="string" Value=""/>
 				<Property Name="EventView\FilterMode1" Type="int32" Value="2"/>
 				<Property Name="ExternalSourcesInputPath" Type="string">

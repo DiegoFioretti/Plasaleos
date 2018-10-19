@@ -21,7 +21,7 @@ GameObject:
   - component: {fileID: 4155129637062232}
   - component: {fileID: 212367008722834164}
   - component: {fileID: 95131625826247670}
-  m_Layer: 14
+  m_Layer: 0
   m_Name: TheMushroom
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -38,7 +38,7 @@ GameObject:
   - component: {fileID: 4942912824313808}
   - component: {fileID: 61786839774183962}
   - component: {fileID: 114606100541141600}
-  m_Layer: 14
+  m_Layer: 0
   m_Name: JumpToMushroom
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -55,7 +55,7 @@ GameObject:
   - component: {fileID: 4248751897600080}
   - component: {fileID: 61622103460702726}
   - component: {fileID: 114574326260272998}
-  m_Layer: 14
+  m_Layer: 0
   m_Name: Mushroom
   m_TagString: Untagged
   m_Icon: {fileID: 0}

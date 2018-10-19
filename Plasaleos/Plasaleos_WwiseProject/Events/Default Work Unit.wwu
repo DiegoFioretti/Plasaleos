@@ -156,7 +156,7 @@
 						<Action Name="" ID="{1F58DD79-7896-4E76-B5DB-DEB1B289F394}" ShortID="305436613">
 							<PropertyList>
 								<Property Name="ActionType" Type="int16" Value="12"/>
-								<Property Name="Delay" Type="Real64" Value="8.018"/>
+								<Property Name="Delay" Type="Real64" Value="2"/>
 								<Property Name="FadeTime" Type="Real64" Value="1.5"/>
 								<Property Name="Scope" Type="int16" Value="1"/>
 								<Property Name="Volume" Type="Real64" Value="-5"/>
