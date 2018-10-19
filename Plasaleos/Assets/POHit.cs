@@ -18,6 +18,7 @@ public class POHit : MonoBehaviour {
                 Entity entity;
                 if (entity = collision.gameObject.GetComponent<Entity>()) {
                     entity.Damage();
+                    AkSoundEngine.PostEvent("Alien_Dead", gameObject);
                 }
             }
         }

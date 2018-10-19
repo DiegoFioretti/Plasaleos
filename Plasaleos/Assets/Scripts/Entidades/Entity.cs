@@ -106,7 +106,7 @@ public class Entity : MonoBehaviour {
     public void CheckForFlip() {
         // Debug.DrawRay(transform.position, m_transformRight, Color.blue, 1.5f);
         RaycastHit2D frontHit = Physics2D.Raycast(transform.position,
-            m_entityRight, 1.5f, m_groundLayer);
+            m_entityRight, 1.3f, m_groundLayer);
         Vector2 up = new Vector2(transform.up.x, transform.up.y);
         Vector2 entityRightDown = m_entityRight - up; //When it hits a slope with gravity in favor
         Debug.DrawRay(transform.position, entityRightDown, Color.magenta);
