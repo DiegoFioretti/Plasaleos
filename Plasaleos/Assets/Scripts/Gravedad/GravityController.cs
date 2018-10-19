@@ -12,6 +12,7 @@ public class GravityController : MonoBehaviour {
         Physics2D.gravity = gravity;
         sin35 = Mathf.Sin(35f * Mathf.Deg2Rad);
         cos35 = Mathf.Cos(35f * Mathf.Deg2Rad);
+        print(gravity);
     }
 
     void FixedUpdate() {
@@ -20,13 +21,17 @@ public class GravityController : MonoBehaviour {
 
     private void ChangeGravity() {
         float angle = Vector2.SignedAngle(gravity, -transform.up);
-        float maxAngle = Vector2.Angle(gravity, Vector3.down);
-        if (Mathf.Abs(angle) >= 30f && maxAngle <= 40f) {
+        float maxAngle = Vector2.SignedAngle(gravity, Vector3.down);
+        print(maxAngle);
+        if (Mathf.Abs(angle) >= 30f && (maxAngle == 0f || //Check for angle not going over 35
+                ((Mathf.Sign(angle) == Mathf.Sign(maxAngle) && Mathf.Abs(maxAngle) == 35f)))) {
+
             gravity = new Vector2(((gravity.x * cos35) - (gravity.y * sin35 * Mathf.Sign(angle))),
                 ((gravity.x * sin35 * Mathf.Sign(angle)) + (gravity.y * cos35))); //Matrix rotation
             //We multiply by the sign on angle on the sin term because sin(angle < 0) < 0
-            gravity = gravity.normalized * force;
-            Physics2D.gravity = gravity;
+            gravity = gravity.normalized;
+            print(gravity);
+            Physics2D.gravity = gravity * force;
         }
     }
 }

@@ -47,7 +47,9 @@ public class GyroController : MonoBehaviour {
     // Update is called once per frame
     void FixedUpdate() {
         if (gyroEnabled) {
-            transform.up = -gyro.gravity;
+            Vector3 down = -gyro.gravity;
+            down.z = 0;
+            transform.up = down;
         } else if (accelEnabled) {
             transform.up = -Input.acceleration;
         }
