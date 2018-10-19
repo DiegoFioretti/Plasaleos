@@ -13,8 +13,8 @@ public class Movement : MonoBehaviour, IState {
 
     public void StateUpdate(out IState nextState) {
         m_entity.CheckForLanding();
-        m_entity.CheckForFlip();
         m_entity.TakeGravityEffect();
+        m_entity.CheckForFlip();
 
         GetComponent<Animator>().SetFloat("Speed", m_entity.m_rb.velocity.magnitude / m_entity.Speed);
         nextState = this;
