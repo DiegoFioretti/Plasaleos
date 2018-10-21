@@ -23,7 +23,11 @@ public class DeathTrigger : MonoBehaviour {
             if (tag == "Trap") {
                 AkSoundEngine.PostEvent("Trap_Hit", gameObject);
             }
-
+        } else if (other.tag == "Rock") {
+            other.gameObject.SetActive(false);
+            if (tag == "Trap") {
+                AkSoundEngine.PostEvent("Trap_Hit", gameObject);
+            }
         }
 
     }

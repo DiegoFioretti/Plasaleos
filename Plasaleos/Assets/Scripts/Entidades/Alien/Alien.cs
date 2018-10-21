@@ -10,14 +10,11 @@ public sealed class Alien : Entity {
     IState m_nextState;
     bool m_scared;
     bool m_alerted;
-    bool m_dead;
-    public bool IsDead { get { return m_dead; } }
 
     protected override void Awake() {
         base.Awake();
         m_scared = false;
         m_alerted = false;
-        m_dead = false;
         SetStateActive(GetComponent<Movement>(), true);
         SetStateActive(GetComponent<Scareness>(), false);
         SetStateActive(GetComponent<Alertness>(), false);
@@ -32,7 +29,7 @@ public sealed class Alien : Entity {
             m_currState = GetComponent<Jumping>();
         }
         m_currState.StateUpdate(out m_nextState);
-        if (m_dead) {
+        if (IsDead) {
             m_nextState = GetComponent<Death>();
         } else if (m_scared) {
             m_nextState = GetComponent<Scareness>();
@@ -74,10 +71,6 @@ public sealed class Alien : Entity {
         } else if ((m_currState as MonoBehaviour) == GetComponent<Alertness>()) {
             GetComponent<Alertness>().ToggleAlert();
         }
-    }
-
-    public void Damage() {
-        m_dead = true;
     }
 
     public float GetAlertDuration() {

@@ -15,6 +15,7 @@ public class Entity : MonoBehaviour {
     float m_speedMultiplier;
     bool m_grounded;
     bool m_jumping;
+    bool m_death;
 
     public LayerMask GroundLayer { get { return m_groundLayer; } }
     public Vector2 EntityRight { get { return m_entityRight; } }
@@ -22,8 +23,10 @@ public class Entity : MonoBehaviour {
     public bool FacingRight { get { return m_facingRight; } }
     public bool Grounded { get { return m_grounded; } }
     public bool Jumping { get { return m_jumping; } }
+    public bool IsDead { get { return m_death; } }
 
     protected virtual void Awake() {
+        m_death = false;
         m_footOffset = GetComponent<SpriteRenderer>().size.y * 0.5f;
         m_rb = GetComponent<Rigidbody2D>();
         m_speedMultiplier = 1f;
@@ -100,11 +103,11 @@ public class Entity : MonoBehaviour {
     }
 
     public void CheckForFlip() {
-        // Debug.DrawRay(transform.position, m_transformRight, Color.blue, 1.5f);
-        RaycastHit2D frontHit = Physics2D.Raycast(transform.position,
-            m_entityRight, 1.25f, m_groundLayer);
-        RaycastHit2D footHit = Physics2D.Raycast(transform.position, -transform.up, m_footOffset + 0.2f, m_groundLayer);
-        if (frontHit && footHit) {
+        RaycastHit2D frontHit = Physics2D.Raycast(transform.position - 0.5f * transform.up,
+            m_entityRight, 1.3f, m_groundLayer);
+        if (frontHit && m_grounded && !((Vector3.Angle(frontHit.normal, Vector3.down) != 90f) &&
+                (Vector3.Angle(Physics2D.gravity, m_entityRight) < 90f))) {
+
             if (Physics2D.Raycast(transform.position, -m_entityRight, //check if it's stuck in a corner
                     1.5f, m_groundLayer)) {
 
@@ -136,6 +139,10 @@ public class Entity : MonoBehaviour {
         return (hit);
     }
 
+    public void Damage() {
+        m_death = true;
+    }
+
     public void Jump() {
         Invoke("EndJump", 0.5f);
         m_jumping = true;
@@ -144,4 +151,5 @@ public class Entity : MonoBehaviour {
     void EndJump() {
         m_jumping = false;
     }
+
 }
