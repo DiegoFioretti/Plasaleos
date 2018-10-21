@@ -31,21 +31,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!1 &1032775316995194
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 4692743895421362}
-  m_Layer: 0
-  m_Name: ResourceManager
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
 --- !u!1 &1066187077610490
 GameObject:
   m_ObjectHideFlags: 1
@@ -282,7 +267,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 224828934887402928}
-  - component: {fileID: 114429083216924118}
   - component: {fileID: 114258902370592384}
   m_Layer: 5
   m_Name: Elements Buttons
@@ -624,19 +608,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &4692743895421362
-Transform:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1032775316995194}
-  m_LocalRotation: {x: -0, y: -0, z: -0.99999994, w: 0.00042450425}
-  m_LocalPosition: {x: 190.23657, y: 445, z: -16.666147}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 224280894946146690}
-  m_RootOrder: 4
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -179.951}
 --- !u!114 &114007635185100238
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -785,8 +756,8 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 1
           m_CallState: 2
-        - m_Target: {fileID: 114429083216924118}
-          m_MethodName: set_enabled
+        - m_Target: {fileID: 1345446808186398}
+          m_MethodName: SetActive
           m_Mode: 6
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
@@ -794,7 +765,7 @@ MonoBehaviour:
             m_IntArgument: 0
             m_FloatArgument: 0
             m_StringArgument: 
-            m_BoolArgument: 1
+            m_BoolArgument: 0
           m_CallState: 2
         - m_Target: {fileID: 0}
           m_MethodName: UpdateLastResourceAffected
@@ -1307,7 +1278,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 114429083216924118}
+      - m_Target: {fileID: 0}
         m_MethodName: set_enabled
         m_Mode: 6
         m_Arguments:
@@ -1386,17 +1357,6 @@ MonoBehaviour:
     m_VerticalOverflow: 0
     m_LineSpacing: 1
   m_Text: '-'
---- !u!114 &114429083216924118
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1345446808186398}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: -146154839, guid: f70555f144d8491a825f0804e09c671c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &114434430239386302
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1615,8 +1575,8 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 1
           m_CallState: 2
-        - m_Target: {fileID: 114429083216924118}
-          m_MethodName: set_enabled
+        - m_Target: {fileID: 1345446808186398}
+          m_MethodName: SetActive
           m_Mode: 6
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
@@ -1624,7 +1584,7 @@ MonoBehaviour:
             m_IntArgument: 0
             m_FloatArgument: 0
             m_StringArgument: 
-            m_BoolArgument: 1
+            m_BoolArgument: 0
           m_CallState: 2
         - m_Target: {fileID: 0}
           m_MethodName: UpdateLastResourceAffected
@@ -1749,7 +1709,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bbfae90dcaaa17147b949af931014b17, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_elementsButtons: {fileID: 114429083216924118}
+  m_elementsButtons: {fileID: 0}
 --- !u!114 &114707932718377366
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2604,7 +2564,6 @@ RectTransform:
   - {fileID: 224315802123057556}
   - {fileID: 224828934887402928}
   - {fileID: 224949021627606572}
-  - {fileID: 4692743895421362}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: -0.39, z: 0}

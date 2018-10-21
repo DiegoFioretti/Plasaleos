@@ -123,7 +123,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 224595858824324540}
-  - component: {fileID: 114125454523527176}
   - component: {fileID: 114320930359982752}
   m_Layer: 5
   m_Name: Elements Buttons
@@ -1194,7 +1193,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bbfae90dcaaa17147b949af931014b17, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_elementsButtons: {fileID: 114125454523527176}
+  m_elementsButtons: {fileID: 1202565691568936}
 --- !u!114 &114092142886651826
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1261,17 +1260,6 @@ MonoBehaviour:
     m_VerticalOverflow: 0
     m_LineSpacing: 1
   m_Text: x
---- !u!114 &114125454523527176
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1202565691568936}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: -146154839, guid: f70555f144d8491a825f0804e09c671c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &114126867553891290
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1400,8 +1388,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 114125454523527176}
-        m_MethodName: set_enabled
+      - m_Target: {fileID: 1202565691568936}
+        m_MethodName: SetActive
         m_Mode: 6
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1409,7 +1397,7 @@ MonoBehaviour:
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
-          m_BoolArgument: 0
+          m_BoolArgument: 1
         m_CallState: 2
       - m_Target: {fileID: 1320643585519572}
         m_MethodName: SetActive
@@ -2086,8 +2074,8 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 1
           m_CallState: 2
-        - m_Target: {fileID: 114125454523527176}
-          m_MethodName: set_enabled
+        - m_Target: {fileID: 1202565691568936}
+          m_MethodName: SetActive
           m_Mode: 6
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
@@ -2095,7 +2083,7 @@ MonoBehaviour:
             m_IntArgument: 0
             m_FloatArgument: 0
             m_StringArgument: 
-            m_BoolArgument: 1
+            m_BoolArgument: 0
           m_CallState: 2
         - m_Target: {fileID: 114593219131944450}
           m_MethodName: UpdateLastResourceAffected
@@ -2502,7 +2490,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5fa3cad220163634f9911073f004fda0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_levelResources: {fileID: 11400000, guid: 43a1686f92b023f46be39aae0bc35129, type: 2}
+  m_levelResources: {fileID: 0}
   m_lianas: {fileID: 11400000, guid: 1974113ccc5343f4daa4820c320f2c1b, type: 2}
   m_mushrooms: {fileID: 11400000, guid: e547ab7d7fa0b914d82c25273a393cfc, type: 2}
   m_alerts: {fileID: 11400000, guid: 8c6e4c9879dab5148addbe34de68336e, type: 2}
@@ -3070,8 +3058,8 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 1
           m_CallState: 2
-        - m_Target: {fileID: 114125454523527176}
-          m_MethodName: set_enabled
+        - m_Target: {fileID: 1202565691568936}
+          m_MethodName: SetActive
           m_Mode: 6
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
@@ -3079,7 +3067,7 @@ MonoBehaviour:
             m_IntArgument: 0
             m_FloatArgument: 0
             m_StringArgument: 
-            m_BoolArgument: 1
+            m_BoolArgument: 0
           m_CallState: 2
         - m_Target: {fileID: 114593219131944450}
           m_MethodName: UpdateLastResourceAffected

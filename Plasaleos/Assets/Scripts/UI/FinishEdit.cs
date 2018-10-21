@@ -2,10 +2,10 @@
 using UnityEngine.UI;
 
 public class FinishEdit : MonoBehaviour {
-    [SerializeField] RectMask2D m_elementsButtons;
+    [SerializeField] GameObject m_elementsButtons;
 
     public void Finish() {
-        m_elementsButtons.enabled = false;
+        m_elementsButtons.SetActive(true);
         transform.parent.gameObject.SetActive(false);
     }
 
