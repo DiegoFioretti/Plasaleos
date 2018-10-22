@@ -33,12 +33,12 @@ public class Liana : MonoBehaviour {
 			m_touch = Input.GetTouch(Input.touchCount - 1);
 
 			if (m_touch.phase == TouchPhase.Began) {
-				if (!EventSystem.current.IsPointerOverGameObject(m_touch.fingerId)) {
-					OnTouchDown();
-				} else {
-					Time.timeScale = 1f;
-					Destroy(gameObject);
-				}
+				// if (!EventSystem.current.IsPointerOverGameObject(m_touch.fingerId)) {
+				OnTouchDown();
+				// } else {
+				// 	Time.timeScale = 1f;
+				// 	Destroy(gameObject);
+				// }
 			} else if (m_touch.phase == TouchPhase.Ended) {
 				OnTouchUp();
 			}

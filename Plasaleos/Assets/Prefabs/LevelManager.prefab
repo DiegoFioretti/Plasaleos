@@ -9,47 +9,50 @@ Prefab:
     m_Modifications: []
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 0}
-  m_RootGameObject: {fileID: 1032725997409400}
+  m_RootGameObject: {fileID: 1673257664920306}
   m_IsPrefabAsset: 1
---- !u!1 &1032725997409400
+--- !u!1 &1673257664920306
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 4965811542734002}
-  - component: {fileID: 114185749727012958}
+  - component: {fileID: 4264299809325518}
+  - component: {fileID: 114145254345388312}
   m_Layer: 0
-  m_Name: GameManager
-  m_TagString: Untagged
+  m_Name: LevelManager
+  m_TagString: LevelManager
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &4965811542734002
+--- !u!4 &4264299809325518
 Transform:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1032725997409400}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 3.2952406, y: 1.1966722, z: -0.1638268}
+  m_GameObject: {fileID: 1673257664920306}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &114185749727012958
+--- !u!114 &114145254345388312
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1032725997409400}
+  m_GameObject: {fileID: 1673257664920306}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ea65b668504948444bbf2f96aeb7f683, type: 3}
+  m_Script: {fileID: 11500000, guid: 88df7928129b1dc46bdfa2444bf3c5a6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  levelAmount: 8
-  isDragGravity: 0
+  LevelWon:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null

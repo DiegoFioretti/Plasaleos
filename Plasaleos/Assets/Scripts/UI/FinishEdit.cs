@@ -2,10 +2,10 @@
 using UnityEngine.UI;
 
 public class FinishEdit : MonoBehaviour {
-    [SerializeField] GameObject m_elementsButtons;
+    [SerializeField] Canvas m_elementsButtons;
 
     public void Finish() {
-        m_elementsButtons.SetActive(true);
+        m_elementsButtons.enabled = true;
         transform.parent.gameObject.SetActive(false);
     }
 

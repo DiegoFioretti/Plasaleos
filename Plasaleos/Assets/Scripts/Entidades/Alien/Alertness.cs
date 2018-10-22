@@ -11,7 +11,7 @@ public class Alertness : MonoBehaviour, IState {
 
     private void OnEnable() {
         m_alerted = true;
-        if (m_entity.m_rb) {
+        if (m_entity.Grounded) {
             m_entity.m_rb.velocity = Vector2.zero;
             GetComponent<Animator>().SetBool("Moving", false);
         }

@@ -511,7 +511,7 @@ GameObject:
   - component: {fileID: 222231546378060656}
   - component: {fileID: 114596156452298688}
   - component: {fileID: 114489447505736120}
-  - component: {fileID: 114852742329187954}
+  - component: {fileID: 114917727361188694}
   m_Layer: 5
   m_Name: ButtonCancel
   m_TagString: Untagged
@@ -1515,7 +1515,7 @@ GameObject:
   - component: {fileID: 222559899837626012}
   - component: {fileID: 114516320635909696}
   - component: {fileID: 114598190656102894}
-  - component: {fileID: 114378780314569506}
+  - component: {fileID: 114048811572701024}
   m_Layer: 5
   m_Name: ButtonCancel
   m_TagString: Untagged
@@ -1837,6 +1837,18 @@ MonoBehaviour:
   m_FillAmount: 1
   m_FillClockwise: 1
   m_FillOrigin: 0
+--- !u!114 &114048811572701024
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1944637870482310}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bbfae90dcaaa17147b949af931014b17, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_elementsButtons: {fileID: 1238267297019484}
 --- !u!114 &114056860903597904
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -3197,18 +3209,6 @@ MonoBehaviour:
   m_FillAmount: 1
   m_FillClockwise: 1
   m_FillOrigin: 0
---- !u!114 &114378780314569506
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1944637870482310}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bbfae90dcaaa17147b949af931014b17, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_elementsButtons: {fileID: 1238267297019484}
 --- !u!114 &114384244842903174
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -3653,6 +3653,28 @@ MonoBehaviour:
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 1
+        m_CallState: 2
+      - m_Target: {fileID: 1754496389884018}
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1531499902037236}
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
         m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
@@ -5336,18 +5358,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_object: {fileID: 1628053091522102, guid: 56866354ad3b6ad4db13407969b0febe, type: 2}
   m_resource: {fileID: 11400000, guid: 1974113ccc5343f4daa4820c320f2c1b, type: 2}
---- !u!114 &114852742329187954
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1315909390719600}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bbfae90dcaaa17147b949af931014b17, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_elementsButtons: {fileID: 1754496389884018}
 --- !u!114 &114863297269359952
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -5591,6 +5601,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_resource: {fileID: 11400000, guid: e547ab7d7fa0b914d82c25273a393cfc, type: 2}
+--- !u!114 &114917727361188694
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1315909390719600}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bbfae90dcaaa17147b949af931014b17, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_elementsButtons: {fileID: 1754496389884018}
 --- !u!114 &114926632469617976
 MonoBehaviour:
   m_ObjectHideFlags: 1
