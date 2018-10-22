@@ -3,6 +3,7 @@ using UnityEngine.EventSystems;
 
 public class Liana : MonoBehaviour {
 	[SerializeField] LayerMask m_terrain;
+	[SerializeField] LayerMask m_lianaPoints;
 	[SerializeField] Color m_invalidColor;
 	ResourceManager m_resourceManager;
 	Camera m_screenCamera;
@@ -33,12 +34,9 @@ public class Liana : MonoBehaviour {
 			m_touch = Input.GetTouch(Input.touchCount - 1);
 
 			if (m_touch.phase == TouchPhase.Began) {
-				// if (!EventSystem.current.IsPointerOverGameObject(m_touch.fingerId)) {
 				OnTouchDown();
-				// } else {
-				// 	Time.timeScale = 1f;
-				// 	Destroy(gameObject);
-				// }
+			} else if (m_touch.phase == TouchPhase.Moved) {
+				WhileOnTouch();
 			} else if (m_touch.phase == TouchPhase.Ended) {
 				OnTouchUp();
 			}
@@ -47,18 +45,20 @@ public class Liana : MonoBehaviour {
 
 	void OnTouchDown() {
 		Vector3 startPos = m_screenCamera.ScreenToWorldPoint(m_touch.position);
-		if (!Physics2D.Raycast(startPos, Vector3.forward, 1000f, m_terrain)) {
+		RaycastHit2D lianaPointHit = Physics2D.Raycast(startPos, Vector3.forward, 1000f, m_lianaPoints);
+		if (lianaPointHit) {
+			startPos = lianaPointHit.collider.transform.position;
+		} else if (!Physics2D.Raycast(startPos, Vector3.forward, 1000f, m_terrain)) {
 			Time.timeScale = 1f;
 			FindObjectOfType<FinishEdit>().Finish();
 			m_resourceManager.Lianas.Add();
 			Destroy(gameObject);
 		} else {
 			startPos.z = 0;
-			transform.position = startPos;
-			m_sprite.enabled = true;
-			m_adjusting = true;
-			ColorPermitted();
 		}
+		transform.position = startPos;
+		m_sprite.enabled = true;
+		m_adjusting = true;
 	}
 
 	void OnTouchUp() {
@@ -79,9 +79,13 @@ public class Liana : MonoBehaviour {
 		}
 	}
 
-	private void LateUpdate() {
+	private void WhileOnTouch() {
 		if (m_adjusting) {
 			m_newPos = m_screenCamera.ScreenToWorldPoint(m_touch.position);
+			RaycastHit2D lianaPointHit = Physics2D.Raycast(m_newPos, Vector3.forward, 1000f, m_lianaPoints);
+			if (lianaPointHit) {
+				m_newPos = lianaPointHit.collider.transform.position;
+			}
 			m_newPos.z = 0f;
 			if (m_newPos.x - transform.position.x < 0f) {
 				m_sprite.flipY = true;

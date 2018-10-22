@@ -92,20 +92,8 @@ public class Mushroom : MonoBehaviour {
     private void OnTriggerEnter2D(Collider2D other) {
         Rigidbody2D rb = other.GetComponent<Rigidbody2D>();
         if (rb.velocity.y < -1f) {
-            Entity m_entity = other.GetComponent<Entity>();
-            float direction = 1f;
-            if (m_entity) {
-                m_entity.Jump();
-                if (!m_entity.FacingRight) {
-                    direction = -1f;
-                }
-            } else {
-                if (rb.velocity.x < 0f) {
-                    direction = -1f;
-                }
-            }
             rb.angularVelocity = 0f;
-            rb.velocity = new Vector2(m_horizontalSpeed * direction, m_jumpForce);
+            rb.velocity = new Vector2(0f, m_jumpForce);
             m_animator.SetTrigger("Jumped");
         }
     }

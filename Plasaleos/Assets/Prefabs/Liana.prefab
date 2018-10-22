@@ -81,6 +81,9 @@ MonoBehaviour:
   m_terrain:
     serializedVersion: 2
     m_Bits: 1024
+  m_lianaPoints:
+    serializedVersion: 2
+    m_Bits: 131072
   m_invalidColor: {r: 0.81960785, g: 0.33736926, b: 0, a: 1}
 --- !u!212 &212800736126752084
 SpriteRenderer:
