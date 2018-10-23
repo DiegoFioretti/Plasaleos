@@ -8,6 +8,7 @@ public class Entity : MonoBehaviour {
     [SerializeField] float m_detachAngle;
     [HideInInspector]
     public Rigidbody2D m_rb;
+    GravityController m_gravityController;
     Vector2 m_entityRight;
     Vector2 m_prevGravity;
     Vector2 m_groundNormal;
@@ -31,6 +32,7 @@ public class Entity : MonoBehaviour {
         m_rb = GetComponent<Rigidbody2D>();
         m_speedMultiplier = 1f;
         m_prevGravity = Physics.gravity;
+        m_gravityController = FindObjectOfType<GravityController>();
     }
 
     protected void SetStateActive(IState state, bool active) {
@@ -67,11 +69,13 @@ public class Entity : MonoBehaviour {
             m_speedMultiplier = 1f;
         }
 
-        if ((!m_grounded || (m_grounded && angle == 90f)) &&
-            (m_prevGravity != Physics2D.gravity)) {
+        if (!m_gravityController.Restricted) {
+            if ((!m_grounded || (m_grounded && angle == 90f)) &&
+                (m_prevGravity != Physics2D.gravity)) {
 
-            float newSpeed = m_rb.velocity.magnitude * 0.7f;
-            m_rb.velocity = Physics2D.gravity.normalized * newSpeed;
+                float newSpeed = m_rb.velocity.magnitude * 0.7f;
+                m_rb.velocity = Physics2D.gravity.normalized * newSpeed;
+            }
         }
 
         if (m_rb.velocity.magnitude > m_speed * m_speedMultiplier) {
@@ -82,7 +86,7 @@ public class Entity : MonoBehaviour {
     }
 
     public void CheckForLanding() {
-        if (m_grounded) {
+        if (m_grounded && !m_gravityController.Restricted) {
             if (Vector2.Angle(-transform.up, Physics2D.gravity) > m_detachAngle) {
                 m_grounded = false;
             }
@@ -94,11 +98,16 @@ public class Entity : MonoBehaviour {
             m_entityRight = new Vector2(
                 m_groundNormal.y, -m_groundNormal.x) * (m_facingRight? 1f: -1f);
         } else {
-            transform.eulerAngles = new Vector3(
-                0f, 0f, -Vector2.SignedAngle(Physics2D.gravity, -Vector2.up)
-            );
-            m_entityRight = new Vector2(
-                transform.right.x, transform.right.y) * (m_facingRight? 1f: -1f);
+            if (m_gravityController.Restricted) {
+                transform.up = Vector3.up;
+                m_entityRight = transform.right * (m_facingRight? 1f: -1f);
+            } else {
+                transform.eulerAngles = new Vector3(
+                    0f, 0f, -Vector2.SignedAngle(Physics2D.gravity, -Vector2.up)
+                );
+                m_entityRight = new Vector2(
+                    transform.right.x, transform.right.y) * (m_facingRight? 1f: -1f);
+            }
         }
     }
 
