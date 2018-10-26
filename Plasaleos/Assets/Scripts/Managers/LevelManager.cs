@@ -56,6 +56,19 @@ public class LevelManager : MonoBehaviour {
 
     private void Update() {
         if (rescuedAliens >= aliveAliens) {
+            GameManager.instance.SetAlienCount(rescuedAliens, SceneManager.GetActiveScene().name);
+            var fooGroup = Resources.FindObjectsOfTypeAll<GameObject>();
+            if(fooGroup.Length > 0)
+            {
+                for(int i = 0; i > fooGroup.Length; i++)
+                {
+                    if(fooGroup[i].tag == "EndScreen")
+                    {
+                        fooGroup[i].SetActive(true);
+                        i = fooGroup.Length;
+                    }
+                }
+            }
             LevelWon.Invoke();
         }
     }

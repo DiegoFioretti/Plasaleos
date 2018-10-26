@@ -54,6 +54,7 @@ public class GyroController : MonoBehaviour {
     // Update is called once per frame
     void FixedUpdate() {
         if (dragGravity) {
+            Vector2 gravityDir;
             if (Input.touchCount > 0) {
                 Touch touch = Input.GetTouch(0);
 
@@ -66,17 +67,18 @@ public class GyroController : MonoBehaviour {
                         break;
 
                         // Report that a direction has been chosen when the finger is lifted.
-                    case TouchPhase.Ended:
+                    case TouchPhase.Moved:
                         endPos = touch.position;
-                        directionChosen = true;
+                        gravityDir = (endPos - startPos);
+                        if (gravityDir.magnitude > dragMagnitude)
+                            directionChosen = true;
                         break;
                 }
             }
             if (directionChosen) {
                 directionChosen = false;
-                Vector2 gravityDir = (endPos - startPos);
-                if (gravityDir.magnitude > dragMagnitude)
-                    transform.up = -gravityDir;
+                gravityDir = (endPos - startPos);
+                transform.up = -gravityDir;
             }
         } else {
             if (gyroEnabled) {

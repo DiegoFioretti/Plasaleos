@@ -795,6 +795,117 @@ Prefab:
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2f02ce6bbefab57479df225a44440182, type: 2}
   m_IsPrefabAsset: 0
+--- !u!1001 &1354397249
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 1564896164}
+    m_Modifications:
+    - target: {fileID: 224231617608591480, guid: 2e573578b7eb7f943ad2df1c150f7c91,
+        type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224231617608591480, guid: 2e573578b7eb7f943ad2df1c150f7c91,
+        type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224231617608591480, guid: 2e573578b7eb7f943ad2df1c150f7c91,
+        type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224231617608591480, guid: 2e573578b7eb7f943ad2df1c150f7c91,
+        type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224231617608591480, guid: 2e573578b7eb7f943ad2df1c150f7c91,
+        type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224231617608591480, guid: 2e573578b7eb7f943ad2df1c150f7c91,
+        type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224231617608591480, guid: 2e573578b7eb7f943ad2df1c150f7c91,
+        type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 224231617608591480, guid: 2e573578b7eb7f943ad2df1c150f7c91,
+        type: 2}
+      propertyPath: m_RootOrder
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 224231617608591480, guid: 2e573578b7eb7f943ad2df1c150f7c91,
+        type: 2}
+      propertyPath: m_AnchoredPosition.x
+      value: -2.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 224231617608591480, guid: 2e573578b7eb7f943ad2df1c150f7c91,
+        type: 2}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224231617608591480, guid: 2e573578b7eb7f943ad2df1c150f7c91,
+        type: 2}
+      propertyPath: m_SizeDelta.x
+      value: 985.9
+      objectReference: {fileID: 0}
+    - target: {fileID: 224231617608591480, guid: 2e573578b7eb7f943ad2df1c150f7c91,
+        type: 2}
+      propertyPath: m_SizeDelta.y
+      value: 453.6
+      objectReference: {fileID: 0}
+    - target: {fileID: 224231617608591480, guid: 2e573578b7eb7f943ad2df1c150f7c91,
+        type: 2}
+      propertyPath: m_AnchorMin.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 224231617608591480, guid: 2e573578b7eb7f943ad2df1c150f7c91,
+        type: 2}
+      propertyPath: m_AnchorMin.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 224231617608591480, guid: 2e573578b7eb7f943ad2df1c150f7c91,
+        type: 2}
+      propertyPath: m_AnchorMax.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 224231617608591480, guid: 2e573578b7eb7f943ad2df1c150f7c91,
+        type: 2}
+      propertyPath: m_AnchorMax.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 224231617608591480, guid: 2e573578b7eb7f943ad2df1c150f7c91,
+        type: 2}
+      propertyPath: m_Pivot.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 224231617608591480, guid: 2e573578b7eb7f943ad2df1c150f7c91,
+        type: 2}
+      propertyPath: m_Pivot.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 114958857090335200, guid: 2e573578b7eb7f943ad2df1c150f7c91,
+        type: 2}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: d07829ca8006bb74d8f1886aaac3ffc5,
+        type: 3}
+    - target: {fileID: 114396738228593980, guid: 2e573578b7eb7f943ad2df1c150f7c91,
+        type: 2}
+      propertyPath: m_Text
+      value: Press the exclamation button to stop the aliens
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 2e573578b7eb7f943ad2df1c150f7c91, type: 2}
+  m_IsPrefabAsset: 0
 --- !u!1001 &1355315422
 Prefab:
   m_ObjectHideFlags: 0
@@ -1111,6 +1222,11 @@ Prefab:
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 75f578c83a2ff0d429ea896145ade280, type: 2}
   m_IsPrefabAsset: 0
+--- !u!224 &1564896164 stripped
+RectTransform:
+  m_CorrespondingSourceObject: {fileID: 224231584853456048, guid: 1b0544a5eca0729468a22910e3b9a123,
+    type: 2}
+  m_PrefabInternal: {fileID: 716291884}
 --- !u!1 &1575765193
 GameObject:
   m_ObjectHideFlags: 0
