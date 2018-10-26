@@ -11,6 +11,10 @@ public class SetGravityType : MonoBehaviour {
     public void SetGravity(bool g)
     {
         GameManager.instance.isDragGravity = g;
+        if(GameObject.FindGameObjectWithTag("Gyroscope"))
+        {
+            GameObject.FindGameObjectWithTag("Gyroscope").GetComponent<GyroController>().dragGravity = g;
+        }
     }
 
     private void Update()

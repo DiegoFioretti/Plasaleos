@@ -14,12 +14,12 @@ public class SwitchCanvas : MonoBehaviour {
         {
             if (GameObject.FindGameObjectWithTag("Gyroscope") != null)
             {
-                if (Physics2D.gravity.y < 0 || GameObject.FindGameObjectWithTag("Gyroscope").GetComponent<GyroController>().dragGravity)
+                if (Physics2D.gravity.y < -9.8f/3 || GameObject.FindGameObjectWithTag("Gyroscope").GetComponent<GyroController>().dragGravity)
                 {
                     canvasUp.SetActive(true);
                     canvasDown.SetActive(false);
                 }
-                else
+                else if(Physics2D.gravity.y > 9.8f / 3)
                 {
                     canvasUp.SetActive(false);
                     canvasDown.SetActive(true);
