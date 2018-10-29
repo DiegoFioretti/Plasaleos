@@ -4532,7 +4532,7 @@ Prefab:
         type: 2}
     - target: {fileID: 1958653359932170, guid: 1b0544a5eca0729468a22910e3b9a123, type: 2}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1b0544a5eca0729468a22910e3b9a123, type: 2}
