@@ -8,7 +8,13 @@ public class GravityController : MonoBehaviour {
     float rot45; //==sin(45)==cos(45)
     float sin35;
     float cos35;
-    public bool Restricted { get { return restricted; } }
+    public bool Restricted {
+        get { return restricted; }
+        set {
+            gravity = Vector3.down * force;
+            restricted = value;
+        }
+    }
 
     void Start() {
         gravity = Vector3.down * force;
