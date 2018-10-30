@@ -14,7 +14,7 @@ public class UISpritePos : MonoBehaviour {
     {
         healthBar = gameObject.GetComponent<RectTransform>();
         gyro = GameObject.FindGameObjectWithTag("Gyroscope");
-        canvasRectT = GameObject.FindGameObjectWithTag("MainCanvas").GetComponent<RectTransform>();
+        canvasRectT = GameObject.FindGameObjectWithTag("AlienCounterCanvas").GetComponent<RectTransform>();
         objectToFollow = GameObject.FindGameObjectWithTag("AlienCounterPoint").transform;
     }
 

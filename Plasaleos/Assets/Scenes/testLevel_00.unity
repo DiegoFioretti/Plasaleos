@@ -1854,7 +1854,7 @@ GameObject:
   - component: {fileID: 403521692}
   m_Layer: 0
   m_Name: AlienCounterCanvas
-  m_TagString: Untagged
+  m_TagString: AlienCounterCanvas
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
