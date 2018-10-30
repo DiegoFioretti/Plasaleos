@@ -38,4 +38,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/TestAnimal.unity
     guid: 01c0e61f1cbc4ca479ae25ab1e80e777
+  - enabled: 1
+    path: Assets/Scenes/Credits.unity
+    guid: 65de09132d9c4d647850c29b4a0dd817
   m_configObjects: {}
