@@ -6,10 +6,9 @@ using UnityEngine.SceneManagement;
 public class ShowTutorial : MonoBehaviour {
 
 	// Use this for initialization
-	void Start () {
-		if(GameManager.instance.GetAlienSavedInLevel(SceneManager.GetActiveScene().name) > 0)
-        {
-            gameObject.SetActive(false);
-        }
+	void Start() {
+		if (GameManager.instance.GetAlienSavedInLevel(SceneManager.GetActiveScene().name) > 0) {
+			gameObject.SetActive(false);
+		}
 	}
 }
