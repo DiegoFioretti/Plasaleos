@@ -11,7 +11,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 78ab87f3f241ef549886df5f8db62197, type: 3}
   m_Name: Resources Level 07
   m_EditorClassIdentifier: 
-  lianas: 3
+  lianas: 5
   mushrooms: 0
   alerts: 3
   scares: 0
