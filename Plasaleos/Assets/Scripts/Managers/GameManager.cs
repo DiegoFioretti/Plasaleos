@@ -79,4 +79,9 @@ public class GameManager : MonoBehaviour {
         a += b;
         return aliensSaved[a];
     }
+
+    public int GetAlienSavedInLevel(int level)
+    {
+        return aliensSaved[level];
+    }
 }
