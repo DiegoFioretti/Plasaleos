@@ -13,7 +13,7 @@ public class SwitchCanvas : MonoBehaviour {
     }
 
     void Update() {
-        if (!isUp && (Physics2D.gravity.y < -9.8f / 3 || gyroController.dragGravity)) {
+        if ((!isUp && Physics2D.gravity.y < -9.8f / 3) || gyroController.dragGravity) {
             foreach (GameObject canvas in canvases) {
                 Vector3 rotation = canvas.transform.eulerAngles;
                 rotation.z = 0f;
