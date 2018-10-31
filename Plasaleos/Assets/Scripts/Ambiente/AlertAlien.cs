@@ -31,6 +31,7 @@ public class AlertAlien : MonoBehaviour {
             go[i].GetComponent<Alien>().Alert();
         }
         if (!m_alerted) {
+            AkSoundEngine.PostEvent("SoundAlert", gameObject);
             Invoke("ExpireAlert", m_alertDuration);
         } else {
             CancelInvoke();
