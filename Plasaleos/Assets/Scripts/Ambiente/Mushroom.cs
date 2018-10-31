@@ -9,7 +9,13 @@ public class Mushroom : MonoBehaviour {
         m_animator = GetComponentInChildren<Animator>();
     }
 
+    private void Start()
+    {
+        AkSoundEngine.PostEvent("ObjectSpawn", gameObject);
+    }
+
     private void OnTriggerEnter2D(Collider2D other) {
+        AkSoundEngine.PostEvent("ObjectBounce", gameObject);
         Rigidbody2D rb = other.GetComponent<Rigidbody2D>();
         if (rb.velocity.y < -1f) {
             rb.angularVelocity = 0f;

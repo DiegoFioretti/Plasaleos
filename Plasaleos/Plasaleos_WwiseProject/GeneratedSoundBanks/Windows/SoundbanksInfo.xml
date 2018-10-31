@@ -27,10 +27,17 @@
 				<Event Id="1529951376" Name="Hazard_BrokenIce" ObjectPath="\Events\Default Work Unit\Hazard_BrokenIce"/>
 				<Event Id="3998872777" Name="Music_Background" ObjectPath="\Events\Default Work Unit\Music_Background"/>
 				<Event Id="2637400697" Name="Music_Victory" ObjectPath="\Events\Default Work Unit\Music_Victory"/>
+				<Event Id="511549180" Name="ObjectBounce" ObjectPath="\Events\Default Work Unit\ObjectBounce"/>
+				<Event Id="3934850721" Name="ObjectSpawn" ObjectPath="\Events\Default Work Unit\ObjectSpawn"/>
+				<Event Id="1528301148" Name="SoundAlert" ObjectPath="\Events\Default Work Unit\SoundAlert"/>
 				<Event Id="3086540886" Name="StopAll" ObjectPath="\Events\Default Work Unit\StopAll" MaxAttenuation="0.000000"/>
 				<Event Id="2814314654" Name="Trap_Hit" ObjectPath="\Events\Default Work Unit\Trap_Hit"/>
 			</IncludedEvents>
 			<IncludedMemoryFiles>
+				<File Id="7139390" Language="SFX">
+					<ShortName>Sound2.wav</ShortName>
+					<Path>SFX\Sound2_56D34C19.wem</Path>
+				</File>
 				<File Id="534485032" Language="SFX">
 					<ShortName>VictoryV2.wav</ShortName>
 					<Path>SFX\VictoryV2_56D34C19.wem</Path>
@@ -46,6 +53,14 @@
 				<File Id="599664353" Language="SFX">
 					<ShortName>Spike.wav</ShortName>
 					<Path>SFX\Spike_56D34C19.wem</Path>
+				</File>
+				<File Id="677202040" Language="SFX">
+					<ShortName>Grow.wav</ShortName>
+					<Path>SFX\Grow_56D34C19.wem</Path>
+				</File>
+				<File Id="778592870" Language="SFX">
+					<ShortName>Bounce.wav</ShortName>
+					<Path>SFX\Bounce_56D34C19.wem</Path>
 				</File>
 				<File Id="794205814" Language="SFX">
 					<ShortName>Step.wav</ShortName>

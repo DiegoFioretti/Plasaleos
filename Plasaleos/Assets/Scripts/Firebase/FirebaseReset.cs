@@ -4,6 +4,11 @@ using UnityEngine;
 
 public class FirebaseReset : MonoBehaviour {
 
+    private void Start()
+    {
+        NewUser();
+    }
+
     public void NewUser()
     {
         string email = UserManagerFB.instance.GetValue() + "@abc.com";
