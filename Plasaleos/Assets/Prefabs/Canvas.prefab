@@ -1273,6 +1273,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_object: {fileID: 1628053091522102, guid: 56866354ad3b6ad4db13407969b0febe, type: 2}
   m_resource: {fileID: 11400000, guid: 1974113ccc5343f4daa4820c320f2c1b, type: 2}
+  m_editionCanvas: {fileID: 0}
 --- !u!114 &114130359628534946
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1436,6 +1437,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_object: {fileID: 1919942724678370, guid: e74c5ddadd7b68e40818718482376f6f, type: 2}
   m_resource: {fileID: 11400000, guid: e547ab7d7fa0b914d82c25273a393cfc, type: 2}
+  m_editionCanvas: {fileID: 0}
 --- !u!114 &114190831604392816
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1688,7 +1690,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_alertButton: {fileID: 1366805291420924}
-  m_continueButton: {fileID: 1537041144208024}
+  m_continueButtons: []
 --- !u!114 &114282701869663122
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2973,7 +2975,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: 231d48b6dc26f2d42ab459b920945a75, type: 3}
+  m_Sprite: {fileID: 21300000, guid: c5935b459026bc942ba14dfe90007974, type: 3}
   m_Type: 1
   m_PreserveAspect: 0
   m_FillCenter: 1

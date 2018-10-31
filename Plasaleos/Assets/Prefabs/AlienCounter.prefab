@@ -57,6 +57,7 @@ GameObject:
   - component: {fileID: 114736807879084540}
   - component: {fileID: 114544814632407740}
   - component: {fileID: 114329086613081010}
+  - component: {fileID: 114295408068174994}
   m_Layer: 5
   m_Name: AlienCounter
   m_TagString: Untagged
@@ -64,6 +65,18 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &114295408068174994
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1103335056234970}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dfb241edba75dfc40ab34906e548f24c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  text: {fileID: 114908397223145074}
 --- !u!114 &114295485001896152
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -83,7 +96,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: fd1afd630b0bdea4b9bb41d934c71650, type: 3}
+  m_Sprite: {fileID: 21300000, guid: df9cdfe1bae9e3e49a50dfd6dcea44bf, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -97,7 +110,7 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1103335056234970}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b7862452f9d0970498371dcc4880829d, type: 3}
   m_Name: 
@@ -108,7 +121,7 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1103335056234970}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5d17e04472c027f4082917434c8cb1cb, type: 3}
   m_Name: 
@@ -133,7 +146,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: 231d48b6dc26f2d42ab459b920945a75, type: 3}
+  m_Sprite: {fileID: 21300000, guid: c5935b459026bc942ba14dfe90007974, type: 3}
   m_Type: 1
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -173,7 +186,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: ?/?
+  m_Text: '?'
 --- !u!222 &222098522629850604
 CanvasRenderer:
   m_ObjectHideFlags: 1
@@ -246,8 +259,8 @@ RectTransform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -258.7, y: 128}
-  m_SizeDelta: {x: 125.16, y: 48.91}
+  m_AnchorMin: {x: 1, y: 1}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: -128.4, y: -49.400024}
+  m_SizeDelta: {x: 255.9, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}

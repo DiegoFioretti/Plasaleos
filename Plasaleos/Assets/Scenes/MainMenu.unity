@@ -418,7 +418,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: 0bfdb580d19637c43bdc0ba63c822c49, type: 3}
+  m_Sprite: {fileID: 21300000, guid: fd45e1aef12cc7b449dbe6d661d03a66, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -1101,10 +1101,10 @@ MonoBehaviour:
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
   m_SpriteState:
-    m_HighlightedSprite: {fileID: 21300000, guid: 4af26e4484b0c2245b463cf65176766f,
+    m_HighlightedSprite: {fileID: 21300000, guid: 5a304a5c8803d7745918d57c83e0d2fe,
       type: 3}
-    m_PressedSprite: {fileID: 21300000, guid: 3c49354b9cd3b29469e30062bc12fb58, type: 3}
-    m_DisabledSprite: {fileID: 21300000, guid: 4af26e4484b0c2245b463cf65176766f, type: 3}
+    m_PressedSprite: {fileID: 21300000, guid: b34bde080a325614f8bf8a1a77014ee6, type: 3}
+    m_DisabledSprite: {fileID: 21300000, guid: 5a304a5c8803d7745918d57c83e0d2fe, type: 3}
   m_AnimationTriggers:
     m_NormalTrigger: Normal
     m_HighlightedTrigger: Highlighted
@@ -1147,7 +1147,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: 4af26e4484b0c2245b463cf65176766f, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 5a304a5c8803d7745918d57c83e0d2fe, type: 3}
   m_Type: 1
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -1570,10 +1570,10 @@ MonoBehaviour:
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
   m_SpriteState:
-    m_HighlightedSprite: {fileID: 21300000, guid: 4af26e4484b0c2245b463cf65176766f,
+    m_HighlightedSprite: {fileID: 21300000, guid: 5a304a5c8803d7745918d57c83e0d2fe,
       type: 3}
-    m_PressedSprite: {fileID: 21300000, guid: 3c49354b9cd3b29469e30062bc12fb58, type: 3}
-    m_DisabledSprite: {fileID: 21300000, guid: 4af26e4484b0c2245b463cf65176766f, type: 3}
+    m_PressedSprite: {fileID: 21300000, guid: b34bde080a325614f8bf8a1a77014ee6, type: 3}
+    m_DisabledSprite: {fileID: 21300000, guid: 5a304a5c8803d7745918d57c83e0d2fe, type: 3}
   m_AnimationTriggers:
     m_NormalTrigger: Normal
     m_HighlightedTrigger: Highlighted
@@ -1616,7 +1616,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: 4af26e4484b0c2245b463cf65176766f, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 5a304a5c8803d7745918d57c83e0d2fe, type: 3}
   m_Type: 1
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -1727,20 +1727,6 @@ Prefab:
         type: 2}
       propertyPath: m_Pivot.y
       value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 1815758435128168, guid: aaf130e93c953b945ace65001632c996, type: 2}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 114682381109367146, guid: aaf130e93c953b945ace65001632c996,
-        type: 2}
-      propertyPath: color2.a
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 114239725265960102, guid: aaf130e93c953b945ace65001632c996,
-        type: 2}
-      propertyPath: color2.a
-      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: aaf130e93c953b945ace65001632c996, type: 2}
@@ -2303,21 +2289,6 @@ Prefab:
       propertyPath: m_Pivot.y
       value: 0.5
       objectReference: {fileID: 0}
-    - target: {fileID: 114544814632407740, guid: aad9705312ec5f94d82b3a29b4da21dd,
-        type: 2}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 114908397223145074, guid: aad9705312ec5f94d82b3a29b4da21dd,
-        type: 2}
-      propertyPath: m_Text
-      value: '?'
-      objectReference: {fileID: 0}
-    - target: {fileID: 114329086613081010, guid: aad9705312ec5f94d82b3a29b4da21dd,
-        type: 2}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: aad9705312ec5f94d82b3a29b4da21dd, type: 2}
   m_IsPrefabAsset: 0
@@ -2326,29 +2297,6 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 224768680752179096, guid: aad9705312ec5f94d82b3a29b4da21dd,
     type: 2}
   m_PrefabInternal: {fileID: 1603783181}
---- !u!114 &1603783183 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 114908397223145074, guid: aad9705312ec5f94d82b3a29b4da21dd,
-    type: 2}
-  m_PrefabInternal: {fileID: 1603783181}
-  m_Script: {fileID: 708705254, guid: f70555f144d8491a825f0804e09c671c, type: 3}
---- !u!1 &1603783184 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1103335056234970, guid: aad9705312ec5f94d82b3a29b4da21dd,
-    type: 2}
-  m_PrefabInternal: {fileID: 1603783181}
---- !u!114 &1603783185
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1603783184}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dfb241edba75dfc40ab34906e548f24c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  text: {fileID: 1603783183}
 --- !u!1 &1625266352
 GameObject:
   m_ObjectHideFlags: 0
