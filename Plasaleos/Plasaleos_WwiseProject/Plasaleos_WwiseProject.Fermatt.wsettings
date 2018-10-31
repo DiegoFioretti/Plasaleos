@@ -3,15 +3,18 @@
 	<UserProjectSettingsInfo>
 		<UserProjectSettings Name="" ID="{45F71BAB-4A7B-45AF-9477-1FFE9F3965AB}">
 			<PropertyList>
-				<Property Name="AudioFilesImporter\Path" Type="string" Value="D:\Documents\Project-Plasaleos\Plasaleos\Plasaleos_WwiseProject\Originals\Music"/>
+				<Property Name="AudioFilesImporter\Path" Type="string" Value="D:\Documents\Project-Plasaleos\Plasaleos\Plasaleos_WwiseProject\Originals\SFX"/>
 				<Property Name="Event Action List\{28012C5D-20AD-49C4-95AC-004C51463F82}\x64_Expand States" Type="string" Value=""/>
 				<Property Name="Event Action List\{36C6BD32-D375-470A-BAFE-F604780783BD}\x64_Expand States" Type="string" Value=""/>
 				<Property Name="Event Action List\{603FBC00-5053-4320-AB45-7BB17981DB5C}\x64_Expand States" Type="string" Value=""/>
 				<Property Name="Event Action List\{620FC1D5-D532-42D5-A8F7-66EC3581CAC9}\x64_Expand States" Type="string" Value=""/>
 				<Property Name="Event Action List\{64E4E525-07E3-4063-A2C9-04468A96A04C}\x64_Expand States" Type="string" Value=""/>
+				<Property Name="Event Action List\{68833091-660E-4C1B-A341-3D650D3AE8C4}\x64_Expand States" Type="string" Value=""/>
+				<Property Name="Event Action List\{6A8F8FB4-D8BE-4B76-BB40-5099A69BFF76}\x64_Expand States" Type="string" Value=""/>
 				<Property Name="Event Action List\{995FBD95-1BA5-4A6E-BEED-CF65E32347E6}\x64_Expand States" Type="string" Value=""/>
 				<Property Name="Event Action List\{C7DCDA4D-2900-4A5D-82EC-7258283A74A8}\x64_Expand States" Type="string" Value=""/>
 				<Property Name="Event Action List\{CD994746-8C1B-4137-9BEB-0B4B42009D30}\x64_Expand States" Type="string" Value=""/>
+				<Property Name="Event Action List\{F46E9B2A-E279-447F-8AE4-07ECBA050CAB}\x64_Expand States" Type="string" Value=""/>
 				<Property Name="EventView\FilterMode1" Type="int32" Value="2"/>
 				<Property Name="ExternalSourcesInputPath" Type="string">
 					<ValueList>
@@ -35,7 +38,7 @@
 				<Property Name="GenerateSoundBanks\x64_SelectedPlatforms" Type="string" Value="bC6n5LDD/k6/mwZzGX2eDFq+B2rTKGdNhfQNGLn5NcM="/>
 				<Property Name="GenerateSoundBanks\x64_SelectedSoundBanks" Type="string" Value="H/ulwPKJIE6AeK8/2muC5Q=="/>
 				<Property Name="HardwareController\CurrentSession" Type="string" Value="{2451DD2E-A7B2-45E6-B93B-6F49B9B887AD}"/>
-				<Property Name="HardwareController\{2451DD2E-A7B2-45E6-B93B-6F49B9B887AD}\x64_ActiveGroups" Type="string" Value="lv4YWgN9kkmko47KYijbCAH/////////mjYbazZJkU2EU32l2p3z4wH/////////"/>
+				<Property Name="HardwareController\{2451DD2E-A7B2-45E6-B93B-6F49B9B887AD}\x64_ActiveGroups" Type="string" Value="mjYbazZJkU2EU32l2p3z4wH/////////lv4YWgN9kkmko47KYijbCAH/////////"/>
 				<Property Name="MeterView\LastObject1" Type="string" Value="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}"/>
 				<Property Name="MeterView\MeterMode1" Type="int32" Value="1"/>
 				<Property Name="MeterView\MeterMode1Viewpoint0" Type="int32" Value="1"/>
