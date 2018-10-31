@@ -9,7 +9,7 @@ Event	ID	Name			Wwise Object Path	Notes
 	3998872777	Music_Background			\Default Work Unit\Music_Background	
 
 In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
-	303669959	Victory_2	D:\Documents\Project-Plasaleos\Plasaleos\Plasaleos_WwiseProject\.cache\Android\SFX\Victory_2_56D34C19.wem		\Actor-Mixer Hierarchy\Default Work Unit\Victory_2		291296
+	534485032	VictoryV2	D:\Documents\Project-Plasaleos\Plasaleos\Plasaleos_WwiseProject\.cache\Android\SFX\VictoryV2_56D34C19.wem		\Actor-Mixer Hierarchy\Default Work Unit\VictoryV2		356160
 	561358359	Dead	D:\Documents\Project-Plasaleos\Plasaleos\Plasaleos_WwiseProject\.cache\Android\SFX\Dead_56D34C19.wem		\Actor-Mixer Hierarchy\Default Work Unit\Dead		91162
 	570449265	PlasaleosMusicProto-04	D:\Documents\Project-Plasaleos\Plasaleos\Plasaleos_WwiseProject\.cache\Android\SFX\PlasaleosMusicProto-04_3CBE96A5.wem		\Actor-Mixer Hierarchy\Default Work Unit\PlasaleosMusicProto-04		14112040
 	599664353	Spike	D:\Documents\Project-Plasaleos\Plasaleos\Plasaleos_WwiseProject\.cache\Android\SFX\Spike_56D34C19.wem		\Actor-Mixer Hierarchy\Default Work Unit\Spike		23826
