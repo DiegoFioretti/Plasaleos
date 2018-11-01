@@ -8,7 +8,7 @@ public class AmbientButton : MonoBehaviour {
     public void Instance() {
         if (m_resource.Request()) {
             GameObject go = Instantiate(m_object);
-            go.transform.SetParent(m_editionCanvas);
+            go.transform.SetParent(m_editionCanvas, false);
             go.SetActive(true);
             Time.timeScale = 0f;
         }
