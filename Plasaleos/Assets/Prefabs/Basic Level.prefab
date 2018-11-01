@@ -2454,14 +2454,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.3254717, g: 0.6855395, b: 1, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: c3983881a691c8143a6f901170a28e88, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 9d3ddf01a09f0064fbe3267c3263644b, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -2523,7 +2523,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5fa3cad220163634f9911073f004fda0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_levelResources: {fileID: 0}
+  m_levelResources: {fileID: 11400000, guid: ce6feaee9775d344eb820de200942514, type: 2}
   m_lianas: {fileID: 11400000, guid: 1974113ccc5343f4daa4820c320f2c1b, type: 2}
   m_mushrooms: {fileID: 11400000, guid: e547ab7d7fa0b914d82c25273a393cfc, type: 2}
   m_alerts: {fileID: 11400000, guid: 8c6e4c9879dab5148addbe34de68336e, type: 2}
