@@ -31,14 +31,15 @@ public class GravityController : MonoBehaviour {
     private void ChangeGravity() {
         float angle = Vector2.SignedAngle(gravity, -transform.up);
         if (restricted) {
-            float maxAngle = Vector2.SignedAngle(gravity, Vector3.down);
-            if (Mathf.Abs(angle) >= 25f && (maxAngle == 0f || //Check for angle not going over 35
-                    ((Mathf.Sign(angle) == Mathf.Sign(maxAngle) && Mathf.Abs(maxAngle) == 35f)))) {
+            gravity = Vector2.down;
+            // float maxAngle = Vector2.SignedAngle(gravity, Vector3.down);
+            // if (Mathf.Abs(angle) >= 25f && (maxAngle == 0f || //Check for angle not going over 35
+            //         ((Mathf.Sign(angle) == Mathf.Sign(maxAngle) && Mathf.Abs(maxAngle) == 35f)))) {
 
-                gravity = new Vector2(((gravity.x * cos35) - (gravity.y * sin35 * Mathf.Sign(angle))),
-                    ((gravity.x * sin35 * Mathf.Sign(angle)) + (gravity.y * cos35))); //Matrix rotation
-                //We multiply by the sign on angle on the sin term because sin(angle < 0) < 0
-            }
+            //     gravity = new Vector2(((gravity.x * cos35) - (gravity.y * sin35 * Mathf.Sign(angle))),
+            //         ((gravity.x * sin35 * Mathf.Sign(angle)) + (gravity.y * cos35))); //Matrix rotation
+            //     //We multiply by the sign on angle on the sin term because sin(angle < 0) < 0
+            // }
         } else {
             if (Mathf.Abs(angle) >= 35f) {
                 gravity = new Vector2((gravity.x - gravity.y * Mathf.Sign(angle)),
