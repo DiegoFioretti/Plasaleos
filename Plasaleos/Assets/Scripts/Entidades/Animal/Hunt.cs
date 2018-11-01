@@ -6,7 +6,6 @@ public class Hunt : MonoBehaviour, IState {
     [SerializeField] float m_reachDistance;
     [SerializeField] float m_looseDistance;
     Animal m_animal;
-    Movement m_movement;
     Alien m_alienPrey;
     Vector2 m_transformRight;
     Vector2 m_groundNormal;
@@ -14,20 +13,31 @@ public class Hunt : MonoBehaviour, IState {
 
     private void Awake() {
         m_animal = GetComponent<Animal>();
-        m_movement = GetComponent<Movement>();
+    }
+
+    private void OnEnable()
+    {
+        GetComponent<Animator>().SetBool("Chasing", true);
+    }
+
+    private void OnDisable()
+    {
+        GetComponent<Animator>().SetBool("Chasing", false);
     }
 
     public void StateUpdate(out IState nextState) {
-        m_movement.StateUpdate(out nextState);
-        if (transform.localScale.z != m_alienPrey.transform.localScale.z) {
-            m_animal.Flip();
-        }
+        m_animal.CheckForFlip();
+        m_animal.CheckForLanding();
+        m_animal.TakeGravityEffect();
         RaycastHit2D hit;
         if (!m_alienPrey.isActiveAndEnabled || (Vector3.Distance(
                 transform.position, m_alienPrey.transform.position) > m_looseDistance)) {
 
             nextState = GetComponent<Movement>();
         } else {
+            if (transform.localScale.z != m_alienPrey.transform.localScale.z) {
+                m_animal.Flip();
+            }
             if (m_animal.SearchPrey(out hit)) {
                 if (hit.distance < m_reachDistance) {
                     m_alienPrey.Damage();
@@ -44,8 +54,9 @@ public class Hunt : MonoBehaviour, IState {
     }
 
     public void StateFixedUpdate() {
-        if (m_animal.IsGrounded()) {
-            m_animal.m_rb.AddForce(m_movement.GetTransformRight() * m_chaseSpeed * 1.5f);
+        float angle = Vector2.Angle(m_animal.EntityRight, -Physics2D.gravity);
+        if (m_animal.Grounded && angle <= 90f) {
+            m_animal.m_rb.AddForce(m_animal.EntityRight * m_chaseSpeed * 1.5f);
         }
     }
 

@@ -13,12 +13,10 @@ public class Animal : Entity {
     IState m_currState;
     IState m_nextState;
     Movement m_movementState;
-    bool m_death;
     bool m_scared;
 
     protected override void Awake() {
         base.Awake();
-        m_death = false;
         m_scared = false;
         m_movementState = GetComponent<Movement>();
         SetStateActive(GetComponent<Movement>(), false);
@@ -35,9 +33,10 @@ public class Animal : Entity {
         SetStateActive(m_currState, true);
     }
 
-    private void Update() {
+    protected override void Update() {
+        base.Update();
         m_currState.StateUpdate(out m_nextState);
-        if (m_death) {
+        if (IsDead) {
             m_nextState = GetComponent<Death>();
         } else if (m_scared) {
             m_nextState = GetComponent<Scareness>();
@@ -59,6 +58,10 @@ public class Animal : Entity {
         }
     }
 
+    protected override void LateUpdate() {
+        base.LateUpdate();
+    }
+
     public bool SearchPrey(out RaycastHit2D hit) {
         hit = Physics2D.Raycast(transform.position, transform.right * transform.localScale.x,
             m_detectionDistance, m_prayLayer);
@@ -67,10 +70,6 @@ public class Animal : Entity {
 
     private void FixedUpdate() {
         m_currState.StateFixedUpdate();
-    }
-
-    public void Damage() {
-        m_death = true;
     }
 
     [ContextMenu("Scare")]

@@ -133,19 +133,14 @@
 							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Target">
-									<ObjectRef Name="Victory" ID="{6A06E811-D098-4E5D-9925-02314A2A3C5D}" WorkUnitID="{A55CF131-BE7B-46A7-AA13-13FE3AA2C8EB}"/>
+									<ObjectRef Name="VictoryV2" ID="{0F9E892A-2053-410C-A62C-8A93B8C85144}" WorkUnitID="{A55CF131-BE7B-46A7-AA13-13FE3AA2C8EB}"/>
 								</Reference>
 							</ReferenceList>
 						</Action>
 						<Action Name="" ID="{6B575E7D-8AEC-4408-96B3-308AFA18AF46}" ShortID="271025303">
 							<PropertyList>
 								<Property Name="ActionType" Type="int16" Value="1"/>
-								<Property Name="Delay" Type="Real64" Value="8.018"/>
-								<Property Name="Inclusion" Type="bool">
-									<ValueList>
-										<Value>False</Value>
-									</ValueList>
-								</Property>
+								<Property Name="Delay" Type="Real64" Value="2.018"/>
 							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Target">
@@ -156,7 +151,7 @@
 						<Action Name="" ID="{1F58DD79-7896-4E76-B5DB-DEB1B289F394}" ShortID="305436613">
 							<PropertyList>
 								<Property Name="ActionType" Type="int16" Value="12"/>
-								<Property Name="Delay" Type="Real64" Value="8.018"/>
+								<Property Name="Delay" Type="Real64" Value="2"/>
 								<Property Name="FadeTime" Type="Real64" Value="1.5"/>
 								<Property Name="Scope" Type="int16" Value="1"/>
 								<Property Name="Volume" Type="Real64" Value="-5"/>
@@ -164,6 +159,48 @@
 							<ReferenceList>
 								<Reference Name="Target">
 									<ObjectRef Name="PlasaleosMusicProto-04" ID="{B2668A1B-6578-4332-B4AC-5689E9700F7E}" WorkUnitID="{A55CF131-BE7B-46A7-AA13-13FE3AA2C8EB}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="ObjectSpawn" ID="{F46E9B2A-E279-447F-8AE4-07ECBA050CAB}">
+					<ChildrenList>
+						<Action Name="" ID="{86287455-F946-4FC1-8FE8-2E28AC4CD92F}" ShortID="938820119">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Grow" ID="{A870FC9C-948C-4B16-84F2-468C6863A885}" WorkUnitID="{A55CF131-BE7B-46A7-AA13-13FE3AA2C8EB}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="ObjectBounce" ID="{68833091-660E-4C1B-A341-3D650D3AE8C4}">
+					<ChildrenList>
+						<Action Name="" ID="{D43A40D0-D54B-418E-B98F-B155B97AB69B}" ShortID="794136813">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Bounce" ID="{747463EA-C200-420E-9DC7-CD756AA5D537}" WorkUnitID="{A55CF131-BE7B-46A7-AA13-13FE3AA2C8EB}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="SoundAlert" ID="{6A8F8FB4-D8BE-4B76-BB40-5099A69BFF76}">
+					<ChildrenList>
+						<Action Name="" ID="{4815DF11-FE84-458B-8490-D7408114CABF}" ShortID="989358073">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Sound2" ID="{AC2C2E71-4D5A-4311-8B89-01F4FEAD9066}" WorkUnitID="{A55CF131-BE7B-46A7-AA13-13FE3AA2C8EB}"/>
 								</Reference>
 							</ReferenceList>
 						</Action>

@@ -17,7 +17,10 @@ public class Scareness : MonoBehaviour, IState {
     }
 
     public void StateUpdate(out IState nextState) {
-        if (m_timeLeft <= 0f || !m_entity.IsGrounded()) {
+        m_entity.CheckForFlip();
+        m_entity.CheckForLanding();
+        m_entity.TakeGravityEffect();
+        if (m_timeLeft <= 0f || !m_entity.Grounded) {
             m_entity.Flip();
             nextState = GetComponent<Movement>();
         } else {

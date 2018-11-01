@@ -29,6 +29,7 @@ GameObject:
   - component: {fileID: 114278303731729332}
   - component: {fileID: 114679019257667768}
   - component: {fileID: 95711593403246242}
+  - component: {fileID: 114703000705023184}
   m_Layer: 11
   m_Name: Alien
   m_TagString: Alien
@@ -43,7 +44,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1256088697549998}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -11.72, y: -0.88, z: 0}
+  m_LocalPosition: {x: 4.74, y: -5.5899997, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -63,11 +64,11 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 2
+  m_GravityScale: 1
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
   m_Constraints: 4
 --- !u!70 &70911864447214014
 CapsuleCollider2D:
@@ -81,8 +82,8 @@ CapsuleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_Size: {x: 1.33, y: 1.84}
+  m_Offset: {x: 0, y: 0.03804946}
+  m_Size: {x: 1.33, y: 2.0967717}
   m_Direction: 0
 --- !u!95 &95711593403246242
 Animator:
@@ -113,10 +114,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6a279fc2fd4f18d4191c8ec0f3c0e223, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_facingRight: 1
   m_groundLayer:
     serializedVersion: 2
-    m_Bits: 1024
+    m_Bits: 50176
+  m_facingRight: 1
+  m_speed: 5
+  m_detachAngle: 85
   m_rb: {fileID: 0}
 --- !u!114 &114133663572744894
 MonoBehaviour:
@@ -140,7 +143,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b7ac6272a8d2b9f4cbbbef955fb34178, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_duration: 3
+  m_duration: 4
 --- !u!114 &114309125043880844
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -153,7 +156,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_duration: 2
-  m_speed: 10
+  m_speed: 8
 --- !u!114 &114552153219652784
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -165,8 +168,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5df70b99a363225458f81152d9fae031, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_speed: 8
-  m_detachAngle: 45
 --- !u!114 &114679019257667768
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -178,8 +179,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5439db5161fbb8e4caa2c7ea41c891ee, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  timePerSteps: 0.5
   defaultSound: Alien_Step
+--- !u!114 &114703000705023184
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1256088697549998}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8ed311b3f0bd11f43ac83fc90d94c728, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!212 &212592919974544110
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -213,10 +224,10 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 1015019679
-  m_SortingLayer: 3
+  m_SortingLayer: 4
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 2e8ad000d67bc69449d5f3397138f695, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Sprite: {fileID: 21300000, guid: e5e0fafb7d916f3439caf210ce56d874, type: 3}
+  m_Color: {r: 0.9056604, g: 0.9056604, b: 0.9056604, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0

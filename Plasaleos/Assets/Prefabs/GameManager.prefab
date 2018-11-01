@@ -51,4 +51,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ea65b668504948444bbf2f96aeb7f683, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  levelAmount: 5
+  levelAmount: 8
+  isDragGravity: 0
