@@ -9,6 +9,7 @@ public class ShowTutorial : MonoBehaviour {
 	void Start() {
 		if (GameManager.instance.GetAlienSavedInLevel(SceneManager.GetActiveScene().name) > 0) {
 			gameObject.SetActive(false);
+            GameObject.FindGameObjectWithTag("MainCanvas").GetComponent<Canvas>().enabled = true;
 		}
 	}
 }
