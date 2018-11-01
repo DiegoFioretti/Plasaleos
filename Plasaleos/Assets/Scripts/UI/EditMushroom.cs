@@ -20,7 +20,7 @@ public class EditMushroom : MonoBehaviour, IResourceEdition {
         m_distToFeet = m_sprite.sprite.bounds.size.y * 0.5f;
         m_upOffset = 1.5f;
         m_sprite.color = Color.red;
-        transform.position = (new Vector2(Screen.width, Screen.height)) / 2f;
+        transform.position = Vector2.zero;
         FinishEdit[] fes = FindObjectsOfType<FinishEdit>();
         foreach (FinishEdit fe in fes) {
             fe.SetEditingObject((this));
