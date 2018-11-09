@@ -12,6 +12,7 @@ public class Liana : MonoBehaviour, IResourceEdition {
 	Vector3 m_endPoint;
 	Image m_sprite;
 	Vector2 m_newSize;
+	Vector2 m_halfScreen;
 	Touch m_touch;
 	RectTransform m_rect;
 
@@ -20,10 +21,13 @@ public class Liana : MonoBehaviour, IResourceEdition {
 		m_sprite = GetComponent<Image>();
 		m_resourceManager = FindObjectOfType<ResourceManager>();
 		m_rect = GetComponent<RectTransform>();
-		transform.position = new Vector2(-m_rect.sizeDelta.x * 0.5f, 0f);
-		Vector2 pos2D = transform.position;
-		m_endPoint = pos2D + m_rect.sizeDelta;
+		m_halfScreen = new Vector2 (Screen.width, Screen.height) / 2f;
+		transform.position = m_halfScreen + new Vector2(-m_rect.sizeDelta.x * 0.5f, 0f);
+		m_endPoint = transform.position;
+		m_endPoint.x += m_rect.sizeDelta.x;
 		m_sprite.color = m_invalidColor;
+		m_worldPos =  m_screenCamera.ScreenToWorldPoint(transform.position);
+		m_worldEndPoint = m_screenCamera.ScreenToWorldPoint(m_endPoint);
 		FinishEdit[] fes = FindObjectsOfType<FinishEdit>();
 		foreach (FinishEdit fe in fes) {
 			fe.SetEditingObject((this));
@@ -71,7 +75,7 @@ public class Liana : MonoBehaviour, IResourceEdition {
 		if (Input.touchCount > 0) {
 			m_touch = Input.GetTouch(Input.touchCount - 1);
 		}
-		m_worldPos = m_screenCamera.ScreenToWorldPoint(m_touch.position);
+		m_worldPos =  m_screenCamera.ScreenToWorldPoint(m_touch.position);
 		transform.position = m_touch.position;
 		RefreshSize();
 	}
@@ -116,5 +120,10 @@ public class Liana : MonoBehaviour, IResourceEdition {
 			collider.enabled = true;
 			Destroy(gameObject);
 		}
+	}
+
+	private void OnDrawGizmos() {
+		Gizmos.DrawWireSphere(m_worldEndPoint, 1f);
+		Gizmos.DrawWireSphere(m_worldPos, 1f);
 	}
 }
