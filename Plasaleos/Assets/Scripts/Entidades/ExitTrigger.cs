@@ -13,5 +13,8 @@ public class ExitTrigger : MonoBehaviour {
                 collision.gameObject.SetActive(false);
             }
         }
+        if (collision.tag == "ShipPiece") {
+            GameManager.instance.pieceCount++;
+        }
     }
 }

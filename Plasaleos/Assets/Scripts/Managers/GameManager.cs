@@ -7,6 +7,7 @@ public class GameManager : MonoBehaviour {
     static public GameManager instance;
 
     private int alienCount = 0;
+    public uint pieceCount = 0;
 
     private int[] aliensSaved;
 

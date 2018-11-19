@@ -15,6 +15,7 @@ TagManager:
   - AlienCounterPoint
   - Edition
   - AlienCounterCanvas
+  - ShipPiece
   layers:
   - Default
   - TransparentFX
@@ -35,7 +36,7 @@ TagManager:
   - Door
   - LianaPoint
   - Environment
-  - 
+  - ShipPiece
   - 
   - 
   - 

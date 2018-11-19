@@ -7,9 +7,7 @@ public class LevelManager : MonoBehaviour {
     public UnityEvent LevelWon;
 
     private int aliveAliens = -1;
-
     private int rescuedAliens = 0;
-
     public int RescuedAliens {
         get {
             return rescuedAliens;
