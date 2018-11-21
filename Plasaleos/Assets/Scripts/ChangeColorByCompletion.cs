@@ -6,6 +6,7 @@ using UnityEngine.UI;
 public class ChangeColorByCompletion : MonoBehaviour {
 
     [SerializeField] private int level;
+    [SerializeField] private int piecesInLevel;
 
     [SerializeField] private Color completed;
     [SerializeField] private Color finished;
@@ -13,7 +14,8 @@ public class ChangeColorByCompletion : MonoBehaviour {
     // Use this for initialization
     void Start () {
         int aliens = GameManager.instance.GetAlienSavedInLevel(level);
-        if(aliens >= 4)
+        int pieces = GameManager.instance.GetPiecesSavedInLevel(level);
+        if (aliens >= 4 && pieces >= piecesInLevel)
         {
             GetComponent<Image>().color = completed;
         }

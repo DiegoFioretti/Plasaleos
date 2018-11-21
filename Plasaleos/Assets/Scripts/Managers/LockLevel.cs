@@ -8,16 +8,20 @@ public class LockLevel : MonoBehaviour {
     private Button button;
     [SerializeField] private Text text;
     [SerializeField] private int unlock;
-    public uint requiredPieces;
+    [SerializeField] private int requiredPieces;
 
 	// Use this for initialization
 	void Start () {
         button = gameObject.GetComponent<Button>();
-        if(unlock > GameManager.instance.AlienCount || 
-            requiredPieces < GameManager.instance.pieceCount)
+        if(unlock > GameManager.instance.AlienCount)
         {
             button.enabled = false;
             text.text = "Save " + unlock + " Aliens";
+        }
+        else if(requiredPieces > GameManager.instance.PieceCount)
+        {
+            button.enabled = false;
+            text.text = "Get " + requiredPieces + " ship pieces";
         }
 	}
 }

@@ -14,7 +14,11 @@ public class ExitTrigger : MonoBehaviour {
             }
         }
         if (collision.tag == "ShipPiece") {
-            GameManager.instance.pieceCount++;
+            LevelManager.instance.RescuedPieces++;
+            AkSoundEngine.PostEvent("Alien_Rescued", gameObject);
+            collision.gameObject.SetActive(false);
+            Debug.LogError("WTF?");
         }
+        Debug.LogError("WTF???????????");
     }
 }
