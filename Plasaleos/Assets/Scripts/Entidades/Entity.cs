@@ -58,9 +58,11 @@ public class Entity : MonoBehaviour {
     }
 
     public void TakeGravityEffect() {
-        float angle = Vector2.Angle(m_entityRight, Physics2D.gravity);
+        float angle = Vector2.SignedAngle(m_entityRight, Physics2D.gravity);
         if (!m_grounded) {
             m_speedMultiplier = 2.5f;
+        } else if (m_grounded && (angle == 0f  || angle == 180f)) {
+            transform.up = -Physics2D.gravity;
         } else if (m_grounded && angle < 90f) {
             m_speedMultiplier = 1.5f;
         } else if (m_grounded && angle > 90f) {
@@ -99,7 +101,7 @@ public class Entity : MonoBehaviour {
                 m_groundNormal.y, -m_groundNormal.x) * (m_facingRight? 1f: -1f);
         } else {
             if (m_gravityController.Restricted) {
-                transform.up = Vector3.up;
+                transform.up = -Physics2D.gravity;
                 m_entityRight = transform.right * (m_facingRight? 1f: -1f);
             } else {
                 transform.eulerAngles = new Vector3(

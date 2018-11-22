@@ -1,7 +1,10 @@
 ﻿using UnityEngine;
+using UnityEngine.Events;
 
 public class GravityController : MonoBehaviour {
-
+    static public GravityController Instance;
+    public UnityEvent ToRestricted;
+    public UnityEvent ToUnrestricted;
     [SerializeField] private float force = 9.8f;
     [SerializeField] bool restricted = false;
     private Vector2 gravity;
@@ -11,6 +14,14 @@ public class GravityController : MonoBehaviour {
         set {
             gravity = Vector3.down * force;
             restricted = value;
+        }
+    }
+
+    private void Awake() {
+        if (Instance == null) {
+            Instance = this;
+        } else{
+            Destroy(gameObject);
         }
     }
 
@@ -25,17 +36,27 @@ public class GravityController : MonoBehaviour {
     }
 
     private void ChangeGravity() {
-        float angle = Vector2.SignedAngle(gravity, -transform.up);
-        if (restricted) {
-            gravity = Vector2.down;
-        } else {
+        if (!restricted) {
+            float angle = Vector2.SignedAngle(gravity, -transform.up);
             if (Mathf.Abs(angle) >= 35f) {
                 gravity = new Vector2((gravity.x - gravity.y * Mathf.Sign(angle)),
                     (gravity.x * Mathf.Sign(angle) + gravity.y)) * rot45; //Matrix rotation
                 //We multiply by the sign on angle on the sin term because sin(-45) < 0
             }
+            gravity = gravity.normalized;
+            Physics2D.gravity = gravity * force;
         }
-        gravity = gravity.normalized;
+    }
+
+    public void Restrict (Vector2 direction) {
+        ToRestricted.Invoke();
+        restricted = true;
+        gravity = direction.normalized;
         Physics2D.gravity = gravity * force;
+    }
+
+    public void Unrestric () {
+        ToUnrestricted.Invoke();
+        restricted = false;
     }
 }
