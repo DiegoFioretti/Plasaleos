@@ -813,6 +813,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   level: 4
+  piecesInLevel: 0
   completed: {r: 0.9150943, g: 0.7922247, b: 0.2460395, a: 1}
   finished: {r: 0.07696975, g: 0.8113208, b: 0.057404764, a: 1}
 --- !u!1 &757539744
@@ -847,7 +848,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.120000005, y: 0.23928122}
   m_AnchorMax: {x: 0.88000005, y: 0.8912396}
-  m_AnchoredPosition: {x: 0.000016212, y: 1.025}
+  m_AnchoredPosition: {x: 0.000016212463, y: 1.0249996}
   m_SizeDelta: {x: 0.000022888, y: -2.05}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &757539746
@@ -922,7 +923,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.125, y: 0.23}
   m_AnchorMax: {x: 0.8913083, y: 0.86467505}
-  m_AnchoredPosition: {x: 0, y: -0.70000005}
+  m_AnchoredPosition: {x: 0, y: -0.70000076}
   m_SizeDelta: {x: -2.3572998, y: 2.0816498}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &822238217
@@ -1149,7 +1150,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.10252084, y: 0.90837044}
   m_AnchorMax: {x: 0.14547917, y: 0.9925927}
-  m_AnchoredPosition: {x: -1.0267138, y: -0.42492676}
+  m_AnchoredPosition: {x: -1.0267181, y: -0.42492676}
   m_SizeDelta: {x: 0.30000305, y: -0.05000305}
   m_Pivot: {x: 0.5297217, y: 0.5}
 --- !u!114 &1023630494
@@ -1433,6 +1434,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   level: 1
+  piecesInLevel: 0
   completed: {r: 0.9150943, g: 0.7922247, b: 0.2460395, a: 1}
   finished: {r: 0.07696975, g: 0.8113208, b: 0.057404764, a: 1}
 --- !u!1 &1219185738
@@ -1469,7 +1471,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.003479167, y: 0.9055927}
   m_AnchorMax: {x: 0.047161642, y: 0.9925927}
-  m_AnchoredPosition: {x: -0.55603427, y: 0.57500076}
+  m_AnchoredPosition: {x: -0.5560303, y: 0.57499695}
   m_SizeDelta: {x: -0.69999695, y: -2.050003}
   m_Pivot: {x: 0.5297217, y: 0.5}
 --- !u!114 &1219185741
@@ -1825,6 +1827,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   level: 6
+  piecesInLevel: 0
   completed: {r: 0.9150943, g: 0.7922247, b: 0.2460395, a: 1}
   finished: {r: 0.07696975, g: 0.8113208, b: 0.057404764, a: 1}
 --- !u!114 &1362184318 stripped
@@ -1970,6 +1973,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   level: 0
+  piecesInLevel: 0
   completed: {r: 0.9150943, g: 0.7922247, b: 0.2460395, a: 1}
   finished: {r: 0.07696975, g: 0.8113208, b: 0.057404764, a: 1}
 --- !u!1 &1529828318
@@ -2124,6 +2128,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   level: 5
+  piecesInLevel: 0
   completed: {r: 0.9150943, g: 0.7922247, b: 0.2460395, a: 1}
   finished: {r: 0.07696975, g: 0.8113208, b: 0.057404764, a: 1}
 --- !u!1001 &1603783181
@@ -2653,6 +2658,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   level: 3
+  piecesInLevel: 0
   completed: {r: 0.9150943, g: 0.7922247, b: 0.2460395, a: 1}
   finished: {r: 0.07696975, g: 0.8113208, b: 0.057404764, a: 1}
 --- !u!224 &1960946148 stripped
@@ -2710,42 +2716,42 @@ Prefab:
     - target: {fileID: 224204171436445558, guid: 138d48380b3ba894f825c5e4d37b03e0,
         type: 2}
       propertyPath: m_AnchoredPosition.x
-      value: -128.40015
+      value: 0.59985
       objectReference: {fileID: 0}
     - target: {fileID: 224204171436445558, guid: 138d48380b3ba894f825c5e4d37b03e0,
         type: 2}
       propertyPath: m_AnchoredPosition.y
-      value: -150
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 224204171436445558, guid: 138d48380b3ba894f825c5e4d37b03e0,
         type: 2}
       propertyPath: m_SizeDelta.x
-      value: 255.9
+      value: 1.8999
       objectReference: {fileID: 0}
     - target: {fileID: 224204171436445558, guid: 138d48380b3ba894f825c5e4d37b03e0,
         type: 2}
       propertyPath: m_SizeDelta.y
-      value: 100
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 224204171436445558, guid: 138d48380b3ba894f825c5e4d37b03e0,
         type: 2}
       propertyPath: m_AnchorMin.x
-      value: 1
+      value: 0.869
       objectReference: {fileID: 0}
     - target: {fileID: 224204171436445558, guid: 138d48380b3ba894f825c5e4d37b03e0,
         type: 2}
       propertyPath: m_AnchorMin.y
-      value: 1
+      value: 0.8125928
       objectReference: {fileID: 0}
     - target: {fileID: 224204171436445558, guid: 138d48380b3ba894f825c5e4d37b03e0,
         type: 2}
       propertyPath: m_AnchorMax.x
-      value: 1
+      value: 0.9990001
       objectReference: {fileID: 0}
     - target: {fileID: 224204171436445558, guid: 138d48380b3ba894f825c5e4d37b03e0,
         type: 2}
       propertyPath: m_AnchorMax.y
-      value: 1
+      value: 0.9055927
       objectReference: {fileID: 0}
     - target: {fileID: 224204171436445558, guid: 138d48380b3ba894f825c5e4d37b03e0,
         type: 2}
@@ -2756,6 +2762,21 @@ Prefab:
         type: 2}
       propertyPath: m_Pivot.y
       value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 114903751521174452, guid: 138d48380b3ba894f825c5e4d37b03e0,
+        type: 2}
+      propertyPath: m_Color.r
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114903751521174452, guid: 138d48380b3ba894f825c5e4d37b03e0,
+        type: 2}
+      propertyPath: m_Color.g
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114903751521174452, guid: 138d48380b3ba894f825c5e4d37b03e0,
+        type: 2}
+      propertyPath: m_Color.b
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 138d48380b3ba894f825c5e4d37b03e0, type: 2}
@@ -2912,6 +2933,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   level: 2
+  piecesInLevel: 0
   completed: {r: 0.9150943, g: 0.7922247, b: 0.2460395, a: 1}
   finished: {r: 0.07696975, g: 0.8113208, b: 0.057404764, a: 1}
 --- !u!1 &2062884997
@@ -3216,5 +3238,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   level: 7
+  piecesInLevel: 0
   completed: {r: 0.9150943, g: 0.7922247, b: 0.2460395, a: 1}
   finished: {r: 0.07696975, g: 0.8113208, b: 0.057404764, a: 1}
