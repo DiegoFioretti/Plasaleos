@@ -213,7 +213,7 @@ GameObject:
   - component: {fileID: 507304673}
   - component: {fileID: 507304675}
   m_Layer: 9
-  m_Name: Sky
+  m_Name: MakeUp
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -9300,6 +9300,11 @@ Prefab:
         type: 2}
       propertyPath: m_AnchoredPosition.y
       value: -55.100098
+      objectReference: {fileID: 0}
+    - target: {fileID: 224541132833934628, guid: 3b1dfaa215b62aa498292039d7aa244a,
+        type: 2}
+      propertyPath: m_AnchoredPosition.x
+      value: 0.100097656
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3b1dfaa215b62aa498292039d7aa244a, type: 2}
