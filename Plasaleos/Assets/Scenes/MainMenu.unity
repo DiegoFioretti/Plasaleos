@@ -48333,7 +48333,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   left: {fileID: 1224523371}
   right: {fileID: 77612124}
-  speed: 0.1
+  speed: 0.02
 --- !u!1 &1646307790
 GameObject:
   m_ObjectHideFlags: 0
