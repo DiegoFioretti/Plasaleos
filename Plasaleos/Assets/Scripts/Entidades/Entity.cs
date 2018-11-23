@@ -61,12 +61,14 @@ public class Entity : MonoBehaviour {
         float angle = Vector2.SignedAngle(m_entityRight, Physics2D.gravity);
         if (!m_grounded) {
             m_speedMultiplier = 2.5f;
-        } else if (m_grounded && (angle == 0f  || angle == 180f)) {
+        } else if (!GravityController.Instance.Restricted && m_grounded &&
+            (angle == 0f  || angle == 180f)) {
+                
             transform.up = -Physics2D.gravity;
         } else if (m_grounded && angle < 90f) {
-            m_speedMultiplier = 1.5f;
+            m_speedMultiplier = 1.3f;
         } else if (m_grounded && angle > 90f) {
-            m_speedMultiplier = 0.5f;
+            m_speedMultiplier = 0.7f;
         } else {
             m_speedMultiplier = 1f;
         }
@@ -101,7 +103,7 @@ public class Entity : MonoBehaviour {
                 m_groundNormal.y, -m_groundNormal.x) * (m_facingRight? 1f: -1f);
         } else {
             if (m_gravityController.Restricted) {
-                transform.up = -Physics2D.gravity;
+                transform.up = -GravityController.Instance.GetForcedDirection();
                 m_entityRight = transform.right * (m_facingRight? 1f: -1f);
             } else {
                 transform.eulerAngles = new Vector3(
@@ -116,7 +118,8 @@ public class Entity : MonoBehaviour {
     public void CheckForFlip() {
         RaycastHit2D frontHit = Physics2D.Raycast(transform.position - 0.5f * transform.up,
             m_entityRight, 1.3f, m_groundLayer);
-        if (frontHit && m_grounded && !((Vector3.Angle(frontHit.normal, Vector3.down) != 90f) &&
+        if (frontHit && m_grounded && !((Vector3.Angle(frontHit.normal, 
+                GravityController.Instance.GetForcedDirection()) != 90f) &&
                 (Vector3.Angle(Physics2D.gravity, m_entityRight) < 90f))) {
 
             if (Physics2D.Raycast(transform.position, -m_entityRight, //check if it's stuck in a corner
