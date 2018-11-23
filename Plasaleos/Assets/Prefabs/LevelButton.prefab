@@ -40,6 +40,7 @@ GameObject:
   - component: {fileID: 114289609816567670}
   - component: {fileID: 114936724048325756}
   - component: {fileID: 114943735913300148}
+  - component: {fileID: 114910987147353266}
   m_Layer: 5
   m_Name: LevelButton
   m_TagString: Untagged
@@ -107,6 +108,20 @@ MonoBehaviour:
     m_VerticalOverflow: 0
     m_LineSpacing: 1
   m_Text: Level 1
+--- !u!114 &114910987147353266
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1410489239972308}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ac19f838afce71a488ab743a831f38f0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  unlock: 0
+  requiredPieces: 0
+  locked: {r: 0.5, g: 0.5, b: 0.5, a: 1}
 --- !u!114 &114936724048325756
 MonoBehaviour:
   m_ObjectHideFlags: 1
