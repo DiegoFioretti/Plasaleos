@@ -12,7 +12,7 @@ public class ChangeColorByCompletion : MonoBehaviour {
     [SerializeField] private Color finished;
 
     // Use this for initialization
-    void Start () {
+    void Update () {
         int aliens = GameManager.instance.GetAlienSavedInLevel(level);
         int pieces = GameManager.instance.GetPiecesSavedInLevel(level);
         if (aliens >= 4 && pieces >= piecesInLevel)
