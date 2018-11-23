@@ -17,8 +17,6 @@ public class ExitTrigger : MonoBehaviour {
             LevelManager.instance.RescuedPieces++;
             AkSoundEngine.PostEvent("Alien_Rescued", gameObject);
             collision.gameObject.SetActive(false);
-            Debug.LogError("WTF?");
         }
-        Debug.LogError("WTF???????????");
     }
 }

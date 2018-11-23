@@ -8,6 +8,7 @@ Event	ID	Name			Wwise Object Path	Notes
 	2637400697	Music_Victory			\Default Work Unit\Music_Victory	
 	2814314654	Trap_Hit			\Default Work Unit\Trap_Hit	
 	3086540886	StopAll			\Default Work Unit\StopAll	
+	3462570130	ButtonSound			\Default Work Unit\ButtonSound	
 	3934850721	ObjectSpawn			\Default Work Unit\ObjectSpawn	
 	3998872777	Music_Background			\Default Work Unit\Music_Background	
 
@@ -21,5 +22,6 @@ In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	778592870	Bounce	D:\Documents\Project-Plasaleos\Plasaleos\Plasaleos_WwiseProject\.cache\Windows\SFX\Bounce_56D34C19.wem		\Actor-Mixer Hierarchy\Default Work Unit\Bounce		33834
 	794205814	Step	D:\Documents\Project-Plasaleos\Plasaleos\Plasaleos_WwiseProject\.cache\Windows\SFX\Step_56D34C19.wem		\Actor-Mixer Hierarchy\Default Work Unit\Step		4160
 	801562404	Ice	D:\Documents\Project-Plasaleos\Plasaleos\Plasaleos_WwiseProject\.cache\Windows\SFX\Ice_22627D18.wem		\Actor-Mixer Hierarchy\Default Work Unit\Ice		67996
+	815680581	ButtonSound	D:\Documents\Project-Plasaleos\Plasaleos\Plasaleos_WwiseProject\.cache\Windows\SFX\ButtonSound_56D34C19.wem		\Actor-Mixer Hierarchy\Default Work Unit\ButtonSound		76856
 	1002178581	Rescued	D:\Documents\Project-Plasaleos\Plasaleos\Plasaleos_WwiseProject\.cache\Windows\SFX\Rescued_56D34C19.wem		\Actor-Mixer Hierarchy\Default Work Unit\Rescued		41972
 

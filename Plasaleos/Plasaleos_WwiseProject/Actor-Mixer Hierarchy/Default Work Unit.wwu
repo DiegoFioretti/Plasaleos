@@ -423,6 +423,48 @@
 						<ActiveSource Name="Sound2" ID="{4D589974-2EF7-4392-B464-494B4971D8BC}" Platform="Linked"/>
 					</ActiveSourceList>
 				</Sound>
+				<Sound Name="ButtonSound" ID="{BA2AAFB5-E423-4EAE-A7F0-023C95E36932}" ShortID="660388820">
+					<PropertyList>
+						<Property Name="Lowpass" Type="int16">
+							<ValueList>
+								<Value>35</Value>
+							</ValueList>
+						</Property>
+						<Property Name="Pitch" Type="int32">
+							<ValueList>
+								<Value>-400</Value>
+							</ValueList>
+							<ModifierList>
+								<ModifierInfo>
+									<Modifier Name="" ID="{97372856-20B8-47C9-8B8F-FD768AB746FE}">
+										<PropertyList>
+											<Property Name="Enabled" Type="bool" Value="True"/>
+											<Property Name="Max" Type="Real64" Value="100"/>
+											<Property Name="Min" Type="Real64" Value="-100"/>
+										</PropertyList>
+									</Modifier>
+								</ModifierInfo>
+							</ModifierList>
+						</Property>
+					</PropertyList>
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{785F7985-AC0B-4CD2-82F0-0043AF7F1FC7}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{7F63C48F-B99F-442A-AE38-9D097CD4650E}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<AudioFileSource Name="ButtonSound" ID="{E0FA00B8-BDF4-4B6E-B58A-F0F78BAD6DFF}" ShortID="815680581">
+							<Language>SFX</Language>
+							<AudioFile>ButtonSound.wav</AudioFile>
+						</AudioFileSource>
+					</ChildrenList>
+					<ActiveSourceList>
+						<ActiveSource Name="ButtonSound" ID="{E0FA00B8-BDF4-4B6E-B58A-F0F78BAD6DFF}" Platform="Linked"/>
+					</ActiveSourceList>
+				</Sound>
 			</ChildrenList>
 		</WorkUnit>
 	</AudioObjects>

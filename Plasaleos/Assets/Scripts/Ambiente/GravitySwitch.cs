@@ -28,6 +28,7 @@ public class GravitySwitch : MonoBehaviour {
 
     private void OnTriggerEnter2D() {
         if (m_counter <= 0f) {
+            AkSoundEngine.PostEvent("ButtonSound", gameObject);
             if (!m_restricting) {
                 GravityController.Instance.Restrict(-transform.up);
                 m_sprite.sprite = m_spriteRestricted;

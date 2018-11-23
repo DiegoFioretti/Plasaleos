@@ -16,6 +16,7 @@ namespace AK
         static const AkUniqueID ALIEN_DEAD = 1625617807U;
         static const AkUniqueID ALIEN_RESCUED = 523915378U;
         static const AkUniqueID ALIEN_STEP = 1249666675U;
+        static const AkUniqueID BUTTONSOUND = 3462570130U;
         static const AkUniqueID HAZARD_BROKENICE = 1529951376U;
         static const AkUniqueID MUSIC_BACKGROUND = 3998872777U;
         static const AkUniqueID MUSIC_VICTORY = 2637400697U;

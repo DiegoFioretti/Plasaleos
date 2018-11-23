@@ -206,6 +206,20 @@
 						</Action>
 					</ChildrenList>
 				</Event>
+				<Event Name="ButtonSound" ID="{48A84FE5-0562-4FCF-B939-80F2CBD68D67}">
+					<ChildrenList>
+						<Action Name="" ID="{9049E447-B4D5-4BDB-A0E3-D74AFD471942}" ShortID="474836824">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="ButtonSound" ID="{BA2AAFB5-E423-4EAE-A7F0-023C95E36932}" WorkUnitID="{A55CF131-BE7B-46A7-AA13-13FE3AA2C8EB}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
 			</ChildrenList>
 		</WorkUnit>
 	</Events>
