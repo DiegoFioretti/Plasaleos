@@ -359,7 +359,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4398445296800090, guid: f5f83187beb326a4997187107dcf6e9a, type: 2}
       propertyPath: m_LocalPosition.y
-      value: -7.66
+      value: -7.701
       objectReference: {fileID: 0}
     - target: {fileID: 4398445296800090, guid: f5f83187beb326a4997187107dcf6e9a, type: 2}
       propertyPath: m_LocalPosition.z
@@ -392,6 +392,16 @@ Prefab:
     - target: {fileID: 1534192590098392, guid: f5f83187beb326a4997187107dcf6e9a, type: 2}
       propertyPath: m_Name
       value: GravitySwitch (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 61039649946567896, guid: f5f83187beb326a4997187107dcf6e9a,
+        type: 2}
+      propertyPath: m_Size.y
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 61039649946567896, guid: f5f83187beb326a4997187107dcf6e9a,
+        type: 2}
+      propertyPath: m_Offset.y
+      value: -0.2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f5f83187beb326a4997187107dcf6e9a, type: 2}
@@ -3312,7 +3322,7 @@ Tilemap:
   - first: {x: 2, y: -4, z: 0}
     second:
       m_TileIndex: 6
-      m_TileSpriteIndex: 6
+      m_TileSpriteIndex: 7
       m_TileMatrixIndex: 0
       m_TileColorIndex: 4
       m_ObjectToInstantiate: {fileID: 0}
@@ -7490,10 +7500,10 @@ Tilemap:
     m_Data: {fileID: 21300062, guid: a3583861987d2614eb32da1b5ae39a6d, type: 3}
   - m_RefCount: 8
     m_Data: {fileID: 21300078, guid: a3583861987d2614eb32da1b5ae39a6d, type: 3}
-  - m_RefCount: 1
-    m_Data: {fileID: 21300038, guid: a3583861987d2614eb32da1b5ae39a6d, type: 3}
   - m_RefCount: 0
     m_Data: {fileID: 0}
+  - m_RefCount: 1
+    m_Data: {fileID: 21300038, guid: a3583861987d2614eb32da1b5ae39a6d, type: 3}
   - m_RefCount: 1
     m_Data: {fileID: 21300036, guid: a3583861987d2614eb32da1b5ae39a6d, type: 3}
   - m_RefCount: 9
@@ -7705,7 +7715,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4398445296800090, guid: f5f83187beb326a4997187107dcf6e9a, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 7.57
+      value: 7.815
       objectReference: {fileID: 0}
     - target: {fileID: 4398445296800090, guid: f5f83187beb326a4997187107dcf6e9a, type: 2}
       propertyPath: m_LocalPosition.z
@@ -15148,12 +15158,12 @@ Prefab:
     - target: {fileID: 224124811630188084, guid: d24173c5cc8c9b84b8c076f6057dd98b,
         type: 2}
       propertyPath: m_AnchoredPosition.x
-      value: 4.4999695
+      value: 4.499939
       objectReference: {fileID: 0}
     - target: {fileID: 224545361770747126, guid: d24173c5cc8c9b84b8c076f6057dd98b,
         type: 2}
       propertyPath: m_AnchoredPosition.x
-      value: -0.5000305
+      value: -0.50006104
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d24173c5cc8c9b84b8c076f6057dd98b, type: 2}
