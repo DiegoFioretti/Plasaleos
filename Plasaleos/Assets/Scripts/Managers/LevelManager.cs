@@ -7,9 +7,8 @@ public class LevelManager : MonoBehaviour {
     public UnityEvent LevelWon;
 
     private int aliveAliens = -1;
-
     private int rescuedAliens = 0;
-
+    private int rescuedPieces = 0;
     public int RescuedAliens {
         get {
             return rescuedAliens;
@@ -26,6 +25,19 @@ public class LevelManager : MonoBehaviour {
         }
         set {
             aliveAliens = value;
+        }
+    }
+
+    public int RescuedPieces
+    {
+        get
+        {
+            return rescuedPieces;
+        }
+
+        set
+        {
+            rescuedPieces = value;
         }
     }
 
@@ -56,7 +68,7 @@ public class LevelManager : MonoBehaviour {
 
     private void Update() {
         if (rescuedAliens >= aliveAliens) {
-            GameManager.instance.SetAlienCount(rescuedAliens, SceneManager.GetActiveScene().name);
+            GameManager.instance.SetAlienCount(rescuedAliens, RescuedPieces, SceneManager.GetActiveScene().name);
             var fooGroup = Resources.FindObjectsOfTypeAll<GameObject>();
             if(fooGroup.Length > 0)
             {

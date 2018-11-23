@@ -7,8 +7,10 @@ public class GameManager : MonoBehaviour {
     static public GameManager instance;
 
     private int alienCount = 0;
+    private int pieceCount = 0;
 
     private int[] aliensSaved;
+    private int[] piecesSaved;
 
     public int levelAmount = 3;
 
@@ -19,8 +21,10 @@ public class GameManager : MonoBehaviour {
         if (!instance) {
             instance = this;
             aliensSaved = new int[levelAmount];
+            piecesSaved = new int[levelAmount];
             for (int i = 0; i < levelAmount; i++) {
                 aliensSaved[i] = 0;
+                piecesSaved[i] = 0;
             }
             DontDestroyOnLoad(gameObject);
         } else {
@@ -39,18 +43,31 @@ public class GameManager : MonoBehaviour {
         }
     }
 
-    public void SetAlienCount(int value, string level) {
+    public int PieceCount
+    {
+        get
+        {
+            return pieceCount;
+        }
+    }
+
+    public void SetAlienCount(int alienValue, int pieceValue, string level) {
         int a;
         System.Int32.TryParse(level[level.Length - 1].ToString(), out a);
         int b;
         System.Int32.TryParse(level[level.Length - 2].ToString(), out b);
         b *= 10;
         a += b;
-        if (aliensSaved[a] < value) {
-            alienCount += value - aliensSaved[a];
-            aliensSaved[a] = value;
+        if (aliensSaved[a] < alienValue) {
+            alienCount += alienValue - aliensSaved[a];
+            aliensSaved[a] = alienValue;
         }
-        if(value > 0)
+        if (piecesSaved[a] < pieceValue)
+        {
+            pieceCount += pieceValue - piecesSaved[a];
+            piecesSaved[a] = pieceValue;
+        }
+        if (alienValue > 0)
         {
             Firebase.Analytics.FirebaseAnalytics.LogEvent("LevelWon");
             GameObject gyro = GameObject.FindGameObjectWithTag("Gyroscope");
@@ -83,5 +100,10 @@ public class GameManager : MonoBehaviour {
     public int GetAlienSavedInLevel(int level)
     {
         return aliensSaved[level];
+    }
+
+    public int GetPiecesSavedInLevel(int level)
+    {
+        return piecesSaved[level];
     }
 }

@@ -16,6 +16,7 @@
 						<ObjectRef Name="Music_Victory" ID="{995FBD95-1BA5-4A6E-BEED-CF65E32347E6}" WorkUnitID="{4A38E2ED-B942-4D81-920F-2F7810173794}" Filter="7" Origin="Manual"/>
 						<ObjectRef Name="SoundAlert" ID="{6A8F8FB4-D8BE-4B76-BB40-5099A69BFF76}" WorkUnitID="{4A38E2ED-B942-4D81-920F-2F7810173794}" Filter="7" Origin="Manual"/>
 						<ObjectRef Name="ObjectBounce" ID="{68833091-660E-4C1B-A341-3D650D3AE8C4}" WorkUnitID="{4A38E2ED-B942-4D81-920F-2F7810173794}" Filter="7" Origin="Manual"/>
+						<ObjectRef Name="ButtonSound" ID="{48A84FE5-0562-4FCF-B939-80F2CBD68D67}" WorkUnitID="{4A38E2ED-B942-4D81-920F-2F7810173794}" Filter="7" Origin="Manual"/>
 					</ObjectInclusionList>
 					<ObjectExclusionList/>
 					<GameSyncExclusionList/>

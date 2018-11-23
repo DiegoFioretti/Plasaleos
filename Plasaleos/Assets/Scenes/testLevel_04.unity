@@ -377,7 +377,7 @@ GameObject:
   - component: {fileID: 507304673}
   - component: {fileID: 507304675}
   m_Layer: 9
-  m_Name: Sky
+  m_Name: MakeUp
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3461,6 +3461,15 @@ Tilemap:
       m_ObjectToInstantiate: {fileID: 0}
       m_TileFlags: 1
       m_ColliderType: 1
+  - first: {x: -1, y: 5, z: 0}
+    second:
+      m_TileIndex: 1
+      m_TileSpriteIndex: 3
+      m_TileMatrixIndex: 0
+      m_TileColorIndex: 4
+      m_ObjectToInstantiate: {fileID: 0}
+      m_TileFlags: 1
+      m_ColliderType: 1
   - first: {x: 18, y: 5, z: 0}
     second:
       m_TileIndex: 6
@@ -5913,8 +5922,8 @@ Tilemap:
   m_TileAssetArray:
   - m_RefCount: 8
     m_Data: {fileID: 11400000, guid: 02ab19671198be64da21dc803788bece, type: 2}
-  - m_RefCount: 0
-    m_Data: {fileID: 0}
+  - m_RefCount: 1
+    m_Data: {fileID: 11400000, guid: 091fd96a889a7a94ead760023406e266, type: 2}
   - m_RefCount: 17
     m_Data: {fileID: 11400000, guid: 0c56d19066158f94583f7a7c0d212ea9, type: 2}
   - m_RefCount: 16
@@ -5964,8 +5973,8 @@ Tilemap:
     m_Data: {fileID: 21300012, guid: a3583861987d2614eb32da1b5ae39a6d, type: 3}
   - m_RefCount: 16
     m_Data: {fileID: 21300010, guid: a3583861987d2614eb32da1b5ae39a6d, type: 3}
-  - m_RefCount: 0
-    m_Data: {fileID: 0}
+  - m_RefCount: 1
+    m_Data: {fileID: 21300000, guid: 8c5408c6f879a9143b730515f7775fc2, type: 3}
   - m_RefCount: 26
     m_Data: {fileID: 21300084, guid: a3583861987d2614eb32da1b5ae39a6d, type: 3}
   - m_RefCount: 24
@@ -6005,7 +6014,7 @@ Tilemap:
   - m_RefCount: 206
     m_Data: {fileID: 21300028, guid: a3583861987d2614eb32da1b5ae39a6d, type: 3}
   m_TileMatrixArray:
-  - m_RefCount: 607
+  - m_RefCount: 608
     m_Data:
       e00: 1
       e01: 0
@@ -6032,8 +6041,8 @@ Tilemap:
     m_Data: {r: 1.801e-41, g: 1.801e-41, b: 1.801e-41, a: 1.801e-41}
   - m_RefCount: 0
     m_Data: {r: 1.801e-41, g: 1.801e-41, b: 1.801e-41, a: 1.801e-41}
-  - m_RefCount: 0
-    m_Data: {r: 1.801e-41, g: 1.801e-41, b: 1.801e-41, a: 1.801e-41}
+  - m_RefCount: 1
+    m_Data: {r: 0.6901922, g: 0.8044188, b: 0.8867924, a: 1}
   m_AnimationFrameRate: 1
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_Origin: {x: -27, y: -15, z: 0}
@@ -6880,7 +6889,7 @@ Tilemap:
       m_TileIndex: 1
       m_TileSpriteIndex: 1
       m_TileMatrixIndex: 0
-      m_TileColorIndex: 0
+      m_TileColorIndex: 1
       m_ObjectToInstantiate: {fileID: 0}
       m_TileFlags: 1
       m_ColliderType: 1
@@ -6889,7 +6898,7 @@ Tilemap:
       m_TileIndex: 1
       m_TileSpriteIndex: 1
       m_TileMatrixIndex: 0
-      m_TileColorIndex: 0
+      m_TileColorIndex: 1
       m_ObjectToInstantiate: {fileID: 0}
       m_TileFlags: 1
       m_ColliderType: 1
@@ -6898,7 +6907,7 @@ Tilemap:
       m_TileIndex: 1
       m_TileSpriteIndex: 1
       m_TileMatrixIndex: 0
-      m_TileColorIndex: 0
+      m_TileColorIndex: 1
       m_ObjectToInstantiate: {fileID: 0}
       m_TileFlags: 1
       m_ColliderType: 1
@@ -6907,7 +6916,7 @@ Tilemap:
       m_TileIndex: 1
       m_TileSpriteIndex: 1
       m_TileMatrixIndex: 0
-      m_TileColorIndex: 0
+      m_TileColorIndex: 1
       m_ObjectToInstantiate: {fileID: 0}
       m_TileFlags: 1
       m_ColliderType: 1
@@ -6942,8 +6951,10 @@ Tilemap:
       e32: 0
       e33: 1
   m_TileColorArray:
+  - m_RefCount: 0
+    m_Data: {r: 2.7328e-41, g: 2.7328e-41, b: 2.7328e-41, a: 2.7328e-41}
   - m_RefCount: 4
-    m_Data: {r: 1, g: 1, b: 1, a: 1}
+    m_Data: {r: 0.6901922, g: 0.8044188, b: 0.8867924, a: 1}
   m_AnimationFrameRate: 1
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_Origin: {x: -21, y: -14, z: 0}
@@ -8278,6 +8289,16 @@ Prefab:
       value: 
       objectReference: {fileID: 21300000, guid: 9d3ddf01a09f0064fbe3267c3263644b,
         type: 3}
+    - target: {fileID: 224541132833934628, guid: 3b1dfaa215b62aa498292039d7aa244a,
+        type: 2}
+      propertyPath: m_AnchoredPosition.x
+      value: 0.100097656
+      objectReference: {fileID: 0}
+    - target: {fileID: 224541132833934628, guid: 3b1dfaa215b62aa498292039d7aa244a,
+        type: 2}
+      propertyPath: m_AnchoredPosition.y
+      value: 0.19995117
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3b1dfaa215b62aa498292039d7aa244a, type: 2}
   m_IsPrefabAsset: 0
