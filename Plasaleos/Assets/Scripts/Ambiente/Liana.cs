@@ -97,7 +97,7 @@ public class Liana : MonoBehaviour, IResourceEdition {
 
 	void RefreshSize() {
 		Vector3 diff = m_endPoint - transform.position;
-		Vector2 size = new Vector2(diff.magnitude * m_toReferenceResolution.x, m_rect.sizeDelta.y) ;
+		Vector2 size = new Vector2(diff.magnitude * m_toReferenceResolution.x, m_rect.sizeDelta.y * m_toReferenceResolution.y) ;
 		m_rect.sizeDelta = size;
 		m_rect.eulerAngles = new Vector3(0f, 0f, Vector2.SignedAngle(Vector3.right, diff));
 		ColorPermitted();
