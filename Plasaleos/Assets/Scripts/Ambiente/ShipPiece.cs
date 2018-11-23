@@ -11,6 +11,7 @@ public class ShipPiece : MonoBehaviour {
         m_sprite = GetComponent<SpriteRenderer>();
         m_rb = GetComponent<Rigidbody2D>();
         m_rb.isKinematic = true;
+        m_rb.gravityScale = 2f;
     }
 
     private void OnCollisionEnter2D(Collision2D other) {

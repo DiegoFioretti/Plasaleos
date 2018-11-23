@@ -107,7 +107,7 @@ MonoBehaviour:
   m_spriteUnrestricted: {fileID: 21300000, guid: 6794ca63c6eafe54dbb9bf161cdb0feb,
     type: 3}
   m_spriteRestricted: {fileID: 21300000, guid: 3c9fcae3d9863b94a9bee8337c1dfef0, type: 3}
-  m_disableDuration: 2
+  m_disableDuration: 1.25
 --- !u!212 &212505071008337584
 SpriteRenderer:
   m_ObjectHideFlags: 1
