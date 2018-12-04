@@ -9,4 +9,8 @@ public class LevelResources : ScriptableObject {
     [Header("Sounds")]
     public int alerts;
     public int scares;
+
+    [Header("Gravity")]
+    public bool restricted;
+    public Vector2 direction = new Vector2(0f, -1f);
 }

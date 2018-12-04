@@ -2,6 +2,7 @@
 using UnityEngine.Events;
 
 public class ResourceManager : MonoBehaviour {
+    static public ResourceManager Instance;
     [SerializeField] LevelResources m_levelResources;
     [Header("Ambient")]
     [SerializeField] Resource m_lianas;
@@ -16,6 +17,11 @@ public class ResourceManager : MonoBehaviour {
     public Resource Scares { get { return m_scares; } }
 
     private void Awake() {
+        if (Instance == null) {
+            Instance = this;
+        } else{
+            Destroy(gameObject);
+        }
         m_lianas.Init(m_levelResources.lianas);
         m_mushrooms.Init(m_levelResources.mushrooms);
         m_alerts.Init(m_levelResources.alerts);
@@ -32,5 +38,17 @@ public class ResourceManager : MonoBehaviour {
 
     public void RecoverLastResource() {
         m_lastResourceAffected.Add();
+    }
+
+    public bool IsGravityRestricted() {
+        return m_levelResources.restricted;
+    }
+
+    public void SetGravityRestriction(bool restriction){
+        m_levelResources.restricted = restriction;
+    }
+
+    public Vector2 GetGravityDirection() {
+        return m_levelResources.direction.normalized;
     }
 }

@@ -29,12 +29,18 @@ public class GravityController : MonoBehaviour {
     }
 
     void Start() {
-        forcedDirection = Vector3.down;
-        gravity = Vector3.down * force;
-        Physics2D.gravity = gravity;
         rot45 = Mathf.Sin(45f * Mathf.Deg2Rad);
         sin35 = Mathf.Sin(35f * Mathf.Deg2Rad);
         cos35 = Mathf.Cos(35f * Mathf.Deg2Rad);
+        if (ResourceManager.Instance.IsGravityRestricted()) {
+            restricted = true;
+            forcedDirection = ResourceManager.Instance.GetGravityDirection();
+            RestrictionChange.Invoke();
+        } else {
+            forcedDirection = Vector3.down;
+        }
+        gravity = forcedDirection * force;
+        Physics2D.gravity = gravity;
     }
 
     void FixedUpdate() {
