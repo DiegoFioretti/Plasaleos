@@ -3,8 +3,7 @@ using UnityEngine.Events;
 
 public class GravityController : MonoBehaviour {
     static public GravityController Instance;
-    public UnityEvent ToRestricted;
-    public UnityEvent ToUnrestricted;
+    public UnityEvent RestrictionChange;
     [SerializeField] private float force = 9.8f;
     [SerializeField] bool restricted = false;
     private Vector2 gravity;
@@ -64,16 +63,16 @@ public class GravityController : MonoBehaviour {
     }
 
     public void Restrict (Vector2 direction) {
-        ToRestricted.Invoke();
         restricted = true;
         forcedDirection = direction.normalized;
         gravity = direction.normalized;
         Physics2D.gravity = gravity * force;
+        RestrictionChange.Invoke();
     }
 
     public void Unrestric () {
-        ToUnrestricted.Invoke();
         restricted = false;
+        RestrictionChange.Invoke();
     }
 
     public Vector2 GetForcedDirection(){

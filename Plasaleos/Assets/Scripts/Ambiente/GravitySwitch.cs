@@ -16,8 +16,7 @@ public class GravitySwitch : MonoBehaviour {
     }
 
     private void Start() {    
-        GravityController.Instance.ToRestricted.AddListener(ChangeToRestric);
-        GravityController.Instance.ToUnrestricted.AddListener(ChangeToUnrestric);
+        GravityController.Instance.RestrictionChange.AddListener(ChangeRestriction);
     }
 
     private void Update() {
@@ -42,13 +41,13 @@ public class GravitySwitch : MonoBehaviour {
         }
     }
 
-    void ChangeToRestric() {
-        m_sprite.sprite = m_spriteRestricted;
+    void ChangeRestriction() {
+        m_sprite.sprite = (GravityController.Instance.Restricted? m_spriteRestricted : m_spriteUnrestricted);
         m_counter = m_disableDuration;
     }
 
-    void ChangeToUnrestric() {
-        m_sprite.sprite = m_spriteUnrestricted;
+    void ChangeRestriction(bool restrict) {
+        m_sprite.sprite = (restrict? m_spriteRestricted : m_spriteUnrestricted);
         m_counter = m_disableDuration;
     }
 }
