@@ -26,8 +26,8 @@ public class GravitySwitch : MonoBehaviour {
         }
     }
 
-    private void OnTriggerEnter2D() {
-        if (m_counter <= 0f) {
+    private void OnTriggerEnter2D(Collider2D other) {
+        if (m_counter <= 0f && other.tag == "Alien") {
             AkSoundEngine.PostEvent("ButtonSound", gameObject);
             if (!m_restricting) {
                 GravityController.Instance.Restrict(-transform.up);
