@@ -4,6 +4,7 @@ using UnityEngine.SceneManagement;
 public class PlaceHolderUIManager : MonoBehaviour {
     private void Awake() {
         Screen.sleepTimeout = 15;
+        Time.timeScale = 1f;
     }
 
     public void LoadLevel1() {
@@ -38,18 +39,15 @@ public class PlaceHolderUIManager : MonoBehaviour {
         SceneManager.LoadScene("testLevel_07");
     }
 
-    public void LoadLevel9()
-    {
+    public void LoadLevel9() {
         SceneManager.LoadScene("testLevel_08");
     }
 
-    public void LoadLevel10()
-    {
+    public void LoadLevel10() {
         SceneManager.LoadScene("testLevel_09");
     }
 
-    public void LoadLevel11()
-    {
+    public void LoadLevel11() {
         SceneManager.LoadScene("testLevel_10");
     }
 

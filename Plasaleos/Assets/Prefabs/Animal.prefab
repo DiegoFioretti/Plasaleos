@@ -65,7 +65,7 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 2
+  m_GravityScale: 1
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
@@ -142,7 +142,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_groundLayer:
     serializedVersion: 2
-    m_Bits: 1024
+    m_Bits: 50176
   m_facingRight: 1
   m_speed: 7
   m_detachAngle: 85
