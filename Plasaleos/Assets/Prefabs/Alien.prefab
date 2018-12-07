@@ -144,6 +144,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_duration: 4
+  alertSpawn: {fileID: 1653400102430486, guid: 52c3196d6a3245449bd595f39ed84102, type: 2}
+  alertHigh: 1.5
 --- !u!114 &114309125043880844
 MonoBehaviour:
   m_ObjectHideFlags: 1

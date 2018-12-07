@@ -17,11 +17,15 @@ namespace AK
         static const AkUniqueID ALIEN_RESCUED = 523915378U;
         static const AkUniqueID ALIEN_STEP = 1249666675U;
         static const AkUniqueID BUTTONSOUND = 3462570130U;
+        static const AkUniqueID ENEMYBITE = 1174545613U;
+        static const AkUniqueID ENEMYFOOTSTEPS = 2051507304U;
+        static const AkUniqueID ENEMYGRRR = 496348736U;
         static const AkUniqueID HAZARD_BROKENICE = 1529951376U;
         static const AkUniqueID MUSIC_BACKGROUND = 3998872777U;
         static const AkUniqueID MUSIC_VICTORY = 2637400697U;
         static const AkUniqueID OBJECTBOUNCE = 511549180U;
         static const AkUniqueID OBJECTSPAWN = 3934850721U;
+        static const AkUniqueID SCARESOUND = 1565300164U;
         static const AkUniqueID SOUNDALERT = 1528301148U;
         static const AkUniqueID STOPALL = 3086540886U;
         static const AkUniqueID TRAP_HIT = 2814314654U;

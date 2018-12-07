@@ -2,6 +2,8 @@
 
 public class Alertness : MonoBehaviour, IState {
     [SerializeField] float m_duration;
+    [SerializeField] GameObject alertSpawn;
+    [SerializeField] float alertHigh = 3;
     Entity m_entity;
     bool m_alerted = false;
 
@@ -16,6 +18,7 @@ public class Alertness : MonoBehaviour, IState {
             GetComponent<Animator>().SetBool("Moving", false);
         }
         Invoke("ToggleAlert", m_duration);
+        Instantiate(alertSpawn, transform.up * alertHigh + transform.position, transform.rotation);
     }
 
     public void StateUpdate(out IState nextState) {

@@ -465,6 +465,134 @@
 						<ActiveSource Name="ButtonSound" ID="{E0FA00B8-BDF4-4B6E-B58A-F0F78BAD6DFF}" Platform="Linked"/>
 					</ActiveSourceList>
 				</Sound>
+				<Sound Name="Bite" ID="{A41E509A-D9C3-49B9-8820-A53A90F6788A}" ShortID="969995682">
+					<PropertyList>
+						<Property Name="Pitch" Type="int32">
+							<ModifierList>
+								<ModifierInfo>
+									<Modifier Name="" ID="{452FEA2B-65A8-4EAE-A7FB-34216A24E342}">
+										<PropertyList>
+											<Property Name="Enabled" Type="bool" Value="True"/>
+											<Property Name="Max" Type="Real64" Value="227"/>
+											<Property Name="Min" Type="Real64" Value="-227"/>
+										</PropertyList>
+									</Modifier>
+								</ModifierInfo>
+							</ModifierList>
+						</Property>
+					</PropertyList>
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{785F7985-AC0B-4CD2-82F0-0043AF7F1FC7}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{7F63C48F-B99F-442A-AE38-9D097CD4650E}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<AudioFileSource Name="Bite" ID="{AB30190C-DE63-41FF-A3C7-9F480B3DF17F}" ShortID="962784055">
+							<Language>SFX</Language>
+							<AudioFile>Bite.wav</AudioFile>
+						</AudioFileSource>
+					</ChildrenList>
+					<ActiveSourceList>
+						<ActiveSource Name="Bite" ID="{AB30190C-DE63-41FF-A3C7-9F480B3DF17F}" Platform="Linked"/>
+					</ActiveSourceList>
+				</Sound>
+				<Sound Name="footstepsAnimal" ID="{A88DF474-89B0-4CB9-9AE1-240A9BB9CEF0}" ShortID="29311711">
+					<PropertyList>
+						<Property Name="Pitch" Type="int32">
+							<ModifierList>
+								<ModifierInfo>
+									<Modifier Name="" ID="{A55ED646-6738-4DE4-AF19-621342B46932}">
+										<PropertyList>
+											<Property Name="Enabled" Type="bool" Value="True"/>
+											<Property Name="Max" Type="Real64" Value="100"/>
+											<Property Name="Min" Type="Real64" Value="-100"/>
+										</PropertyList>
+									</Modifier>
+								</ModifierInfo>
+							</ModifierList>
+						</Property>
+						<Property Name="Volume" Type="Real64">
+							<ValueList>
+								<Value>6</Value>
+							</ValueList>
+							<ModifierList>
+								<ModifierInfo>
+									<Modifier Name="" ID="{BDD75E7B-3595-4F19-AD30-EC5D5AA64506}">
+										<PropertyList>
+											<Property Name="Max" Type="Real64" Value="100"/>
+											<Property Name="Min" Type="Real64" Value="-100"/>
+										</PropertyList>
+									</Modifier>
+								</ModifierInfo>
+							</ModifierList>
+						</Property>
+					</PropertyList>
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{785F7985-AC0B-4CD2-82F0-0043AF7F1FC7}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{7F63C48F-B99F-442A-AE38-9D097CD4650E}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<AudioFileSource Name="footstepsAnimal" ID="{486370D9-257F-4CD9-9076-46097AA56936}" ShortID="3229716">
+							<Language>SFX</Language>
+							<AudioFile>footstepsAnimal.wav</AudioFile>
+						</AudioFileSource>
+					</ChildrenList>
+					<ActiveSourceList>
+						<ActiveSource Name="footstepsAnimal" ID="{486370D9-257F-4CD9-9076-46097AA56936}" Platform="Linked"/>
+					</ActiveSourceList>
+				</Sound>
+				<Sound Name="GRrrr" ID="{3A1BE1A6-7AEA-495E-B767-E2E6C2400AC1}" ShortID="866599260">
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{785F7985-AC0B-4CD2-82F0-0043AF7F1FC7}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{7F63C48F-B99F-442A-AE38-9D097CD4650E}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<AudioFileSource Name="GRrrr" ID="{8BC461A3-19E3-4A8A-85E6-BF1A2C8161F4}" ShortID="762721522">
+							<Language>SFX</Language>
+							<AudioFile>GRrrr.wav</AudioFile>
+						</AudioFileSource>
+					</ChildrenList>
+					<ActiveSourceList>
+						<ActiveSource Name="GRrrr" ID="{8BC461A3-19E3-4A8A-85E6-BF1A2C8161F4}" Platform="Linked"/>
+					</ActiveSourceList>
+				</Sound>
+				<Sound Name="Scare" ID="{6DCC1C3B-E524-4326-8A35-D1230018F3D1}" ShortID="683024511">
+					<PropertyList>
+						<Property Name="Volume" Type="Real64">
+							<ValueList>
+								<Value>12</Value>
+							</ValueList>
+						</Property>
+					</PropertyList>
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{785F7985-AC0B-4CD2-82F0-0043AF7F1FC7}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{7F63C48F-B99F-442A-AE38-9D097CD4650E}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<AudioFileSource Name="Scare" ID="{1968D760-7E02-4FA8-A182-FBA6259AFBA3}" ShortID="855817745">
+							<Language>SFX</Language>
+							<AudioFile>Scare.wav</AudioFile>
+						</AudioFileSource>
+					</ChildrenList>
+					<ActiveSourceList>
+						<ActiveSource Name="Scare" ID="{1968D760-7E02-4FA8-A182-FBA6259AFBA3}" Platform="Linked"/>
+					</ActiveSourceList>
+				</Sound>
 			</ChildrenList>
 		</WorkUnit>
 	</AudioObjects>
