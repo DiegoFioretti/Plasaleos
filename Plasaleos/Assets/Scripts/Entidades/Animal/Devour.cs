@@ -12,18 +12,15 @@ public class Devour : MonoBehaviour, IState {
 
     private void OnEnable() {
         m_timer = m_duration;
+        print("helo");
         GetComponent<Animator>().SetBool("Eat", true);
-    }
-
-    private void OnDisable()
-    {
-        GetComponent<Animator>().SetBool("Eat", false);
     }
 
     public void StateUpdate(out IState nextState) {
         m_timer -= Time.deltaTime;
         if (m_timer < 0f) {
             RaycastHit2D hit;
+            GetComponent<Animator>().SetBool("Eat", false);
             if (m_animal.SearchPrey(out hit)) {
                 Hunt hunt = GetComponent<Hunt>();
                 hunt.Chase(hit.transform);

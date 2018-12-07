@@ -154,6 +154,7 @@ public class Entity : MonoBehaviour {
     }
 
     public void Damage() {
+        GetComponent<Collider2D>().enabled = false;
         m_death = true;
     }
 

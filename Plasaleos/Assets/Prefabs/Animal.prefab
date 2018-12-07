@@ -30,7 +30,7 @@ GameObject:
   - component: {fileID: 114230149307523228}
   - component: {fileID: 95040224006890984}
   - component: {fileID: 114601449114789854}
-  - component: {fileID: 61133357919515554}
+  - component: {fileID: 70192128204718322}
   m_Layer: 13
   m_Name: Animal
   m_TagString: Animal
@@ -45,7 +45,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1636643471779464}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -11.84397, y: -2.6469126, z: 0}
+  m_LocalPosition: {x: 12.060878, y: -6.106429, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -71,8 +71,8 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
---- !u!61 &61133357919515554
-BoxCollider2D:
+--- !u!70 &70192128204718322
+CapsuleCollider2D:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
@@ -84,18 +84,8 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 2.0285714, y: 1.2857143}
-    newSize: {x: 1.33, y: 1.84}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
   m_Size: {x: 2.0285714, y: 1.2857143}
-  m_EdgeRadius: 0
+  m_Direction: 1
 --- !u!95 &95040224006890984
 Animator:
   serializedVersion: 3
@@ -185,7 +175,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_chaseSpeed: 12
-  m_reachDistance: 2
+  m_reachDistance: 0.5
   m_looseDistance: 7
 --- !u!114 &114601449114789854
 MonoBehaviour:
@@ -217,7 +207,7 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1636643471779464}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 39a9afa0aca0ac3409d0fa2c8650fac5, type: 3}
   m_Name: 
@@ -254,8 +244,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 1015019679
-  m_SortingLayer: 5
+  m_SortingLayerID: -91080155
+  m_SortingLayer: 4
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: ab564c448f57bb64c87002b3ff289b2c, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
