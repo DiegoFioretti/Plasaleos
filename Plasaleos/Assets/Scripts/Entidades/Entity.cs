@@ -58,7 +58,9 @@ public class Entity : MonoBehaviour {
     }
 
     public void TakeGravityEffect() {
-        float angle = Vector2.SignedAngle(m_entityRight, Physics2D.gravity);
+        float angle = Vector2.Angle(m_entityRight, Physics2D.gravity);
+        Debug.DrawRay(transform.position, Physics2D.gravity, Color.magenta);
+        Debug.DrawRay(transform.position, m_entityRight, Color.cyan);
         if (!m_grounded) {
             m_speedMultiplier = 2.5f;
         } else if (!GravityController.Instance.Restricted && m_grounded &&
@@ -66,15 +68,16 @@ public class Entity : MonoBehaviour {
                 
             transform.up = -Physics2D.gravity;
         } else if (m_grounded && angle < 90f) {
-            m_speedMultiplier = 1.3f;
+            m_speedMultiplier = 1.4f;
         } else if (m_grounded && angle > 90f) {
-            m_speedMultiplier = 0.7f;
+            m_speedMultiplier = 0.6f;
         } else {
             m_speedMultiplier = 1f;
         }
+        print(m_speedMultiplier);
 
         if (!m_gravityController.Restricted) {
-            if ((!m_grounded || (m_grounded && angle == 90f)) &&
+            if (!m_grounded &&
                 (m_prevGravity != Physics2D.gravity)) {
 
                 float newSpeed = m_rb.velocity.magnitude * 0.7f;
