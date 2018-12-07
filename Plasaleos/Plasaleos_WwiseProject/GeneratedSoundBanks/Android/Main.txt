@@ -1,10 +1,14 @@
 Event	ID	Name			Wwise Object Path	Notes
+	496348736	EnemyGrrr			\Default Work Unit\EnemyGrrr	
 	511549180	ObjectBounce			\Default Work Unit\ObjectBounce	
 	523915378	Alien_Rescued			\Default Work Unit\Alien_Rescued	
+	1174545613	EnemyBite			\Default Work Unit\EnemyBite	
 	1249666675	Alien_Step			\Default Work Unit\Alien_Step	
 	1528301148	SoundAlert			\Default Work Unit\SoundAlert	
 	1529951376	Hazard_BrokenIce			\Default Work Unit\Hazard_BrokenIce	
+	1565300164	ScareSound			\Default Work Unit\ScareSound	
 	1625617807	Alien_Dead			\Default Work Unit\Alien_Dead	
+	2051507304	EnemyFootsteps			\Default Work Unit\EnemyFootsteps	
 	2637400697	Music_Victory			\Default Work Unit\Music_Victory	
 	2814314654	Trap_Hit			\Default Work Unit\Trap_Hit	
 	3086540886	StopAll			\Default Work Unit\StopAll	
@@ -13,15 +17,19 @@ Event	ID	Name			Wwise Object Path	Notes
 	3998872777	Music_Background			\Default Work Unit\Music_Background	
 
 In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
+	3229716	footstepsAnimal	D:\Documents\Project-Plasaleos\Plasaleos\Plasaleos_WwiseProject\.cache\Android\SFX\footstepsAnimal_56D34C19.wem		\Actor-Mixer Hierarchy\Default Work Unit\footstepsAnimal		18420
 	7139390	Sound2	D:\Documents\Project-Plasaleos\Plasaleos\Plasaleos_WwiseProject\.cache\Android\SFX\Sound2_56D34C19.wem		\Actor-Mixer Hierarchy\Default Work Unit\Sound2		95898
 	534485032	VictoryV2	D:\Documents\Project-Plasaleos\Plasaleos\Plasaleos_WwiseProject\.cache\Android\SFX\VictoryV2_56D34C19.wem		\Actor-Mixer Hierarchy\Default Work Unit\VictoryV2		356160
 	561358359	Dead	D:\Documents\Project-Plasaleos\Plasaleos\Plasaleos_WwiseProject\.cache\Android\SFX\Dead_56D34C19.wem		\Actor-Mixer Hierarchy\Default Work Unit\Dead		91162
 	570449265	PlasaleosMusicProto-04	D:\Documents\Project-Plasaleos\Plasaleos\Plasaleos_WwiseProject\.cache\Android\SFX\PlasaleosMusicProto-04_3CBE96A5.wem		\Actor-Mixer Hierarchy\Default Work Unit\PlasaleosMusicProto-04		14112040
 	599664353	Spike	D:\Documents\Project-Plasaleos\Plasaleos\Plasaleos_WwiseProject\.cache\Android\SFX\Spike_56D34C19.wem		\Actor-Mixer Hierarchy\Default Work Unit\Spike		23826
 	677202040	Grow	D:\Documents\Project-Plasaleos\Plasaleos\Plasaleos_WwiseProject\.cache\Android\SFX\Grow_56D34C19.wem		\Actor-Mixer Hierarchy\Default Work Unit\Grow		75416
+	762721522	GRrrr	D:\Documents\Project-Plasaleos\Plasaleos\Plasaleos_WwiseProject\.cache\Android\SFX\GRrrr_56D34C19.wem		\Actor-Mixer Hierarchy\Default Work Unit\GRrrr		131136
 	778592870	Bounce	D:\Documents\Project-Plasaleos\Plasaleos\Plasaleos_WwiseProject\.cache\Android\SFX\Bounce_56D34C19.wem		\Actor-Mixer Hierarchy\Default Work Unit\Bounce		33834
 	794205814	Step	D:\Documents\Project-Plasaleos\Plasaleos\Plasaleos_WwiseProject\.cache\Android\SFX\Step_56D34C19.wem		\Actor-Mixer Hierarchy\Default Work Unit\Step		4160
 	801562404	Ice	D:\Documents\Project-Plasaleos\Plasaleos\Plasaleos_WwiseProject\.cache\Android\SFX\Ice_22627D18.wem		\Actor-Mixer Hierarchy\Default Work Unit\Ice		67996
 	815680581	ButtonSound	D:\Documents\Project-Plasaleos\Plasaleos\Plasaleos_WwiseProject\.cache\Android\SFX\ButtonSound_56D34C19.wem		\Actor-Mixer Hierarchy\Default Work Unit\ButtonSound		76856
+	855817745	Scare	D:\Documents\Project-Plasaleos\Plasaleos\Plasaleos_WwiseProject\.cache\Android\SFX\Scare_56D34C19.wem		\Actor-Mixer Hierarchy\Default Work Unit\Scare		112872
+	962784055	Bite	D:\Documents\Project-Plasaleos\Plasaleos\Plasaleos_WwiseProject\.cache\Android\SFX\Bite_56D34C19.wem		\Actor-Mixer Hierarchy\Default Work Unit\Bite		53836
 	1002178581	Rescued	D:\Documents\Project-Plasaleos\Plasaleos\Plasaleos_WwiseProject\.cache\Android\SFX\Rescued_56D34C19.wem		\Actor-Mixer Hierarchy\Default Work Unit\Rescued		41972
 

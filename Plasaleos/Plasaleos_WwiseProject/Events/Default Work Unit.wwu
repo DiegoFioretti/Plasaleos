@@ -220,6 +220,62 @@
 						</Action>
 					</ChildrenList>
 				</Event>
+				<Event Name="EnemyBite" ID="{70A28365-CDB2-47EE-B6D1-3E195D205FC0}">
+					<ChildrenList>
+						<Action Name="" ID="{275B8BF7-CA3C-4110-9643-BE9E6401AAD6}" ShortID="660072825">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Bite" ID="{A41E509A-D9C3-49B9-8820-A53A90F6788A}" WorkUnitID="{A55CF131-BE7B-46A7-AA13-13FE3AA2C8EB}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="ScareSound" ID="{C8726765-BF52-453C-B38E-81989F7DF4CB}">
+					<ChildrenList>
+						<Action Name="" ID="{0D540361-10F9-4863-99E7-18F925995CEC}" ShortID="440456960">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Scare" ID="{6DCC1C3B-E524-4326-8A35-D1230018F3D1}" WorkUnitID="{A55CF131-BE7B-46A7-AA13-13FE3AA2C8EB}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="EnemyFootsteps" ID="{9547402D-BFEB-4A50-A640-CC582BE0E217}">
+					<ChildrenList>
+						<Action Name="" ID="{5E1EEE47-97BF-4E29-9E45-8EF10295825A}" ShortID="250433504">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="footstepsAnimal" ID="{A88DF474-89B0-4CB9-9AE1-240A9BB9CEF0}" WorkUnitID="{A55CF131-BE7B-46A7-AA13-13FE3AA2C8EB}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="EnemyGrrr" ID="{CC53BF24-912F-415C-8592-8B4E91C84F78}">
+					<ChildrenList>
+						<Action Name="" ID="{0234BDEA-8BEC-4064-B5A8-DDAF5912BD88}" ShortID="546192049">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="GRrrr" ID="{3A1BE1A6-7AEA-495E-B767-E2E6C2400AC1}" WorkUnitID="{A55CF131-BE7B-46A7-AA13-13FE3AA2C8EB}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
 			</ChildrenList>
 		</WorkUnit>
 	</Events>
