@@ -14,6 +14,7 @@ public class ScareAlien : MonoBehaviour {
             for (int i = 0; i < go.Length; i++) {
                 go[i].GetComponent<Alien>().Scare();
             }
+            AkSoundEngine.PostEvent("ScareSound", gameObject);
         }
     }
 }
