@@ -4,9 +4,7 @@
 
 # Nombre del juego
 
-Lorem ipsum dolor sit amet consectetur adipiscing elit, quam nunc per litora montes himenaeos. Porttitor tellus dis cubilia vitae tortor felis litora vestibulum lacinia, cras diam ut dictumst orci consequat gravida rhoncus, hac faucibus volutpat ligula massa sem ornare posuere.
-
-Aliquam massa ut at semper parturient ridiculus netus suspendisse eros, vivamus lobortis libero lacinia tempor fusce dis rutrum natoque non, tincidunt tempus mus eleifend luctus tellus odio platea. 
+Plasaleos es un juego en el que el jugador maneja la rotación, vegetación y sonidos de un planeta para guiar a los alienigenas a la salida. Tu mision es salvar a dichos alienigenas, recuperar las piezas de la nave que se estrello y ayudarlos a escapar.
 
 This is a game (demo/protoype/vertical slice) developed by students from <a href="https://www.imagecampus.edu.ar/">Image Campus</a>
 
