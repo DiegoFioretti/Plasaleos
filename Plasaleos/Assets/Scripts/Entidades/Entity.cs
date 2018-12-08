@@ -59,8 +59,6 @@ public class Entity : MonoBehaviour {
 
     public void TakeGravityEffect() {
         float angle = Vector2.Angle(m_entityRight, Physics2D.gravity);
-        Debug.DrawRay(transform.position, Physics2D.gravity, Color.magenta);
-        Debug.DrawRay(transform.position, m_entityRight, Color.cyan);
         if (!m_grounded) {
             m_speedMultiplier = 2.5f;
         } else if (!GravityController.Instance.Restricted && m_grounded &&
