@@ -18,10 +18,10 @@ This is a game (demo/protoype/vertical slice) developed by students from <a href
 ## Credits
 (in alphabetical order)
 
-- **Fernández Matías** - *Programming* - <a href="LINK A RED"><img height="16" width="16" src="https://unpkg.com/simple-icons@latest/icons/linkedin.svg" /></a> <a href="LINK A RED"><img height="16" width="16" src="https://unpkg.com/simple-icons@latest/icons/facebook.svg" /></a> <a href="LINK A RED"><img height="16" width="16" src="https://unpkg.com/simple-icons@latest/icons/twitter.svg" /> <img height="16" width="16" src="https://unpkg.com/simple-icons@latest/icons/github.svg" /></a> <a href="LINK A RED"><img height="16" width="16" src="https://unpkg.com/simple-icons@latest/icons/behance.svg" /></a> <a href="LINK A RED"><img height="16" width="16" src="https://unpkg.com/simple-icons@latest/icons/artstation.svg" /></a>
-- **Fioretti Diego** - *Art* - <a href="LINK A RED"><img height="16" width="16" src="https://unpkg.com/simple-icons@latest/icons/behance.svg" /></a> <a href="LINK A RED"><img height="16" width="16" src="https://unpkg.com/simple-icons@latest/icons/artstation.svg" /></a>
-- **Monterrosa Martin** - *Audio*
-- **Nombre Apellido** - *Testing* - <a href="LINK A RED"><img height="16" width="16" src="https://unpkg.com/simple-icons@latest/icons/linkedin.svg" /></a> <a href="LINK A RED"><img height="16" width="16" src="https://unpkg.com/simple-icons@latest/icons/facebook.svg" /></a>
+- **Fernández Matías** - *Producer, Programming, Artist, SFX* - <a href="https://www.linkedin.com/in/mat%C3%ADas-fern%C3%A1ndez-%F0%9F%95%B9-game-developer-6747b4162/"><img height="16" width="16" src="https://unpkg.com/simple-icons@latest/icons/linkedin.svg" /></a> <a href="https://github.com/Fermatt98"> <img height="16" width="16" src="https://unpkg.com/simple-icons@latest/icons/github.svg" /></a>
+- **Fioretti Diego** - *Game & Level Designer, Kanban Master* - <a href="LINK A RED"><img height="16" width="16" src="https://unpkg.com/simple-icons@latest/icons/behance.svg" /></a> <a href="LINK A RED"><img height="16" width="16" src="https://unpkg.com/simple-icons@latest/icons/artstation.svg" /></a>
+- **Monterrosa Martin** - *Programmer, Repo Master, Music Composer*
+- **Perugini Leo** - *Environment Artist* - <a href="LINK A RED"><img height="16" width="16" src="https://unpkg.com/simple-icons@latest/icons/linkedin.svg" /></a> <a href="LINK A RED"><img height="16" width="16" src="https://unpkg.com/simple-icons@latest/icons/facebook.svg" /></a>
 
 
 This game was also possible thanks to the support of these professors:
@@ -32,11 +32,6 @@ This game was also possible thanks to the support of these professors:
 - **Puig Fernando**
 
 
-## Acknowledgements
-
-Otras personas a las que quieran agradecerles, sino sacar este título
-
-
 ## Links
 
-Download it from itch.io: https://lqngames.itch.io/under-control
+Download it from itch.io: https://fermatt.itch.io/plasaleos
