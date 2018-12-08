@@ -5,7 +5,6 @@ public class Liana : MonoBehaviour, IResourceEdition {
 	[SerializeField] GameObject m_resourcePrefab;
 	[SerializeField] LayerMask m_terrain;
 	[SerializeField] Color m_invalidColor;
-	ResourceManager m_resourceManager;
 	Camera m_screenCamera;
 	Vector3 m_worldPos;
 	Vector3 m_worldEndPoint;
@@ -22,7 +21,6 @@ public class Liana : MonoBehaviour, IResourceEdition {
 		m_scaler = GetComponentInParent<CanvasScaler>();
 		m_screenCamera = Camera.main;
 		m_sprite = GetComponent<Image>();
-		m_resourceManager = FindObjectOfType<ResourceManager>();
 		m_rect = GetComponent<RectTransform>();
 		m_halfScreen = new Vector2 (Screen.width, Screen.height) / 2f;
 		m_toReferenceResolution = m_scaler.referenceResolution;
@@ -105,7 +103,7 @@ public class Liana : MonoBehaviour, IResourceEdition {
 	}
 
 	public void Cancel() {
-		m_resourceManager.Lianas.Add();
+		ResourceManager.Instance.Lianas.Add();
 		Destroy(gameObject);
 	}
 

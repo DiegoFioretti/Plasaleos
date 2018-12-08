@@ -17,7 +17,6 @@ public class Entity : MonoBehaviour {
     bool m_grounded;
     bool m_jumping;
     bool m_death;
-
     public LayerMask GroundLayer { get { return m_groundLayer; } }
     public Vector2 EntityRight { get { return m_entityRight; } }
     public float Speed { get { return m_speed; } }
@@ -25,9 +24,11 @@ public class Entity : MonoBehaviour {
     public bool Grounded { get { return m_grounded; } }
     public bool Jumping { get { return m_jumping; } }
     public bool IsDead { get { return m_death; } }
+    public bool Scared;
 
     protected virtual void Awake() {
         m_death = false;
+        Scared = false;
         m_footOffset = GetComponent<SpriteRenderer>().size.y * 0.5f;
         m_rb = GetComponent<Rigidbody2D>();
         m_speedMultiplier = 1f;
@@ -72,7 +73,6 @@ public class Entity : MonoBehaviour {
         } else {
             m_speedMultiplier = 1f;
         }
-        print(m_speedMultiplier);
 
         if (!m_gravityController.Restricted) {
             if (!m_grounded &&
@@ -157,6 +157,16 @@ public class Entity : MonoBehaviour {
     public void Damage() {
         GetComponent<Collider2D>().enabled = false;
         m_death = true;
+    }
+
+    public void Scare (Vector2 signalPosition) {
+        Vector2 diff = transform.position; //just casting Pos to Vec2
+        diff = signalPosition - diff;
+        if ((diff.x - EntityRight.x > 0 && FacingRight) ||
+            (diff.x - EntityRight.x < 0 && !FacingRight)) {
+            
+            Scared = true;
+        }
     }
 
     public void Jump() {

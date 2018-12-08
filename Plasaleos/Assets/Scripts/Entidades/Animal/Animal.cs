@@ -14,11 +14,9 @@ public class Animal : Entity {
     IState m_nextState;
     Movement m_movementState; 
     Hunt m_huntState;
-    bool m_scared;
 
     protected override void Awake() {
         base.Awake();
-        m_scared = false;
         m_movementState = GetComponent<Movement>();
         m_huntState = GetComponent<Hunt>();
         SetStateActive(m_movementState, false);
@@ -27,7 +25,12 @@ public class Animal : Entity {
         SetStateActive(GetComponent<Death>(), false);
         SetStateActive(m_huntState, false);
         SetStateActive(GetComponent<Devour>(), false);
-        if (m_sleeper) {
+        if (IsDead) {
+            m_nextState = GetComponent<Death>();
+        } else if (Scared) {
+            m_nextState = GetComponent<Scareness>();
+            Scared = false;
+        } else if (m_sleeper) {
             m_currState = GetComponent<Rest>();
         } else {
             m_currState = m_movementState;
@@ -40,9 +43,9 @@ public class Animal : Entity {
         m_currState.StateUpdate(out m_nextState);
         if (IsDead) {
             m_nextState = GetComponent<Death>();
-        } else if (m_scared) {
+        } else if (Scared) {
             m_nextState = GetComponent<Scareness>();
-            m_scared = false;
+            Scared = false;
         } else if (m_currState == (m_movementState as IState) ||
                     m_currState == (m_huntState as IState) ) {
 
@@ -92,11 +95,6 @@ public class Animal : Entity {
 
     private void FixedUpdate() {
         m_currState.StateFixedUpdate();
-    }
-
-    [ContextMenu("Scare")]
-    public void Scared() {
-        m_scared = true;
     }
 
 }
