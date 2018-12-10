@@ -131,7 +131,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &60528305
 RectTransform:
   m_ObjectHideFlags: 0
@@ -149,8 +149,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 73.1, y: -43.1}
-  m_SizeDelta: {x: 137.8, y: 66.3}
+  m_AnchoredPosition: {x: 73.1, y: -60.7}
+  m_SizeDelta: {x: 137.8, y: 101.5}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &60528306
 MonoBehaviour:
@@ -201,7 +201,7 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: TestAnimal
+          m_StringArgument: testLevel_13
           m_BoolArgument: 0
         m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
@@ -597,8 +597,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0.5299988, y: 7.6}
-  m_SizeDelta: {x: -12, y: -26.2}
+  m_AnchoredPosition: {x: -0.40000153, y: 14.599998}
+  m_SizeDelta: {x: -42, y: -40.3}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &634685144
 MonoBehaviour:
@@ -747,6 +747,48 @@ MonoBehaviour:
     positionOffset: {x: 0, y: 0, z: 0}
   m_posOffsetData: {fileID: 0}
   listenerMask: 1
+--- !u!1001 &1282385524
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4965811542734002, guid: dce0269bec015ed429e96b8858703da5, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 3.2952406
+      objectReference: {fileID: 0}
+    - target: {fileID: 4965811542734002, guid: dce0269bec015ed429e96b8858703da5, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 1.1966722
+      objectReference: {fileID: 0}
+    - target: {fileID: 4965811542734002, guid: dce0269bec015ed429e96b8858703da5, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: -0.1638268
+      objectReference: {fileID: 0}
+    - target: {fileID: 4965811542734002, guid: dce0269bec015ed429e96b8858703da5, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4965811542734002, guid: dce0269bec015ed429e96b8858703da5, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4965811542734002, guid: dce0269bec015ed429e96b8858703da5, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4965811542734002, guid: dce0269bec015ed429e96b8858703da5, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4965811542734002, guid: dce0269bec015ed429e96b8858703da5, type: 2}
+      propertyPath: m_RootOrder
+      value: 7
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: dce0269bec015ed429e96b8858703da5, type: 2}
+  m_IsPrefabAsset: 0
 --- !u!1001 &1435230173
 Prefab:
   m_ObjectHideFlags: 0

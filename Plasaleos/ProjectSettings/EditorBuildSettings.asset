@@ -44,6 +44,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/testLevel_10.unity
     guid: 6244cdbe3a94203409364e2bdb416dd7
+  - enabled: 1
+    path: Assets/Scenes/testLevel_13.unity
+    guid: 068b37f16ba5f6d42a52b65366d9c724
   - enabled: 0
     path: Assets/Scenes/TestAnimal.unity
     guid: 01c0e61f1cbc4ca479ae25ab1e80e777
