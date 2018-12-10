@@ -11,9 +11,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 78ab87f3f241ef549886df5f8db62197, type: 3}
   m_Name: Resources Level 12
   m_EditorClassIdentifier: 
-  lianas: 2
+  lianas: 0
   mushrooms: 0
   alerts: 3
-  scares: 0
-  restricted: 1
+  scares: 4
+  restricted: 0
   direction: {x: 0, y: -1}
