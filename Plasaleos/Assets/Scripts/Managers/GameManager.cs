@@ -16,6 +16,10 @@ public class GameManager : MonoBehaviour {
 
     public bool isDragGravity = false;
 
+    public bool resetLevel = false;
+
+    public Vector3 lastPosMainMenu = Vector3.zero;
+
     // Use this for initialization
     void Awake() {
         if (!instance) {
