@@ -4,7 +4,7 @@
 
 # 
 
-Plasaleos es un juego en el que el jugador maneja la rotación, vegetación y sonidos de un planeta para guiar a los alienigenas a la salida. Tu mision es salvar a dichos alienigenas, recuperar las piezas de la nave que se estrello y ayudarlos a escapar.
+Plasaleos is a game in which the player controls the rotation, vegetation and sounds of a planet in order to guide aliens on their way out. Your mission is to save said aliens, get the parts of their ship and help them escape.
 
 This is a game (demo/protoype/vertical slice) developed by students from <a href="https://www.imagecampus.edu.ar/">Image Campus</a>
 
