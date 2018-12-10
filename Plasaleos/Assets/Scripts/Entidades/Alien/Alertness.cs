@@ -18,7 +18,7 @@ public class Alertness : MonoBehaviour, IState {
             GetComponent<Animator>().SetBool("Moving", false);
         }
         Invoke("ToggleAlert", m_duration);
-        Instantiate(alertSpawn, transform.up * alertHigh + transform.position, transform.rotation);
+        Instantiate(alertSpawn, transform.up * alertHigh + transform.position, transform.rotation, transform);
     }
 
     public void StateUpdate(out IState nextState) {
