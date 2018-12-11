@@ -24,4 +24,14 @@ public class Footsteps : MonoBehaviour {
     public void Step() {
         AkSoundEngine.PostEvent(defaultSound, gameObject);
     }
+
+    public void Grrr()
+    {
+        AkSoundEngine.PostEvent("EnemyGrrr", gameObject);
+    }
+
+    public void Eating()
+    {
+        AkSoundEngine.PostEvent("EnemyBite", gameObject);
+    }
 }

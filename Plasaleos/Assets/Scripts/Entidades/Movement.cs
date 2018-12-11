@@ -11,8 +11,7 @@ public class Movement : MonoBehaviour, IState {
         GetComponent<Animator>().SetBool("Moving", true);
     }
 
-    private void OnDisable()
-    {
+    private void OnDisable() {
         GetComponent<Animator>().SetBool("Moving", false);
     }
 
@@ -21,7 +20,8 @@ public class Movement : MonoBehaviour, IState {
         m_entity.CheckForFlip();
         m_entity.TakeGravityEffect();
 
-        GetComponent<Animator>().SetFloat("Speed", m_entity.m_rb.velocity.magnitude / m_entity.Speed);
+        GetComponent<Animator>().SetFloat("Speed",
+            m_entity.m_rb.velocity.magnitude / m_entity.Speed);
         nextState = this;
     }
 

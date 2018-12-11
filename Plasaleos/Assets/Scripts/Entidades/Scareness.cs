@@ -17,11 +17,10 @@ public class Scareness : MonoBehaviour, IState {
     }
 
     public void StateUpdate(out IState nextState) {
-        m_entity.CheckForFlip();
         m_entity.CheckForLanding();
         m_entity.TakeGravityEffect();
-        if (m_timeLeft <= 0f || !m_entity.Grounded) {
-            m_entity.Flip();
+        if (m_timeLeft <= 0f) {
+            //m_entity.Flip();
             nextState = GetComponent<Movement>();
         } else {
             m_timeLeft -= Time.deltaTime;

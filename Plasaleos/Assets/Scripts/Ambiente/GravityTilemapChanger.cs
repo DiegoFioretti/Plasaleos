@@ -6,17 +6,13 @@ public class GravityTilemapChanger : MonoBehaviour {
     [SerializeField] TilemapRenderer m_restrictedTilemap;
 
     private void Start() {    
-        GravityController.Instance.ToRestricted.AddListener(ChangeToRestric);
-        GravityController.Instance.ToUnrestricted.AddListener(ChangeToUnrestric);
+        GravityController.Instance.RestrictionChange.AddListener(ChangeRestriction);
     }
 
-    void ChangeToRestric() {
-        m_restrictedTilemap.enabled = true;
-        m_unrestrictedTilemap.enabled = false;
+    void ChangeRestriction() {
+        bool restriction = GravityController.Instance.Restricted;
+        m_restrictedTilemap.enabled = restriction;
+        m_unrestrictedTilemap.enabled = !restriction;
     }
 
-    void ChangeToUnrestric() {
-        m_restrictedTilemap.enabled = false;
-        m_unrestrictedTilemap.enabled = true;
-    }
 }

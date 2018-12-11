@@ -10,15 +10,12 @@ public class GravitySpriteChanger : MonoBehaviour {
     }
 
     private void Start() {    
-        GravityController.Instance.ToRestricted.AddListener(ChangeToRestric);
-        GravityController.Instance.ToUnrestricted.AddListener(ChangeToUnrestric);
+        GravityController.Instance.RestrictionChange.AddListener(ChangeRestriction);
     }
 
-    void ChangeToRestric() {
-        m_sprite.sprite = m_restrictedSprite;
+    void ChangeRestriction() {
+        m_sprite.sprite = (GravityController.Instance.Restricted?
+            m_restrictedSprite : m_unrestrictedSprite);
     }
 
-    void ChangeToUnrestric() {
-       m_sprite.sprite = m_unrestrictedSprite;
-    }
 }

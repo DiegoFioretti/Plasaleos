@@ -15,13 +15,11 @@ public class Hunt : MonoBehaviour, IState {
         m_animal = GetComponent<Animal>();
     }
 
-    private void OnEnable()
-    {
+    private void OnEnable() {
         GetComponent<Animator>().SetBool("Chasing", true);
     }
 
-    private void OnDisable()
-    {
+    private void OnDisable() {
         GetComponent<Animator>().SetBool("Chasing", false);
     }
 
@@ -35,12 +33,19 @@ public class Hunt : MonoBehaviour, IState {
 
             nextState = GetComponent<Movement>();
         } else {
-            if (transform.localScale.z != m_alienPrey.transform.localScale.z) {
+            if ((m_animal.FacingRight && !m_alienPrey.FacingRight && 
+                m_alienPrey.transform.position.x < transform.position.x) ||
+                (!m_animal.FacingRight && m_alienPrey.FacingRight && 
+                m_alienPrey.transform.position.x > transform.position.x)) {
+
                 m_animal.Flip();
             }
             if (m_animal.SearchPrey(out hit)) {
                 if (hit.distance < m_reachDistance) {
                     m_alienPrey.Damage();
+                    Vector3 offset = m_animal.EntityRight * 0.5f;
+                    m_alienPrey.transform.position = transform.position + offset;
+                    m_alienPrey.transform.SetParent(transform);
                     nextState = GetComponent<Devour>();
                 } else {
                     m_alienPrey = hit.transform.GetComponent<Alien>();
@@ -56,7 +61,7 @@ public class Hunt : MonoBehaviour, IState {
     public void StateFixedUpdate() {
         float angle = Vector2.Angle(m_animal.EntityRight, -Physics2D.gravity);
         if (m_animal.Grounded && angle <= 90f) {
-            m_animal.m_rb.AddForce(m_animal.EntityRight * m_chaseSpeed * 1.5f);
+            m_animal.m_rb.AddForce(m_animal.EntityRight * m_chaseSpeed * 2f);
         }
     }
 

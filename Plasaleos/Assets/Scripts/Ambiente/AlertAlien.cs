@@ -3,7 +3,6 @@
 public class AlertAlien : MonoBehaviour {
     [SerializeField] GameObject m_alertButton;
     [SerializeField] GameObject[] m_continueButtons;
-    ResourceManager m_resourceManager;
     float m_alertDuration;
     bool m_alerted;
 
@@ -13,14 +12,13 @@ public class AlertAlien : MonoBehaviour {
         foreach (GameObject continueButton in m_continueButtons) {
             continueButton.SetActive(false);
         }
-        m_resourceManager = FindObjectOfType<ResourceManager>();
         m_alertDuration = FindObjectOfType<Alien>().GetAlertDuration();
     }
 
     public void ToggleAlert() {
         if (m_alerted) {
             Alert();
-        } else if (m_resourceManager.Alerts.Request()) {
+        } else if (ResourceManager.Instance.Alerts.Request()) {
             Alert();
         }
     }

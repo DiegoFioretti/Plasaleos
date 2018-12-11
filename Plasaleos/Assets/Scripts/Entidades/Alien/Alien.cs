@@ -8,12 +8,10 @@
 public sealed class Alien : Entity {
     IState m_currState;
     IState m_nextState;
-    bool m_scared;
     bool m_alerted;
 
     protected override void Awake() {
         base.Awake();
-        m_scared = false;
         m_alerted = false;
         SetStateActive(GetComponent<Movement>(), true);
         SetStateActive(GetComponent<Scareness>(), false);
@@ -31,9 +29,9 @@ public sealed class Alien : Entity {
         m_currState.StateUpdate(out m_nextState);
         if (IsDead) {
             m_nextState = GetComponent<Death>();
-        } else if (m_scared) {
+        } else if (Scared) {
             m_nextState = GetComponent<Scareness>();
-            m_scared = false;
+            Scared = false;
         } else if (m_alerted) {
             m_nextState = GetComponent<Alertness>();
             m_alerted = false;
@@ -53,14 +51,9 @@ public sealed class Alien : Entity {
         m_currState.StateFixedUpdate();
     }
 
-    [ContextMenu("Scare")]
-    public void Scare() {
-        m_scared = true;
-    }
-
     public void Scare(bool enemyFacingRight) {
         if (enemyFacingRight != FacingRight) {
-            m_scared = true;
+            Scared = true;
         }
     }
 

@@ -83,7 +83,7 @@ CapsuleCollider2D:
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0.03804946}
-  m_Size: {x: 1.33, y: 2.0967717}
+  m_Size: {x: 0.78, y: 2.0967717}
   m_Direction: 0
 --- !u!95 &95711593403246242
 Animator:
@@ -127,7 +127,7 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1256088697549998}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 39a9afa0aca0ac3409d0fa2c8650fac5, type: 3}
   m_Name: 
@@ -144,6 +144,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_duration: 4
+  alertSpawn: {fileID: 1653400102430486, guid: 52c3196d6a3245449bd595f39ed84102, type: 2}
+  alertHigh: 1.5
 --- !u!114 &114309125043880844
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -163,7 +165,7 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1256088697549998}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5df70b99a363225458f81152d9fae031, type: 3}
   m_Name: 
@@ -224,7 +226,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 1015019679
-  m_SortingLayer: 4
+  m_SortingLayer: 5
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: e5e0fafb7d916f3439caf210ce56d874, type: 3}
   m_Color: {r: 0.9056604, g: 0.9056604, b: 0.9056604, a: 1}
