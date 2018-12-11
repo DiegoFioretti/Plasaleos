@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<SoundBanksInfo Platform="Windows" BasePlatform="Windows" SchemaVersion="11" SoundbankVersion="132">
+	<RootPaths>
+		<ProjectRoot>D:\Documents\Project-Plasaleos\Plasaleos\Plasaleos_WwiseProject\</ProjectRoot>
+		<SourceFilesRoot>D:\Documents\Project-Plasaleos\Plasaleos\Plasaleos_WwiseProject\.cache\Windows\</SourceFilesRoot>
+		<SoundBanksRoot>D:\Documents\Project-Plasaleos\Plasaleos\Plasaleos_WwiseProject\GeneratedSoundBanks\Windows\</SoundBanksRoot>
+		<ExternalSourcesInputFile></ExternalSourcesInputFile>
+		<ExternalSourcesOutputRoot>D:\Documents\Project-Plasaleos\Plasaleos\Plasaleos_WwiseProject\GeneratedSoundBanks\Windows</ExternalSourcesOutputRoot>
+	</RootPaths>
+	<DialogueEvents/>
+	<StreamedFiles/>
+	<MediaFilesNotInAnyBank/>
+	<SoundBanks>
+		<SoundBank Id="1355168291" Language="SFX">
+			<ObjectPath>Init</ObjectPath>
+			<ShortName>Init</ShortName>
+			<Path>Init.bnk</Path>
+		</SoundBank>
+		<SoundBank Id="3161908922" Language="SFX">
+			<ObjectPath>\SoundBanks\Default Work Unit\Main</ObjectPath>
+			<ShortName>Main</ShortName>
+			<Path>Main.bnk</Path>
+			<IncludedEvents>
+				<Event Id="1625617807" Name="Alien_Dead" ObjectPath="\Events\Default Work Unit\Alien_Dead"/>
+				<Event Id="523915378" Name="Alien_Rescued" ObjectPath="\Events\Default Work Unit\Alien_Rescued"/>
+				<Event Id="1249666675" Name="Alien_Step" ObjectPath="\Events\Default Work Unit\Alien_Step"/>
+				<Event Id="3462570130" Name="ButtonSound" ObjectPath="\Events\Default Work Unit\ButtonSound"/>
+				<Event Id="1174545613" Name="EnemyBite" ObjectPath="\Events\Default Work Unit\EnemyBite"/>
+				<Event Id="2051507304" Name="EnemyFootsteps" ObjectPath="\Events\Default Work Unit\EnemyFootsteps"/>
+				<Event Id="496348736" Name="EnemyGrrr" ObjectPath="\Events\Default Work Unit\EnemyGrrr"/>
+				<Event Id="1529951376" Name="Hazard_BrokenIce" ObjectPath="\Events\Default Work Unit\Hazard_BrokenIce"/>
+				<Event Id="3998872777" Name="Music_Background" ObjectPath="\Events\Default Work Unit\Music_Background"/>
+				<Event Id="2637400697" Name="Music_Victory" ObjectPath="\Events\Default Work Unit\Music_Victory"/>
+				<Event Id="511549180" Name="ObjectBounce" ObjectPath="\Events\Default Work Unit\ObjectBounce"/>
+				<Event Id="3934850721" Name="ObjectSpawn" ObjectPath="\Events\Default Work Unit\ObjectSpawn"/>
+				<Event Id="1565300164" Name="ScareSound" ObjectPath="\Events\Default Work Unit\ScareSound"/>
+				<Event Id="1528301148" Name="SoundAlert" ObjectPath="\Events\Default Work Unit\SoundAlert"/>
+				<Event Id="3086540886" Name="StopAll" ObjectPath="\Events\Default Work Unit\StopAll" MaxAttenuation="0.000000"/>
+				<Event Id="2814314654" Name="Trap_Hit" ObjectPath="\Events\Default Work Unit\Trap_Hit"/>
+			</IncludedEvents>
+			<IncludedMemoryFiles>
+				<File Id="3229716" Language="SFX">
+					<ShortName>footstepsAnimal.wav</ShortName>
+					<Path>SFX\footstepsAnimal_56D34C19.wem</Path>
+				</File>
+				<File Id="7139390" Language="SFX">
+					<ShortName>Sound2.wav</ShortName>
+					<Path>SFX\Sound2_56D34C19.wem</Path>
+				</File>
+				<File Id="534485032" Language="SFX">
+					<ShortName>VictoryV2.wav</ShortName>
+					<Path>SFX\VictoryV2_56D34C19.wem</Path>
+				</File>
+				<File Id="561358359" Language="SFX">
+					<ShortName>Dead.wav</ShortName>
+					<Path>SFX\Dead_56D34C19.wem</Path>
+				</File>
+				<File Id="570449265" Language="SFX">
+					<ShortName>PlasaleosMusicProto-04.wav</ShortName>
+					<Path>SFX\PlasaleosMusicProto-04_3CBE96A5.wem</Path>
+				</File>
+				<File Id="599664353" Language="SFX">
+					<ShortName>Spike.wav</ShortName>
+					<Path>SFX\Spike_56D34C19.wem</Path>
+				</File>
+				<File Id="677202040" Language="SFX">
+					<ShortName>Grow.wav</ShortName>
+					<Path>SFX\Grow_56D34C19.wem</Path>
+				</File>
+				<File Id="762721522" Language="SFX">
+					<ShortName>GRrrr.wav</ShortName>
+					<Path>SFX\GRrrr_56D34C19.wem</Path>
+				</File>
+				<File Id="778592870" Language="SFX">
+					<ShortName>Bounce.wav</ShortName>
+					<Path>SFX\Bounce_56D34C19.wem</Path>
+				</File>
+				<File Id="794205814" Language="SFX">
+					<ShortName>Step.wav</ShortName>
+					<Path>SFX\Step_56D34C19.wem</Path>
+				</File>
+				<File Id="801562404" Language="SFX">
+					<ShortName>Ice.wav</ShortName>
+					<Path>SFX\Ice_22627D18.wem</Path>
+				</File>
+				<File Id="815680581" Language="SFX">
+					<ShortName>ButtonSound.wav</ShortName>
+					<Path>SFX\ButtonSound_56D34C19.wem</Path>
+				</File>
+				<File Id="855817745" Language="SFX">
+					<ShortName>Scare.wav</ShortName>
+					<Path>SFX\Scare_56D34C19.wem</Path>
+				</File>
+				<File Id="962784055" Language="SFX">
+					<ShortName>Bite.wav</ShortName>
+					<Path>SFX\Bite_56D34C19.wem</Path>
+				</File>
+				<File Id="1002178581" Language="SFX">
+					<ShortName>Rescued.wav</ShortName>
+					<Path>SFX\Rescued_56D34C19.wem</Path>
+				</File>
+			</IncludedMemoryFiles>
+		</SoundBank>
+	</SoundBanks>
+</SoundBanksInfo>
