@@ -62,6 +62,18 @@ public class PlaceHolderUIManager : MonoBehaviour {
         SceneManager.LoadScene("testLevel_10");
     }
 
+    public void LoadLevel12()
+    {
+        GameManager.instance.resetLevel = false;
+        SceneManager.LoadScene("testLevel_11");
+    }
+
+    public void LoadLevel13()
+    {
+        GameManager.instance.resetLevel = false;
+        SceneManager.LoadScene("testLevel_12");
+    }
+
     public void LoadLevel(string level) {
         GameManager.instance.resetLevel = false;
         SceneManager.LoadScene(level);

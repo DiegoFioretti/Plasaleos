@@ -13157,7 +13157,7 @@ Prefab:
     - target: {fileID: 224124811630188084, guid: d24173c5cc8c9b84b8c076f6057dd98b,
         type: 2}
       propertyPath: m_AnchoredPosition.x
-      value: 4.499939
+      value: 4.5
       objectReference: {fileID: 0}
     - target: {fileID: 224545361770747126, guid: d24173c5cc8c9b84b8c076f6057dd98b,
         type: 2}
@@ -13869,7 +13869,7 @@ Prefab:
         type: 2}
     - target: {fileID: 1873558671283030, guid: 3b1dfaa215b62aa498292039d7aa244a, type: 2}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1861764495105404, guid: 3b1dfaa215b62aa498292039d7aa244a, type: 2}
       propertyPath: m_IsActive
@@ -13938,6 +13938,30 @@ Prefab:
         type: 2}
       propertyPath: m_AnchoredPosition.x
       value: 6.3007812
+      objectReference: {fileID: 0}
+    - target: {fileID: 1937218926305012, guid: 3b1dfaa215b62aa498292039d7aa244a, type: 2}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114614256135064236, guid: 3b1dfaa215b62aa498292039d7aa244a,
+        type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_StringArgument
+      value: testLevel_12
+      objectReference: {fileID: 0}
+    - target: {fileID: 114317438776319146, guid: 3b1dfaa215b62aa498292039d7aa244a,
+        type: 2}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114317438776319146, guid: 3b1dfaa215b62aa498292039d7aa244a,
+        type: 2}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114317438776319146, guid: 3b1dfaa215b62aa498292039d7aa244a,
+        type: 2}
+      propertyPath: m_Color.b
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3b1dfaa215b62aa498292039d7aa244a, type: 2}
