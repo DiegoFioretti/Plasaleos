@@ -29,7 +29,15 @@ public class GameManager : MonoBehaviour {
                 json = File.ReadAllText(dataPath);
                 data = JsonUtility.FromJson<GameManagerData>(json);
                 if (data.aliensSaved.Length != levelAmount) {
-                    CreateFile();
+                    int[] aux = new int[levelAmount];
+                    for (int i = 0; i < data.aliensSaved.Length; i++) {
+                        aux[i] = data.aliensSaved[i];
+                    }
+                    data.aliensSaved = aux;
+                    for (int i = 0; i < data.piecesSaved.Length; i++) {
+                        aux[i] = data.piecesSaved[i];
+                    }
+                    data.piecesSaved = aux;
                 }
             } else {
                 CreateFile();

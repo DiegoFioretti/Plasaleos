@@ -24,8 +24,8 @@ public class Liana : MonoBehaviour, IResourceEdition {
 		m_rect = GetComponent<RectTransform>();
 		m_halfScreen = new Vector2 (Screen.width, Screen.height) / 2f;
 		m_toReferenceResolution = m_scaler.referenceResolution;
-		m_toReferenceResolution.x /= Screen.width;
 		m_toReferenceResolution.y /= Screen.height;
+		m_toReferenceResolution.x /= Screen.height * 16f/9f;
 		transform.position = m_halfScreen + new Vector2(-m_rect.sizeDelta.x * 0.5f, 0f);
 		m_endPoint = transform.position;
 		m_endPoint.x += m_rect.sizeDelta.x;
