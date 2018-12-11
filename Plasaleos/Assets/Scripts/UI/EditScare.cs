@@ -7,8 +7,6 @@ public class EditScare : MonoBehaviour, IResourceEdition {
     [SerializeField] Image m_line;
     [SerializeField] LayerMask m_affectedLayer;
     Camera m_camera;
-    Vector2 m_initCircleSize;
-    float m_lineInitOffset;
     float m_initDistance;
 
     private void Awake() {
@@ -16,8 +14,6 @@ public class EditScare : MonoBehaviour, IResourceEdition {
         m_initDistance = Vector3.Distance(m_adjustmentController.transform.position,
             transform.position);
         print("Init Dist:" + m_initDistance);
-        m_lineInitOffset = m_line.transform.position.x;
-        m_initCircleSize = m_scareCircle.rectTransform.sizeDelta;
 		FinishEdit[] fes = FindObjectsOfType<FinishEdit>();
 		foreach (FinishEdit fe in fes) {
 			fe.SetEditingObject((this));
